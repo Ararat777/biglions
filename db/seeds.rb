@@ -143,3 +143,4 @@
     cat_design.categories.create(:title => 'prototyping', :name => 'Прототипирование')
     cat_design.categories.create(:title => 'corporate_style', :name => 'Фирменный стиль')
     cat_design.categories.create(:title => 'out_advertising', :name => 'Наружная реклама')
+    AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
