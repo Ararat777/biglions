@@ -31,6 +31,9 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'activeadmin'
 gem 'devise'
 gem 'jquery-ui-rails', '~> 4.2.1'
+gem 'rb-readline'
+gem 'i18n'
+gem 'therubyracer'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
