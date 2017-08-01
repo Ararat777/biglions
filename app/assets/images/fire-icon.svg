@@ -1,0 +1,19 @@
+<svg width="48" height="64" viewBox="0 0 48 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Vector</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-6439 -8834)">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(6439 8834)" fill="url(#paint0_linear)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(36.1615 49.0182 -36.7694 47.7476 24.6847 -18.0565)">
+<stop offset="0" stop-color="#E9B760"/>
+<stop offset="0.138122" stop-color="#F7F2A8"/>
+<stop offset="0.39779" stop-color="#FDDC7E"/>
+<stop offset="0.790055" stop-color="#E4B25B"/>
+<stop offset="0.98895" stop-color="#F6CA6B"/>
+</linearGradient>
+<path id="path0_fill" d="M 28.5 5.00679e-08C 28.5 5.00679e-08 30.72 7.95 30.72 14.4C 30.72 20.58 26.67 25.59 20.49 25.59C 14.28 25.59 9.6 20.58 9.6 14.4L 9.69 13.32C 3.63 20.52 0 29.85 0 39.99C 0 53.25 10.74 63.99 24 63.99C 37.26 63.99 48 53.25 48 39.99C 48 23.82 40.23 9.39 28.5 5.00679e-08ZM 23.13 54.99C 17.79 54.99 13.47 50.79 13.47 45.57C 13.47 40.71 16.62 37.29 21.9 36.21C 27.21 35.13 32.7 32.58 35.76 28.47C 36.93 32.34 37.53 36.42 37.53 40.59C 37.53 48.54 31.08 54.99 23.13 54.99Z"/>
+</defs>
+</svg>

@@ -1,0 +1,11 @@
+
+
+
+<% pages.each_with_index do |page,number| %>
+<div class="nav-item nav-btn slideBtn btn<%= number + 1 %>" data-number="<%= number + 1 %>" id="<%= page.title %>">
+  <%= page.nav_name %>
+</div>
+<% if number + 1 != pages.size %>
+  <div class="nav-item separator"></div>
+<% end %>
+<% end %>

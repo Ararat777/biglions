@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-lg-4">
+    <%= image_tag '/assets/tick.svg',class: 'img-fluid' %>
+  </div>
+  <div class="col-lg-8">
+    <h2 class="title">
+      <%= page.name %>
+    </h2>
+    <div class="row">
+      <% page.indents.each do |item| %>
+      <div class="col-lg-6">
+       <p class="description">
+         <%= item.body %>
+       </p>
+        
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

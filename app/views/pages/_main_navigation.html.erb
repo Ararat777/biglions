@@ -1,0 +1,5 @@
+<% pages.each_with_index do |page,number| %>
+<div class="nav-item nav-btn progress-bar btn<%= number + 1 %>" data-number="<%= number + 1 %>">
+  <div class="progress"></div>
+</div>
+<% end %>
