@@ -12,7 +12,7 @@
    <div class="category-box">
      <div class="sub-categories">
       <% @category.categories.each do |item| %>
-        <%= link_to item.name,services_sub_category_path(page.title,item.title) %>
+        <%= link_to item.name,services_sub_category_path('marketing',item.title) %>
       <% end %>
     </div>
    </div>

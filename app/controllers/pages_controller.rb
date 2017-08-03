@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   
   def about
     @pages = @category.pages
-    @reviews = Review.all
+    
     render_page
   end
   

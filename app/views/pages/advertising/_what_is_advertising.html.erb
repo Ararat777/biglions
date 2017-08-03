@@ -1,0 +1,12 @@
+<h2 class="title">
+  <%= page.name %>
+</h2>
+<div class="row">
+  <% page.indents.each do |item| %>
+    <div class="col-lg-5">
+      <p class="description">
+        <%= item.body %>
+      </p>
+    </div>
+  <%end%>
+</div>

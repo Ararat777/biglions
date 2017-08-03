@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-lg-6">
+    <h2 class="title">
+      <%= page.name %>
+    </h2>
+  </div>
+</div>
+<div class="row">
+      <% page.indents.each do |item| %>
+      <div class="col-lg-4 text-left">
+        <%= image_tag item.image_url, class: 'indent-image img-fluid' %>
+        <h4 class="indent-title"><%= item.title %></h4>
+        <p class="description"><%= item.body %></p>
+      </div>
+      <%end %>
+</div>

@@ -3,6 +3,8 @@ ActiveAdmin.register Category do
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
 # permit_params :list, :of, :attributes, :on, :model
+  menu label: 'Категории',priority: 1
+  
 #
 # or
 #

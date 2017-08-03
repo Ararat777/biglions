@@ -1,3 +1,5 @@
+require 'active_admin/resource_controller'
+
 ActiveAdmin.setup do |config|
   # == Site Title
   #
@@ -269,4 +271,13 @@ ActiveAdmin.setup do |config|
   # of those filters by default here.
   #
   # config.include_default_association_filters = true
+end
+class ActiveAdmin::ResourceController
+  include InheritedResources::DSL
+  create! do |success, failure|
+    success.html { redirect_to collection_url }
+  end
+  update! do |success, failure|
+    success.html { redirect_to collection_url }
+  end
 end
