@@ -2,11 +2,16 @@
   <%= page.name %>
 </h2>
 <div class="row">
-  <% page.indents.each do |item| %>
+  <% page.indents.each_with_index do |item,number| %>
   <div class="col-lg-5 text-left">
     <%= image_tag item.image_url, class: 'indent-image img-fluid' %>
     <h4 class="indent-title"><%= item.title %></h4>
     <p class="description"><%= item.body %></p>
+    <% if number == 1 %>
+    <div class="how_work-button button">
+      Обратится к опытным специалистам
+    </div>
+    <%end%>
   </div>
   <% end %>
   

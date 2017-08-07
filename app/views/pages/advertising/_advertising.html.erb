@@ -1,10 +1,32 @@
-<h2 class="title">
-  <%= page.name %>
-</h2>
+
 <div class="row">
   <div class="col-lg-5">
-    <p class="description">
+   <div class="description-box">
+    <h2 class="title">
+        <%= page.name %>
+    </h2>
+     <p class="description">
       <%= page.indents.first.body %>
     </p>
+   </div>
+  </div>
+  <div class="col-lg-7">
+    <div class="shadow-cloud">
+     <div class="cloud-text">
+       <p class="jdun-text">
+        Все еще ждешь результат от текущих подрядчиков?
+      </p>
+      <h2 class="title">Не жди!</h2>
+      <p class="description">
+        Заполни заявку и получишь профессиональную настройку рекламной компании и скидку 20%
+      </p>
+      <div class="cloud-button button">
+        Заполнить заявку
+      </div>
+     </div>
+    </div>
+    <div class="jdun-image">
+      <%= image_tag '/assets/jdun.png', class: 'img-fluid' %>
+    </div>
   </div>
 </div>

@@ -13,6 +13,7 @@
     <p class="description">
       <%= page.indents.first.body %>
     </p>
+   
   </div>
   <div class="col-lg-4 offset-lg-1">
    <div class="category-box">
@@ -20,9 +21,6 @@
       <% @category.categories.each do |item| %>
         <%= link_to item.name,services_sub_category_path(page.title,item.title) %>
       <% end %>
-    </div>
-    <div class="advancement-button button">
-      Оставить заявку на PROдвижение
     </div>
    </div>
   </div>
