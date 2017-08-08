@@ -608,7 +608,7 @@ a,a:focus,a:visited{
         left: 0;
         margin: 0;
         padding: 0;
-        transition: 0.7s ease;
+        transition: 0.5s ease;
         .slide-item{
           
           display: inline;
@@ -870,8 +870,13 @@ a,a:focus,a:visited{
     }
   }
   .about.slider{
-    background: url('/assets/crew-about.png') no-repeat;
-    background-size: cover;
+    background: url('/assets/about-blured.png') no-repeat;
+    background-size: 112%;
+    background-position: center;
+    .slide-content.team{
+      background: url('/assets/crew-about.png') no-repeat;
+      background-size: cover;
+    }
   }
   .show-more.button{
       display: table;
@@ -924,8 +929,13 @@ a,a:focus,a:visited{
   }
   
   .marketing.slider{
-    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/marketing.jpg') no-repeat;
+    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/marketing-blured.png') no-repeat;
+      background-size: 112%;
+      background-position: center;
+    .slide-content.marketing{
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/marketing.jpg') no-repeat;
       background-size: cover;
+    }
     .slide-content{
       &.price{
         .title{
@@ -987,8 +997,13 @@ a,a:focus,a:visited{
     }
   }
   .advertising.slider{
-    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/advertising.png') no-repeat;
+    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/advertising-blured.png') no-repeat;
+      background-size: 112%;
+      background-position: center;
+    .slide-content.advertising{
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/advertising.png') no-repeat;
       background-size: cover;
+    }
     .price-box{
       padding: 15px;
       background: rgba(0,0,0,0.2);
@@ -1048,8 +1063,13 @@ a,a:focus,a:visited{
     }
   }
   .webdevelopment.slider{
-    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/development.jpg') no-repeat;
+    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/development-blured.png') no-repeat;
+      background-size: 112%;
+      background-position: center;
+    .slide-content.webdevelopment{
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/development.jpg') no-repeat;
       background-size: cover;
+    }
     .show-price-bg{
       width: 100%;
       height: 100%;
