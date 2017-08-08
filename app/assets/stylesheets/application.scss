@@ -840,9 +840,11 @@ a,a:focus,a:visited{
   }
   .main.slider{
     .slide-content.intro-development{
-      .description{
+      .description.first{
         margin-top: 20px;
+        margin-bottom: 20px;
       }
+      
       
     }
     .description.phrase{
@@ -854,6 +856,13 @@ a,a:focus,a:visited{
         font-weight: normal;
         font-style: italic;
       }
+    }
+    .intro-number{
+      margin: 0;
+    }
+    .intro-description{
+      margin-top: 0;
+      margin-bottom: 50px;
     }
     .intro-description.green{
       background-color: #27AE60;
