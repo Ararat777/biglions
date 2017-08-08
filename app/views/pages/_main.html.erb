@@ -1,10 +1,19 @@
 <div class="row">
-      <div class="col-md-4 col-lg-4">
-        <h2 class="title intro-title"><%= page.name %></h2>
+      <div class="col-md-5 col-lg-5">
+       <div class="justify-box">
+         <h2 class="title intro-title"><%= page.name %></h2>
         <p class="description intro-description first"><%= page.indents.first.title %></p>
-        <p class="description intro-description second"><%= page.indents.first.body %></p>
+        <% if page.title == 'intro-marketing' %>
+        <p class="description intro-description phrase">
+          "Делать деньги без рекламы может только монетный двор."<br>
+          <span class="author">Маколей Т.Б.</span>
+        </p>
+        <% else %>
+        <p class="description intro-description second <% if page.title == 'intro-development'%> green <% end %>"><%= page.indents.first.body %></p>
+        <% end %>
+       </div>
       </div>
-      <div class="col-lg-6 offset-lg-2">
+      <div class="col-lg-6 offset-lg-1">
         <div class="row">
           <% page.indents.offset(1).each do |item| %>
           <div class="col-md-6">

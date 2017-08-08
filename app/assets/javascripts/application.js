@@ -38,7 +38,7 @@ $(document).ready(function(){
   var slideNow = 1
   var translateWidth = 0;
   if(window.location.pathname == '/'){
-    var slideInterval = 4000;
+    var slideInterval = 10000;
     var switchInterval = setInterval(nextSlide,slideInterval);
   }
   $('.nav-btn').first().addClass('active');

@@ -247,6 +247,12 @@ a,a:focus,a:visited{
     }
   }
   .contacts{
+    .phone:hover{
+      background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
     display: inline-flex;
     height: 100%;
     justify-content: center;
@@ -824,7 +830,7 @@ a,a:focus,a:visited{
             background-size: cover;
           }
           .intro-design{
-            background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/intro_1.png');
+            background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/intro_3.png');
             background-size: cover;
           }
           
@@ -833,10 +839,34 @@ a,a:focus,a:visited{
     }
   }
   .main.slider{
-    .slide-content{
+    .slide-content.intro-development{
       .description{
         margin-top: 20px;
       }
+      
+    }
+    .description.phrase{
+       font-size: 18px;
+       line-height: 21px;
+       font-weight: 700;
+       margin-top: 40px;
+      .author{
+        font-weight: normal;
+        font-style: italic;
+      }
+    }
+    .intro-description.green{
+      background-color: #27AE60;
+      padding: 10px;
+      padding-right: 0;
+    }
+    .justify-box{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      
+      flex-direction: column;
     }
   }
   .about.slider{
@@ -1152,7 +1182,7 @@ a,a:focus,a:visited{
       &.active{
         .progress{
           width: 100%;
-        transition: width 4s linear;
+        transition: width 10s linear;
         }
         
       }
