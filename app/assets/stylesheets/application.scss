@@ -77,7 +77,7 @@ a,a:focus,a:visited{
           }
         }
         textarea{
-          min-height: 130px;
+          min-height: 156px;
           resize: none;
         }
         #project_file{
@@ -324,6 +324,12 @@ a,a:focus,a:visited{
       align-items: center;
       flex-direction: column;
       margin: auto auto 30px auto;
+      a{
+        margin-bottom: 10px;
+        img{
+          width: 25px;
+        }
+      }
     }
   }
   .top-menu-opened-item{
