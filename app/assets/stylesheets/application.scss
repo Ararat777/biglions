@@ -338,6 +338,7 @@ a,a:focus,a:visited{
       position: relative;
       
       h4{
+        margin: 0;
         a{
             color: transparent;
         }
@@ -350,6 +351,7 @@ a,a:focus,a:visited{
         font-weight: 900;
       }
       .top-menu-item-hovered{
+        
         width: 100%;
         height: 100%;
         position: absolute;
@@ -430,7 +432,7 @@ a,a:focus,a:visited{
           position: absolute;
           color: #000;
           background-image: none;
-          top: 5%;
+          top: calc(((19.2% + 6px) / 2) - (39px / 2));
           animation: h4Top 1s linear;
           z-index: 1;
           a{
@@ -592,8 +594,8 @@ a,a:focus,a:visited{
 }
 
 @keyframes h4Top{
-  0%{top:42%}
-  100%{color:#000;background-image:none;top:5%}
+  0%{top: calc(37% + ((19.2% + 6px) / 2) - (39px / 2))}
+  100%{color:#000;background-image:none;top: calc(((19.2% + 6px) / 2) - (39px / 2))}
 }
 
 @keyframes overlayVisible{
