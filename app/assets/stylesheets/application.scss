@@ -432,6 +432,8 @@ a,a:focus,a:visited{
           position: absolute;
           color: #000;
           background-image: none;
+          width: 100%;
+          text-align: center;
           top: calc(((19.2% + 6px) / 2) - (39px / 2));
           animation: h4Top 1s linear;
           z-index: 1;
