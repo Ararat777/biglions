@@ -389,8 +389,39 @@ a,a:focus,a:visited{
           justify-content: center;
           align-items: center;
           color: #fff;
+          .category-link{
+            text-align: center;
+            position: relative;
+            
+          }
+          .sub-categories-links-box{
+            position: relative;
+            border-top: 1px solid transparent;
+            border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+            border-image-slice: 1;
+            width: 80%;
+            margin: auto;
+            display: none;
+          }
+          .sub-categories-links{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            a{
+              font-size: 14px;
+              font-weight: normal;
+              line-height: 16px;
+              opacity: 0.7;
+              margin-top: 5px;
+            }
+          }
           a,p{
+            margin-top: 10px;
             font-size: 18px;
+            line-height: 17px;
+            font-weight: 700;
             color: #fff;
             opacity: 0;
             

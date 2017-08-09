@@ -147,7 +147,12 @@ $(document).ready(function(){
     
   }
   
- 
+ $('.category-link').on('mouseenter',function(){
+  
+  $(this).children('.sub-categories-links-box').stop().slideDown();
+ }).on('mouseleave',function(){
+   $(this).children('.sub-categories-links-box').stop().slideUp();
+ });
   
   
 });
