@@ -120,6 +120,9 @@ $(document).ready(function(){
       prevSlide();
     }
   });
+  $('.slide-next').click(function(){
+    nextSlide();
+  });
   
  $('.modal-btn').on("click",function(){
     $('.modal_box').fadeIn();

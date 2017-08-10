@@ -151,7 +151,7 @@ a,a:focus,a:visited{
   z-index: 1;
   .menu{
     width: 100%;
-    margin-left: 100px;
+    margin-left: 50px;
     position: relative;
   }
   .hamburger{
@@ -650,7 +650,17 @@ a,a:focus,a:visited{
   .slider{
     width: 100%;
     margin: 0;
-    
+    .justify-box{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      
+      flex-direction: column;
+      &.horizontal{
+        flex-direction: row;
+      }
+    }
     .viewport{
       width: 100%;
       
@@ -677,7 +687,7 @@ a,a:focus,a:visited{
           float: left;
           
           .slide-content{
-            padding-left: 175px;
+            padding-left: 125px;
             height: 100vh;
             overflow: hidden;
             position: relative;
@@ -712,6 +722,7 @@ a,a:focus,a:visited{
             }
             &.work{
               .number{
+                margin-right: 10px;
                 line-height: 84px;
                 font-size: 72px;
                 font-weight: 900;
@@ -932,14 +943,7 @@ a,a:focus,a:visited{
       padding-right: 0;
       text-align: center;
     }
-    .justify-box{
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      
-      flex-direction: column;
-    }
+    
   }
   .about.slider{
     background: url('/assets/about-blured.png') no-repeat;
@@ -954,7 +958,7 @@ a,a:focus,a:visited{
       display: table;
       height: auto;
       margin: 0;
-      background: transparent;
+     
       color: #fff;
       text-decoration: none;
     }
