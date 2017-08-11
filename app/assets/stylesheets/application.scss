@@ -646,7 +646,7 @@ a,a:focus,a:visited{
   width: 100%;
   
   position: relative;
-  
+  overflow: hidden;
   .slider{
     width: 100%;
     margin: 0;
@@ -1164,6 +1164,75 @@ a,a:focus,a:visited{
       justify-content: center;
       align-items: center;
     }
+    .questions-container{
+      &::-webkit-scrollbar-track
+      {
+        
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar
+      {
+          width: 4px;
+          background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb
+      {
+          
+          background: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);;
+      }
+      max-height: 400px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      .row{
+        margin-bottom: 20px;
+      }
+      .row:last-child{
+        margin-bottom: 0;
+      }
+      .question-box{
+        position: relative;
+        
+        background: rgba(0,0,0,0.2);
+        
+       
+        .question-row{
+          height: 62px;
+          display: flex;
+          flex-direction: row;
+        }
+        .answer{
+          display: none;
+          width: 100%;
+          color: #fff;
+          line-height: 21px;
+          font-size: 16px;
+          margin-left: 5%;
+          padding-bottom: 20px;
+        }
+        
+        .switch{
+          width: 5%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+        .question{
+          display: flex;
+          align-items: center;
+          text-align: left;
+          color: #fff;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 31px;
+          height: 100%;
+        }
+      }
+     
+    }
     .adaptive.form-box{
       padding: 20px;
       border: 1px solid white;
@@ -1248,11 +1317,11 @@ a,a:focus,a:visited{
   
   
   .navigation{
-    position: absolute;
+    position: fixed;
+  
+    display: flex;
     width: 100%;
-    display: inline-flex;
-    left: 0;
-    right: 0;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     bottom: 30px;
