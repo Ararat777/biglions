@@ -151,7 +151,7 @@ a,a:focus,a:visited{
   z-index: 1;
   .menu{
     width: 100%;
-    margin-left: 50px;
+    margin-left: 25px;
     position: relative;
   }
   .hamburger{
@@ -687,7 +687,7 @@ a,a:focus,a:visited{
           float: left;
           
           .slide-content{
-            padding-left: 125px;
+            padding-left: 100px;
             height: 100vh;
             overflow: hidden;
             position: relative;
@@ -888,7 +888,7 @@ a,a:focus,a:visited{
       .indent-title{
         color: #fff;
         font-size: 20px;
-        line-height: 25px;
+        line-height: 23px;
         font-weight: 700;
         margin: 0;
       }
@@ -1270,6 +1270,40 @@ a,a:focus,a:visited{
         }
     }
     }
+  }
+  .design.slider{
+    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/design.jpg') no-repeat;
+    background-size: cover;
+    .design-button{
+      display: table;
+    }
+  }
+  .prototyping.slider{
+    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/prototype-blured.png') no-repeat;
+      background-size: 112%;
+      background-position: center;
+    .slide-content.prototyping .title{
+      margin-top: 20px;
+    }
+    .slide-content.site_prototype{
+      .indent-title{
+        margin-left: 10px !important;
+        
+      }
+      .row{
+        margin-bottom: 20px;
+      }
+      .justify-box{
+        align-items: center;
+        margin-bottom: 20px;
+      }
+    }
+    .slide-content.what_is_prototype,.slide-content.price{
+      .button{
+        display: table;
+      }
+    }
+    
   }
   .contacts{
     width: 100%;

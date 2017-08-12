@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-lg-6">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="service-image">
+          <%= image_tag page.indents.first.image_url,class: 'img-fluid' %>
+        </div>
+      </div>
+    </div>
+    <h2 class="title">
+      <%= page.name %>
+    </h2>
+    <p class="description">
+      <%= page.indents.first.body %>
+    </p>
+    
+  </div>
+  <div class="col-lg-4 offset-lg-1">
+   <div class="category-box">
+     <div class="sub-categories">
+      <% @category.categories.each do |item| %>
+        <%= link_to item.name,services_sub_category_path(page.title,item.title) %>
+      <% end %>
+      
+    </div>
+    <div class="design-button button">
+      Узнать цены
+    </div>
+   </div>
+  </div>
+</div>
