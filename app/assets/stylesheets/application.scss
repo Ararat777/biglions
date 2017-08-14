@@ -876,7 +876,7 @@ a,a:focus,a:visited{
       .project-box.show-all{
         justify-content: center;
         .show-all-projects.button{
-          display: table;
+          
           
           height: 54px;
           margin: auto;
@@ -955,7 +955,7 @@ a,a:focus,a:visited{
     }
   }
   .show-more.button{
-      display: table;
+      
       height: auto;
       margin: 0;
      
@@ -1275,16 +1275,14 @@ a,a:focus,a:visited{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/design.jpg') no-repeat;
     background-size: cover;
     .design-button{
-      display: table;
+      
     }
   }
   .prototyping.slider{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/prototype-blured.png') no-repeat;
       background-size: 112%;
       background-position: center;
-    .slide-content.prototyping .title{
-      margin-top: 20px;
-    }
+    
     .slide-content.site_prototype{
       .indent-title{
         margin-left: 10px !important;
@@ -1298,13 +1296,23 @@ a,a:focus,a:visited{
         margin-bottom: 20px;
       }
     }
-    .slide-content.what_is_prototype,.slide-content.price{
-      .button{
-        display: table;
-      }
-    }
+    
     
   }
+  .redesign.slider{
+    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/redesign-blured.png') no-repeat;
+      background-size: 112%;
+      background-position: center;
+    
+  }
+  .branding.slider{
+    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/branding-blured.png') no-repeat;
+      background-size: 112%;
+      background-position: center;
+  }
+  .slide-content.prototyping .title,.slide-content.redesign .title,.slide-content.branding .title{
+      margin-top: 20px;
+    }
   .contacts{
     width: 100%;
     height: 100vh;
@@ -1517,9 +1525,8 @@ a,a:focus,a:visited{
       
       padding: 10.5px 30px;
       height: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      display: table;
+      
       
       &:hover{
             background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
