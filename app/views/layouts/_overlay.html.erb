@@ -21,9 +21,15 @@
                   <%= link_to item.name,services_category_path(item.title) %>
                 <div class="sub-categories-links-box <%= item.title %>">
                  <div class="sub-categories-links">
-                   <% item.categories.each do |sub_item| %>
-                  <%= link_to sub_item.name,services_sub_category_path(item.title,sub_item.title) %>
-                  <% end %>
+                  <div class="row">
+                    <% item.categories.in_groups_of(3,false).each do |group| %>
+                    <% group.each do |sub_item| %>
+                    <div class="col-lg-6">
+                      <%= link_to sub_item.name,services_sub_category_path(item.title,sub_item.title) %>
+                    </div>
+                    <% end %>
+                    <% end %>
+                  </div>
                  </div>
                 </div>
                 </div>
@@ -54,11 +60,11 @@
             </div>
           </div>
           <div class="top-menu-item contacts">
-            <h4>Контакты</h4>
+            <h4><%= link_to 'Контакты', contacts_path %></h4>
             <div class="top-menu-item-hovered">
               <div class="top-battlements"></div>
               <div class="menu-item">
-                <p class="mobile">(094) <b>342-51-63</b></p>
+                <p class="mobile"><a href="tel:+380943425163">(094) <b>342-51-63</b></a></p>
                 <a href="#">info@biglions.org</a>
                 <a href="#"><%= image_tag '/assets/icon-scype.svg',class: 'img-fluid' %> biglions</a>
                 <p>Украина, г.Харьков, ул.Грековская 5 </p>
@@ -92,7 +98,7 @@
             <% end %>
           </div>
           <div class="input-group">
-            <%= f.submit 'Обсудить проект', class: 'btn btn-primary' %>
+            <%= f.submit 'Обсудить проект', class: 'btn btn-primary button' %>
           </div>
           <% end %>
           <p class="agreement">Отправляя форму, вы соглашаетесь с "Правилами поведения", и положением о переписи квартиры.</p>

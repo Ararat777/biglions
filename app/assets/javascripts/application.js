@@ -127,11 +127,15 @@ $(document).ready(function(){
  $('.modal-btn').on("click",function(){
     $('.modal_box').fadeIn();
   })
+ $('.close-modal-form').on("click",function(){
+    $('.modal_box').fadeOut();
+  })
   $(window).on("click",function(event){
-    if(event.target.className == 'modal_box'){
+    if(event.target.className == 'modal_box' || event.target.className == 'bg'){
       $('.modal_box').fadeOut();
     }
   })
+  
   if(window.location.hash){
     var anchor = window.location.hash
     window.location.hash = ''
@@ -168,21 +172,7 @@ $(document).ready(function(){
      $(this).find("img").attr("src","/assets/arrow-down.svg");
    }
  })
- var initialFillValue = 0;
- var config1 = liquidFillGaugeDefaultSettings();
-    config1.circleColor = "white";
-    config1.textColor = "white";
-    config1.waveTextColor = "#white";
-    config1.waveColor = "#fff892";
-    config1.circleFillGap = 0;
-    config1.circleThickness = 0.05;
-    config1.textVertPosition = 0.5;
-    config1.waveAnimateTime = 1000;
-    config1.displayPercent = false;
-    config1.minValue = 0;
-    config1.maxValue = 400;
  
- var gauge1 = loadLiquidFillGauge("fillgauge1", initialFillValue,config1);
  var currentInputValue = '';
  $(".gift.form-box input,.gift.form-box textarea").on("click",function(){
    currentInputValue = $(this).val();
@@ -200,6 +190,12 @@ $(document).ready(function(){
    }
    
  });
+ $('.map-button').on("click",function(){
+   $('.map-box').fadeIn();
+ });
+ $('.close-map').on("click",function(){
+   $('.map-box').fadeOut();
+ })
   
   
   
