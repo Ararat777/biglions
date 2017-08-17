@@ -51,7 +51,7 @@ $(document).ready(function(){
     }else{
       
       translateWidth = -$('.viewport').width() * slideNow;
-      $('.slidewrapper').css({
+      $('.slidewrapper').finish().css({
          'transform': 'translate(' + translateWidth + 'px, 0)',
          '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
          '-ms-transform': 'translate(' + translateWidth + 'px, 0)'
@@ -195,7 +195,18 @@ $(document).ready(function(){
  });
  $('.close-map').on("click",function(){
    $('.map-box').fadeOut();
- })
+ });
+ 
+ $(window).on('mousewheel', function(event){
+   if(event.deltaY > 0){
+     
+      prevSlide();
+   }else if(event.deltaY < 0){
+    
+     nextSlide();
+   }
+   
+ });
   
   
   
