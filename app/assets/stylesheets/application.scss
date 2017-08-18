@@ -50,6 +50,7 @@ body{
 .liquidFillGaugeText { font-family: 'Proxima Nova',sans-serif; font-weight: 900; }
 a,a:focus,a:visited{
   text-decoration: none;
+  
 }
 .modal-form-box,.form-box{
   
@@ -726,12 +727,18 @@ a,a:focus,a:visited{
                 margin-top: 20px;
               }
             .title{
+              margin-bottom: 20px;
               font-weight: 900;
               font-size: 44px;
               line-height: 45px;
               text-transform: uppercase;
               color: #fff;
               
+            }
+            &.design,&.webdevelopment,&.marketing{
+              .title{
+                margin-top: 20px;
+              }
             }
             .description{
               font-size: 18px;
@@ -778,11 +785,13 @@ a,a:focus,a:visited{
                   font-size: 18px;
                   line-height: 23px;
                   color: rgba(255,255,255,0.5);
+                  
                 }
                 p{
                   font-size: 16px;
                   line-height: 21px;
                   color: #fff;
+                  margin-top: 20px;
                 }
               }
             }
@@ -911,7 +920,8 @@ a,a:focus,a:visited{
         font-size: 20px;
         line-height: 23px;
         font-weight: 700;
-        margin: 0;
+        margin: 10px 0 5px 0;
+        
       }
           }
           .intro-development{
@@ -976,10 +986,10 @@ a,a:focus,a:visited{
     }
   }
   .show-more.button{
-      
+      color: white;
       height: auto;
       margin: 0;
-      width: 40%;
+      width: 80%;
       text-decoration: none;
     }
   .services.slider{
@@ -1047,6 +1057,8 @@ a,a:focus,a:visited{
           margin: 0;
         }
         .title.price{
+          margin-top: 0;
+          margin-bottom: 20px;
           background-color: #EB5757;
           display: inline-block;
           padding: 0 5px;
@@ -1135,6 +1147,9 @@ a,a:focus,a:visited{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        .title{
+          margin-top: 0 !important;
+        }
         .description{
           font-size: 16px !important;
         }
@@ -1531,7 +1546,27 @@ a,a:focus,a:visited{
      }
     
    
-   }     
+   }
+  .sales{
+    display: flex;
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 50px;
+    background: #EB5757;
+    color: white;
+    font-size: 18px;
+    line-height: 21px;
+    box-shadow: 4px 10px 20px rgba(235, 87, 87, 0.5);
+    span{
+      margin-right: 10px;
+      font-size: 48px;
+      line-height: 56px;
+      font-weight: 900;
+    }
+  }
      
 }
 .modal_box{
