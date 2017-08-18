@@ -34,7 +34,7 @@
                <div class="row">
             <div class="col-lg-12">
               <div class="input-group">
-                <%= f.submit 'Обсудить проект', class: 'btn btn-primary' %>
+                <%= f.submit 'Обсудить проект', class: 'button' %>
               </div>
             </div>
               </div>
@@ -95,4 +95,10 @@ var initialFillValue = 0;
     config1.maxValue = 400;
  
  var gauge1 = loadLiquidFillGauge("fillgauge1", initialFillValue,config1);
+  $(".gift.form-box input[type=text],.gift.form-box textarea").each(function(){
+   if($(this).val()){
+     initialFillValue += 100;
+   }
+    gauge1.update(initialFillValue);
+  });
 </script>

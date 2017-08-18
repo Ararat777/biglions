@@ -174,19 +174,23 @@ $(document).ready(function(){
  })
  
  var currentInputValue = '';
- $(".gift.form-box input,.gift.form-box textarea").on("click",function(){
+ $(".gift.form-box input[type=text],.gift.form-box textarea").on("click",function(){
    currentInputValue = $(this).val();
    
- })  
- $(".gift.form-box input,.gift.form-box textarea").on("change", function(){
+ })
+ $(".gift.form-box input[type=text],.gift.form-box textarea").on("input", function(){
    if($(this).val()){
      if(!currentInputValue){
        initialFillValue += 100;
        gauge1.update(initialFillValue);
      }
+     currentInputValue = $(this).val();
+     
    }else{
      initialFillValue -= 100;
      gauge1.update(initialFillValue);
+     currentInputValue = $(this).val();
+     
    }
    
  });
@@ -197,16 +201,28 @@ $(document).ready(function(){
    $('.map-box').fadeOut();
  });
  
- $(window).on('mousewheel', function(event){
-   if(event.deltaY > 0){
+  if(window.location.pathname != '/'){
+     $('.slider').on('mousewheel', function(event){
+        if(event.deltaY > 0){
      
-      prevSlide();
-   }else if(event.deltaY < 0){
+          prevSlide();
+        }else if(event.deltaY < 0){
     
-     nextSlide();
-   }
+          nextSlide();
+        }
    
- });
+      });
+    $(window).on("keydown", function(event){
+      if(event.which == 37){
+        prevSlide();
+      }else if(event.which == 39){
+        nextSlide();
+      }
+      
+    });
+    
+  }
+
   
   
   
