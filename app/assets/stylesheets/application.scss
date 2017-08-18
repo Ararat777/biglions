@@ -1054,11 +1054,11 @@ a,a:focus,a:visited{
     .slide-content{
       &.price{
         .title{
-          margin: 0;
+          margin-bottom: 0 !important;
         }
         .title.price{
           margin-top: 0;
-          margin-bottom: 20px;
+          margin-bottom: 20px !important;
           background-color: #EB5757;
           display: inline-block;
           padding: 0 5px;
