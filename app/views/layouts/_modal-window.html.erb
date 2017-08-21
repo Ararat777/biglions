@@ -3,11 +3,11 @@
     <div class="modal-form-box">
       <div class="container">
         <div class="row">
-          <div class="col-lg-10 offset-lg-1">
+          <div class="col-md-10 offset-md-1">
             <h2>Обсудить проект</h2>
           <%= form_for :project,url: '#' do |f| %>
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-md-6">
                 <div class="input-group">
                   <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?' %>
                 </div>
@@ -18,7 +18,7 @@
                   <%= f.text_field :email, class: 'form-control',placeholder: 'Электронная почта' %>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6">
               <div class="input-group">
                <%= f.text_area :comment, class: 'form-control',placeholder: 'Опишите кратко свой проект' %>
               </div>
@@ -26,7 +26,7 @@
             <div class="actions">
              <div class="container">
                <div class="row">
-                <div class="col-lg-6">
+                <div class="col-md-6">
               <div class="input-group file">
                 <%= f.file_field :file, class: 'form-control' %>
                 <%= f.label :file do %>
@@ -35,7 +35,7 @@
                 <% end %>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-md-6">
               <div class="input-group">
                 <%= f.submit 'Обсудить проект', class: 'button' %>
               </div>

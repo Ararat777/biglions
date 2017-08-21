@@ -2,15 +2,15 @@
   <%= page.name %>
 </h2>
 <div class="row">
-  <div class="col-lg-4">
+  <div class="col-md-4">
     <p class="description">
       <%= page.indents.first.body %>
     </p>
   </div>
-  <div class="col-lg-8">
+  <div class="col-md-8">
     <div class="row">
       <% page.indents.offset(1).each do |item| %>
-      <div class="col-lg-6 text-center">
+      <div class="col-md-6 text-center">
         <%= image_tag item.image_url, class: 'indent-image img-fluid' %>
         <h4 class="indent-title"><%= item.title %></h4>
         <p class="description"><%= item.body %></p>

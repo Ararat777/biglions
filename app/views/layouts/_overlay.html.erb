@@ -24,7 +24,7 @@
                   <div class="row">
                     <% item.categories.in_groups_of(3,false).each do |group| %>
                     <% group.each do |sub_item| %>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                       <%= link_to sub_item.name,services_sub_category_path(item.title,sub_item.title) %>
                     </div>
                     <% end %>

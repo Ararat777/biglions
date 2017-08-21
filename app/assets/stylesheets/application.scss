@@ -1431,21 +1431,22 @@ a,a:focus,a:visited{
   
   
   .navigation{
-    position: fixed;
-  
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
+    position: absolute;
+    white-space: nowrap;
     align-items: center;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
     bottom: 30px;
     z-index: 1;
     .nav-item{
+      display: inline-block;
        margin-left: 10px;
        &:first-child{
          margin-left: 0;
        }
      }
+    
     .progress-bar{
       width: 157px;
       height: 5px;
@@ -1469,16 +1470,20 @@ a,a:focus,a:visited{
     }
     .slideBtn{
       position: relative;
-       height: 44px;
-       color: white;
+       
        font-size: 16px;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       padding: 0 10px;
+       
+        border-right: 1px solid transparent;
+        border-left: 1px solid transparent;
+       padding: 10px 10px;
        cursor: pointer;
+      span{
+        color: white;
+      }
       &.active{
         background-color: #000;
+        border-right-color: #000;
+        border-left-color: #000;
       }
        &:not(:first-child):not(:last-child).active{
          
@@ -1488,7 +1493,7 @@ a,a:focus,a:visited{
            height: 0;
            position: absolute;
            top: 0;
-           right: -14px;
+           right: -15px;
            z-index: 1;
            border-top: 22px solid transparent;
 	       border-left: 14px solid #000;
@@ -1500,7 +1505,7 @@ a,a:focus,a:visited{
            height: 0;
            position: absolute;
            top: 0;
-           left: -14px;
+           left: -15px;
            z-index: 1;
            border-top: 22px solid transparent;
 	       border-right: 14px solid #000;
@@ -1520,7 +1525,7 @@ a,a:focus,a:visited{
            height: 0;
            position: absolute;
            top: 0;
-           right: -14px;
+           right: -15px;
            z-index: 1;
            border-top: 22px solid transparent;
 	       border-left: 14px solid #000;
@@ -1532,7 +1537,7 @@ a,a:focus,a:visited{
            height: 0;
            position: absolute;
            top: 0;
-           left: -14px;
+           left: -15px;
            z-index: 1;
            border-top: 22px solid transparent;
 	       border-right: 14px solid #000;
@@ -1543,6 +1548,7 @@ a,a:focus,a:visited{
        width: 24px;
        height: 2px;
        background: #000;
+       
      }
     
    
