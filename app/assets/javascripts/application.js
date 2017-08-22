@@ -16,7 +16,7 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-$(document).ready(function(){
+$(window).on('load',function(){
   function getDecimal(number){
     return number - parseInt(number);
   }
@@ -35,16 +35,17 @@ $(document).ready(function(){
   }else{
     $('.slide-item').css("width", (100 / slideCount) + '%');
   }
-  var slideNow = 1
+  var slideNow = 1;
   var translateWidth = 0;
+  
   if($('.navigation').width() > $(window).width()){
     var translateDelta = 0;
     var delta = $('.navigation').width() - $(window).width();
     var delta2 = 0;
     var middleWindow = $(window).width() / 2;
     var btnMiddlePosition = 0;
+    
   }
-  
   if(window.location.pathname == '/'){
     var slideInterval = 10000;
     var switchInterval = setInterval(nextSlide,slideInterval);
@@ -52,22 +53,20 @@ $(document).ready(function(){
   $('.nav-btn').first().addClass('active');
   function nextSlide(){
     if(slideNow == slideCount || slideNow <= 0 || slideNow > slideCount){
-      $('.slidewrapper').css('transform','translate(0,0)');
+      $('.slidewrapper').css('left','0');
       slideNow = 1
       $('.nav-btn').last().removeClass('active');
       $('.nav-btn').first().addClass('active');
       if($('.navigation').width() > $(window).width()){
         
         translateDelta = 0;
-        $('.navigation').css('transform','translateX(0)');
+        $('.navigation').css('left','0');
       }
     }else{
       
       translateWidth = -$('.viewport').width() * slideNow;
-      $('.slidewrapper').finish().css({
-         'transform': 'translate(' + translateWidth + 'px, 0)',
-         '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-         '-ms-transform': 'translate(' + translateWidth + 'px, 0)'
+      $('.slidewrapper').css({
+         'left': translateWidth + 'px'
        });
       $('.btn' + slideNow).removeClass('active');
       slideNow++;
@@ -80,7 +79,9 @@ $(document).ready(function(){
         
         
         btnMiddlePosition = $('.nav-btn.active').offset().left + ($('.nav-btn.active').width() / 2);
+        
         if(delta >= Math.abs($('.navigation').offset().left) && btnMiddlePosition > middleWindow){
+          
           delta2 = delta - Math.abs($('.navigation').offset().left);
           if((btnMiddlePosition - middleWindow) > delta2){
             translateDelta -= delta2;
@@ -88,9 +89,7 @@ $(document).ready(function(){
             translateDelta -= (btnMiddlePosition - middleWindow);
           }
             $('.navigation').css({
-            'transform': 'translate(' + translateDelta + 'px, 0)',
-            '-webkit-transform': 'translate(' + translateDelta + 'px, 0)',
-            '-ms-transform': 'translate(' + translateDelta + 'px, 0)'
+            'left': translateDelta + 'px'
           })
         }
       }
@@ -103,13 +102,11 @@ $(document).ready(function(){
       slideNow = slideCount;
       translateWidth = -$('.viewport').width() * (slideNow - 1);
       $('.slidewrapper').css({
-         'transform': 'translate(' + translateWidth + 'px, 0)',
-         '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-         '-ms-transform': 'translate(' + translateWidth + 'px, 0)'
+         'left': translateWidth + 'px' 
        });
       $('.btn' + slideNow).addClass('active');
       if($('.navigation').width() > $(window).width()){
-        $('.navigation').css('transform','translateX(' + -delta + 'px)');
+        $('.navigation').css('left', -delta + 'px');
         translateDelta = -delta;
       } 
       
@@ -119,9 +116,7 @@ $(document).ready(function(){
       slideNow--;
       translateWidth = -$('.viewport').width() * (slideNow - 1);
       $('.slidewrapper').css({
-         'transform': 'translate(' + translateWidth + 'px, 0)',
-         '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-         '-ms-transform': 'translate(' + translateWidth + 'px, 0)'
+         'left': translateWidth + 'px'
        });
       $('.btn' + slideNow).addClass('active');
       if($('.navigation').width() > $(window).width()){
@@ -133,10 +128,8 @@ $(document).ready(function(){
             translateDelta += (middleWindow - btnMiddlePosition);
           }
           $('.navigation').css({
-           'transform': 'translate(' + translateDelta + 'px, 0)',
-           '-webkit-transform': 'translate(' + translateDelta + 'px, 0)',
-           '-ms-transform': 'translate(' + translateDelta + 'px, 0)'
-          })
+           'left': translateDelta + 'px'
+          });
         }
       }
       
@@ -148,9 +141,7 @@ $(document).ready(function(){
      if(barNumber != slideNow){
        translateWidth = -$('.viewport').width() * (barNumber - 1);
        $('.slidewrapper').css({
-         'transform': 'translate(' + translateWidth + 'px, 0)',
-         '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-         '-ms-transform': 'translate(' + translateWidth + 'px, 0)'
+         'left': translateWidth + 'px'
        });
        $('.btn' + slideNow).removeClass('active');
        slideNow = barNumber;
@@ -170,9 +161,7 @@ $(document).ready(function(){
           translateDelta -= (btnMiddlePosition - middleWindow);
         }
         $('.navigation').css({
-          'transform': 'translate(' + translateDelta + 'px, 0)',
-         '-webkit-transform': 'translate(' + translateDelta + 'px, 0)',
-         '-ms-transform': 'translate(' + translateDelta + 'px, 0)'
+          'left': translateDelta + 'px'
         })
       }else if(Math.abs($('.navigation').offset().left) > 0 && btnMiddlePosition < middleWindow){
         if((middleWindow - btnMiddlePosition) > Math.abs($('.navigation').offset().left)){
@@ -181,9 +170,7 @@ $(document).ready(function(){
           translateDelta += middleWindow - btnMiddlePosition;
         }
         $('.navigation').css({
-         'transform': 'translate(' + translateDelta + 'px, 0)',
-         '-webkit-transform': 'translate(' + translateDelta + 'px, 0)',
-         '-ms-transform': 'translate(' + translateDelta + 'px, 0)'
+         'left': translateDelta + 'px'
         })
       }
     }
@@ -218,9 +205,7 @@ $(document).ready(function(){
     var barNumber = +$(anchor).data("number");
     translateWidth = -$('.viewport').width() * (barNumber - 1);
     $('.slidewrapper').css({
-         'transform': 'translate(' + translateWidth + 'px, 0)',
-         '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-         '-ms-transform': 'translate(' + translateWidth + 'px, 0)'
+         'left': translateWidth + 'px'
     });
     $('.btn' + slideNow).removeClass('active');
     

@@ -74,7 +74,7 @@ a,a:focus,a:visited{
           padding: 10px;
           background: #060606;
           &:focus{
-            border: 1px solid transparent;
+            border: 1px solid;
             border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
             border-image-slice: 1;
           }
@@ -95,7 +95,7 @@ a,a:focus,a:visited{
           font-family: "Proxima Nova Condensed", sans-serif;
           background-color: #000;
           cursor: pointer;
-          border: 1px solid transparent;
+          border: 1px solid;
           border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
           border-image-slice: 1;
           padding: 12.5px 7px;
@@ -111,7 +111,7 @@ a,a:focus,a:visited{
           }
         }
         input[type=submit]{
-          border: 3px solid transparent;
+          border: 3px solid;
           border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
           border-image-slice: 1;
           background: transparent;
@@ -174,8 +174,7 @@ a,a:focus,a:visited{
       display: inline-block;
       width: 30px;
       height: 30px;
-      border-top: 3px solid transparent;
-      border-bottom: 3px solid transparent;
+      border-width: 3px 0 3px 0;
       border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
       border-image-slice: 1;
       .middle-line{
@@ -221,7 +220,7 @@ a,a:focus,a:visited{
         opacity: 0;
         width: 30px;
         height: 30px;
-        border: 3px solid transparent;
+        border: 3px solid;
         border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
         border-image-slice: 1;
         transition: visibility 1.2s, opacity 1.2s,transform .5s .5s;
@@ -245,7 +244,7 @@ a,a:focus,a:visited{
     height: 100%;
   }
   .higher{
-    height: 100%;
+    height: 72px;
   }
   .logo{
     display: inline-flex;
@@ -369,6 +368,8 @@ a,a:focus,a:visited{
         position: absolute;
         visibility: hidden;
         opacity: 0;
+        top: 0;
+        left: 0;
         transition: opacity 0.5s linear;
         display: flex;
         justify-content: center;
@@ -405,7 +406,7 @@ a,a:focus,a:visited{
           }
           .sub-categories-links-box{
             position: relative;
-            border-top: 1px solid transparent;
+            border-width: 1px 0 0 0;
             border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
             border-image-slice: 1;
             width: 80%;
@@ -485,6 +486,7 @@ a,a:focus,a:visited{
           color: #000;
           background-image: none;
           width: 100%;
+          left: 0;
           text-align: center;
           top: calc(((19.2% + 6px) / 2) - (39px / 2));
           animation: h4Top 1s linear;
@@ -567,7 +569,7 @@ a,a:focus,a:visited{
           padding: 10px;
           background: #060606;
           &:focus{
-            border: 1px solid transparent;
+            border: 1px solid;
             border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
             border-image-slice: 1;
           }
@@ -588,7 +590,7 @@ a,a:focus,a:visited{
           font-family: "Proxima Nova Condensed", sans-serif;
           background-color: #000;
           cursor: pointer;
-          border: 1px solid transparent;
+          border: 1px solid;
           border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
           border-image-slice: 1;
           padding: 8px 7px;
@@ -603,7 +605,7 @@ a,a:focus,a:visited{
           }
         }
         input[type=submit]{
-          border: 3px solid transparent;
+          border: 3px solid;
           border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
           border-image-slice: 1;
           background: transparent;
@@ -807,7 +809,7 @@ a,a:focus,a:visited{
             }
             .sub-categories{
               padding-left: 10px;
-              border-left: 3px solid transparent;
+              border-width: 0 0 0 3px;
               border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
               border-image-slice: 1; 
               display: flex;
@@ -850,12 +852,12 @@ a,a:focus,a:visited{
                   display: flex;
                   input[type=text],textarea{
                     border-radius: 0;
-                    border: 1px solid transparent;
+                    border: 1px solid;
                     padding: 10px;
                     color: #fff;
                     background: rgba(6,6,6,0.7);
                     &:focus{
-                      border: 1px solid transparent;
+                      border: 1px solid;
                       border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
                       border-image-slice: 1;
                     }
@@ -863,7 +865,7 @@ a,a:focus,a:visited{
 
                 }
                     input[type=submit]{
-                    border: 3px solid transparent;
+                    border: 3px solid;
                     border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
                     border-image-slice: 1;
                     background: transparent;
@@ -978,7 +980,7 @@ a,a:focus,a:visited{
   }
   .about.slider{
     background: url('/assets/about-blured.png') no-repeat;
-    background-size: 120%;
+    background-size: 110% 110%;
     background-position: center;
     .slide-content.team{
       background: url('/assets/crew-about.png') no-repeat;
@@ -1023,18 +1025,18 @@ a,a:focus,a:visited{
     }
     .webdevelopment{
       background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/development-blured.png') no-repeat;
-      background-size: 120%;
+      background-size: 110% 110%;
       background-position: center;
     }
     .marketing{
       background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/marketing-blured.png') no-repeat;
-      background-size: 120%;
+      background-size: 110% 110%;
       background-position: center;
      
     }
     .design{
       background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/design-blured.png') no-repeat;
-      background-size: 120%;
+      background-size: 110% 110%;
       background-position: center;
     }
     
@@ -1045,7 +1047,7 @@ a,a:focus,a:visited{
   
   .marketing.slider{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/marketing-blured.png') no-repeat;
-      background-size: 120%;
+      background-size: 110% 110%;
       background-position: center;
     .slide-content.marketing{
       background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/marketing.jpg') no-repeat;
@@ -1084,12 +1086,12 @@ a,a:focus,a:visited{
         display: flex;
         input[type=text],textarea{
           border-radius: 0;
-          border: 1px solid transparent;
+          border: 1px solid;
           padding: 10px;
           color: #fff;
           background: rgba(6,6,6,0.5);
           &:focus{
-            border: 1px solid transparent;
+            border: 1px solid;
             border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
             border-image-slice: 1;
           }
@@ -1097,7 +1099,7 @@ a,a:focus,a:visited{
         
       }
           input[type=submit]{
-          border: 3px solid transparent;
+          border: 3px solid;
           border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
           border-image-slice: 1;
           background: transparent;
@@ -1112,7 +1114,7 @@ a,a:focus,a:visited{
   }
   .ppc.slider{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/ppc-blured.png') no-repeat;
-      background-size: 120%;
+      background-size: 110% 110%;
       background-position: center;
     .slide-content.ppc{
       background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/ppc.png') no-repeat;
@@ -1181,7 +1183,7 @@ a,a:focus,a:visited{
   }
   .webdevelopment.slider{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/development-blured.png') no-repeat;
-      background-size: 120%;
+      background-size: 110% 110%;
       background-position: center;
     .slide-content.webdevelopment{
       background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/development.jpg') no-repeat;
@@ -1284,12 +1286,12 @@ a,a:focus,a:visited{
         display: flex;
         input[type=text],textarea{
           border-radius: 0;
-          border: 1px solid transparent;
+          border: 1px solid;
           padding: 10px;
           color: #fff;
           background: rgba(6,6,6,0.5);
           &:focus{
-            border: 1px solid transparent;
+            border: 1px solid;
             border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
             border-image-slice: 1;
           }
@@ -1297,7 +1299,7 @@ a,a:focus,a:visited{
         
       }
           input[type=submit]{
-          border: 3px solid transparent;
+          border: 3px solid;
           border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
           border-image-slice: 1;
           background: transparent;
@@ -1318,7 +1320,7 @@ a,a:focus,a:visited{
   }
   .prototyping.slider{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/prototype-blured.png') no-repeat;
-      background-size: 120%;
+      background-size: 110% 110%;
       background-position: center;
     
     .slide-content.site_prototype{
@@ -1339,13 +1341,13 @@ a,a:focus,a:visited{
   }
   .redesign.slider{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/redesign-blured.png') no-repeat;
-      background-size: 120%;
+      background-size: 110% 110%;
       background-position: center;
     
   }
   .branding.slider{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/branding-blured.png') no-repeat;
-      background-size: 120%;
+      background-size: 110% 110%;
       background-position: center;
   }
   .slide-content.prototyping .title,.slide-content.redesign .title,.slide-content.branding .title{
@@ -1634,7 +1636,7 @@ a,a:focus,a:visited{
       font-family: "Proxima Nova Condensed", sans-serif;
       color: #fff;
       font-size: 16px;
-      border: 3px solid transparent;
+      border: 3px solid;
       border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
       border-image-slice: 1;
       overflow: hidden;
@@ -1654,22 +1656,29 @@ a,a:focus,a:visited{
     width: 100%;
    
     height: 100%;
-    left: 0;
+    left: 100%;
     top: 0;
-    transition: transform 0.2s;
-    transform: translateX(100%);
+    transition: left 0.2s;
     background: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
     z-index: -1;
   }
   &:hover:after{
-    animation: fillButton 0.4s linear;
-    transform: translateX(0);
+    -webkit-animation: fillButton 0.4s linear 1 normal;
+    animation: fillButton 0.4s linear 1 normal;
+    left: 0;
+    left: 0;
+    height: 100%;
   }
 }
+@-webkit-keyframes fillButton{
+  0% {left: 100%;visibility: hidden;}
+  50% {left: -100%;visibility: hidden;}
+  100% {left: 0;visibility: visible;}
+}
 @keyframes fillButton{
-  0%{transform: translateX(100%);visibility: hidden;}
-  50%{transform: translateX(-100%);visibility: hidden;}
-  100%{transform: translateX(0);visibility: visible;}
+  0% {left: 100%;visibility: hidden;}
+  50% {left: -100%;visibility: hidden;}
+  100% {left: 0;visibility: visible;}
 }
   
 
