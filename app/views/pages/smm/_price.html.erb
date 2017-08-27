@@ -1,0 +1,38 @@
+<h2 class="title">
+  <%= page.name %>
+</h2>
+<div class="row">
+  <% category.tariffs.each_with_index do |item,number| %>
+  <% if number == 2 %>
+  <div class="col-md-6">
+    <div class="tariff-box text-center">
+      <h4>
+        <%= item.title %>
+      </h4>
+      <p>
+        <%= raw(item.body) %>
+      </p>
+      <div class="tariff-button button">
+        $<%= item.price %>
+      </div>
+    </div>
+  </div>
+  <% else %>
+  <div class="col-md-3 tariff">
+   <div class="justify-box">
+     <div class="tariff-box text-center">
+      <h4>
+        <%= item.title %>
+      </h4>
+      <p>
+        <%= raw(item.body) %>
+      </p>
+      <div class="tariff-button button">
+        $<%= item.price %>
+      </div>
+    </div>
+   </div>
+  </div>
+  <% end %>
+  <% end %>
+</div>

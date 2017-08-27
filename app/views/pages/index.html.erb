@@ -11,7 +11,7 @@
                 <% if @category.title == 'main' %>
                          <%= render "main",page: page,page_number: number + 1 %>
                        <% else %>
-                         <%= render "pages/#{@category.title}/#{page.title}",page: page %>
+                         <%= render "pages/#{@category.title}/#{page.title}",page: page,category: @category %>
                        <%end %>
              </div>
            </div>

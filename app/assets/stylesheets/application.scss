@@ -726,6 +726,75 @@ a,a:focus,a:visited{
             display: flex;
             justify-content: center;
             align-items: center;
+            .questions-container{
+              &::-webkit-scrollbar-track
+              {
+
+                background-color: transparent;
+              }
+
+              &::-webkit-scrollbar
+              {
+                  width: 4px;
+                  background-color: transparent;
+              }
+
+              &::-webkit-scrollbar-thumb
+              {
+
+                  background: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);;
+              }
+              max-height: 400px;
+              overflow-y: scroll;
+              overflow-x: hidden;
+              .row{
+                margin-bottom: 20px;
+              }
+              .row:last-child{
+                margin-bottom: 0;
+              }
+              .question-box{
+                position: relative;
+
+                background: rgba(0,0,0,0.2);
+
+
+                .question-row{
+                  height: 62px;
+                  display: flex;
+                  flex-direction: row;
+                }
+                .answer{
+                  display: none;
+                  width: 100%;
+                  color: #fff;
+                  line-height: 21px;
+                  font-size: 16px;
+                  margin-left: 5%;
+                  padding-bottom: 20px;
+                }
+
+                .switch{
+                  width: 5%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  cursor: pointer;
+                }
+                .question{
+                  display: flex;
+                  align-items: center;
+                  text-align: left;
+                  color: #fff;
+                  font-weight: 700;
+                  font-size: 24px;
+                  line-height: 31px;
+                  height: 100%;
+                }
+              }
+     
+            }
             
             .line{
                 width: 20%;
@@ -734,7 +803,7 @@ a,a:focus,a:visited{
                 margin-top: 20px;
               }
             .title{
-              margin-bottom: 20px;
+              margin-bottom: 8px;
               font-weight: 900;
               font-size: 44px;
               line-height: 45px;
@@ -1213,75 +1282,7 @@ a,a:focus,a:visited{
       justify-content: center;
       align-items: center;
     }
-    .questions-container{
-      &::-webkit-scrollbar-track
-      {
-        
-        background-color: transparent;
-      }
-
-      &::-webkit-scrollbar
-      {
-          width: 4px;
-          background-color: transparent;
-      }
-
-      &::-webkit-scrollbar-thumb
-      {
-          
-          background: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);;
-      }
-      max-height: 400px;
-      overflow-y: scroll;
-      overflow-x: hidden;
-      .row{
-        margin-bottom: 20px;
-      }
-      .row:last-child{
-        margin-bottom: 0;
-      }
-      .question-box{
-        position: relative;
-        
-        background: rgba(0,0,0,0.2);
-        
-       
-        .question-row{
-          height: 62px;
-          display: flex;
-          flex-direction: row;
-        }
-        .answer{
-          display: none;
-          width: 100%;
-          color: #fff;
-          line-height: 21px;
-          font-size: 16px;
-          margin-left: 5%;
-          padding-bottom: 20px;
-        }
-        
-        .switch{
-          width: 5%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-        }
-        .question{
-          display: flex;
-          align-items: center;
-          text-align: left;
-          color: #fff;
-          font-weight: 700;
-          font-size: 24px;
-          line-height: 31px;
-          height: 100%;
-        }
-      }
-     
-    }
+    
     .adaptive.form-box{
       padding: 20px;
       border: 1px solid white;
@@ -1356,9 +1357,75 @@ a,a:focus,a:visited{
       background-size: 110% 110%;
       background-position: center;
   }
+  .promo_sites.slider{
+    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/promo-sites-blured.png') no-repeat;
+      background-size: 110% 110%;
+      background-position: center;
+    .sales{
+      width: 100%;
+      line-height: 17px;
+      padding: 8px;
+    }
+    .slide-content.why_us{
+      .indent-title{
+        margin-left: 10px !important;
+        
+      }
+      .row{
+        margin-bottom: 20px;
+      }
+      .justify-box{
+        align-items: center;
+        margin-bottom: 20px;
+      }
+    }
+    
+  }
+  .smm.slider{
+    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/smm-blured.png') no-repeat;
+      background-size: 110% 110%;
+      background-position: center;
+    .social-icons{
+      margin-bottom: 10px;
+      img{
+        margin-right: 28px;
+        width: 48px;
+      }
+    }
+    .sales{
+      
+      line-height: 17px;
+      padding: 8px;
+    }
+  }
   .slide-content.prototyping .title,.slide-content.redesign .title,.slide-content.branding .title{
       margin-top: 20px;
     }
+  .slide-content .tariff-box{
+    background: rgba(6,6,6, 0.5);
+    position: relative;
+    padding-top: 30px;
+    
+    h4,.tariff-button{
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 36px;
+      line-height: 34px;
+      font-weight: 900;
+      color: #fff;
+    }
+    h4{
+      margin-bottom: 40px;
+    }
+    p{
+      padding-right: 5px;
+      padding-left: 5px;
+      font-size: 16px;
+      line-height: 19px;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+    
+  }
   .contacts{
     width: 100%;
     height: 100vh;

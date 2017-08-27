@@ -1,8 +1,10 @@
 class PagesController < ApplicationController
+  
   before_action :get_category,except: ['contacts']
   def main
-    
+    puts request.user_agent
     @pages = @category.pages
+    
     render_page
   end
   
