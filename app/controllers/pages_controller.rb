@@ -1,8 +1,9 @@
 class PagesController < ApplicationController
   
   before_action :get_category,except: ['contacts']
+  
   def main
-    puts request.user_agent
+    
     @pages = @category.pages
     
     render_page
@@ -24,7 +25,11 @@ class PagesController < ApplicationController
   private
   
   def render_page
-    render 'index.html.erb'
+    if mobile_device?
+      render "main_mobile.html.erb"
+    else
+      render 'index.html.erb'
+    end
   end
   
   def get_category

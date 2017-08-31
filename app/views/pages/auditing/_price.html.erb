@@ -1,0 +1,26 @@
+<h2 class="title text-center">
+  <%= page.name %>
+</h2>
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+   <p class="description text-center">
+     <%= page.indents.first.body %>
+   </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-10 offset-md-1">
+   <div class="row">
+    <% column_width = 9 %>
+    <% category.tariffs.each_with_index do |item,number| %>
+    <div class="col-md-<%= column_width + number %> tariff-column">
+      <div class="auditing-tariff-box">
+        <span><%= item.title %> - $<%=item.price%> </span>
+        <div class="button">Подробно</div>
+      </div>
+    </div>
+   
+    <% end %>
+   </div>
+  </div>
+</div>

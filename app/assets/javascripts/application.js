@@ -17,6 +17,7 @@
 //= require_tree .
 
 $(window).on('load',function(){
+  var screenWidth = $(window).width();
   function getDecimal(number){
     return number - parseInt(number);
   }
@@ -281,12 +282,12 @@ $(window).on('load',function(){
       }
       
     });
-    
   }
-
-  
-  
-  
+  if(screenWidth <= 768){
+    $('.hamburger.mobile').on("click",function(){
+      $('.overlay').slideToggle(500);
+    })
+  }
 });
 
 

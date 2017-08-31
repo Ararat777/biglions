@@ -1,3 +1,19 @@
+<% if mobile_device? %>
+
+  <div class="logo">
+    <a href="/">
+        <%= image_tag '/assets/text-logo.svg' %>
+    </a>
+  </div>
+  <div class="hamburger mobile">
+       <div class="hamburger_inner">
+         <div class="middle-line"></div>
+         <div class="left-line"></div>
+         <div class="right-line"></div>
+         <div class="rectangular"></div>
+       </div>
+  </div>
+<% else %>
 <div class="hamburger">
        <div class="hamburger_inner">
          <div class="middle-line"></div>
@@ -31,5 +47,5 @@
        </div>
      </div>
 </div>
-
+<% end %>
 

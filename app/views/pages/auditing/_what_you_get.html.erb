@@ -1,0 +1,15 @@
+<h2 class="title">
+  <%= page.name %>
+</h2>
+<div class="row">
+  <% page.indents.each do |item| %>
+  <div class="col-md-4">
+    <div class="justify-box horizontal">
+      <%= image_tag '/assets/point-icon.svg', class: 'point img-fluid' %>
+      <h4 class="indent-title">
+        <%= item.title %>
+      </h4>
+    </div>
+  </div>
+  <% end %>
+</div>

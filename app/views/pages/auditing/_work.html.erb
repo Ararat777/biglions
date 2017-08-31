@@ -1,0 +1,67 @@
+<h2 class="title text-center">
+  <%= page.name %>
+</h2>
+<div class="row">
+  <div class="col-md-12 circle-inner">
+    
+    <div class="circle-box">
+     <div class="circle-arrows">
+       <div class="circle-arrow" data-slide="prev">
+         <%= image_tag '/assets/circle-prev.svg',class: 'img-fluid' %>
+       </div>
+       <div class="circle-arrow" data-slide="next">
+          <%= image_tag '/assets/circle-next.svg',class: 'img-fluid' %>
+       </div>
+    </div>
+      <div class="circle">
+        <% page.indents.each_with_index do |item,number| %>
+        <div class="indent-number in<%= number + 1 %>">
+          <%= number + 1 %>
+        </div>
+        <div class="indent i<%= number + 1 %>">
+          <h4 class="indent-title text-center">
+          <%= item.title %>
+        </h4>
+        <p class="description text-center">
+          <%= item.body %>
+        </p>
+        </div>
+        
+        <% end %>
+      </div>
+   </div>
+  </div>
+</div>
+<script>
+  var circleWidth = $('.circle-box').css("width");
+    $('.circle .indent').first().addClass("active");
+    $('.circle-box').css("height",circleWidth);
+    var rotateValue = 0;
+    var activeIndentNumber = 1;
+    $('.circle-arrow').on("click",function(){
+      var direction = $(this).data("slide");
+      if(direction == "next"){
+        rotateValue += 60;
+        $('.circle').css("transform","rotate(" + -rotateValue + "deg)");
+        $('.i' + activeIndentNumber).removeClass("active");
+        if(activeIndentNumber < 6){
+          activeIndentNumber += 1
+        }else{
+          activeIndentNumber = 1;
+        }
+        $('.i' + activeIndentNumber).addClass("active");
+      }else{
+        rotateValue -= 60;
+        $('.circle').css("transform","rotate(" + -rotateValue + "deg)");
+        $('.i' + activeIndentNumber).removeClass("active");
+        if(activeIndentNumber > 1){
+          activeIndentNumber -= 1
+        }else{
+          activeIndentNumber = 6;
+        }
+        $('.i' + activeIndentNumber).addClass("active");
+      }
+      
+    })
+</script>
+  
