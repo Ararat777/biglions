@@ -2015,13 +2015,88 @@ a,a:focus,a:visited{
     }
       }
     .top-menu-opened-item{
-      .top-menu-item{
-        height: 100px;
+      .top-menu-item-mobile{
+       
+        min-height: 100px;
+        position: relative;
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 10px;
+        h4{
+          width: 100%;
+          text-align: center;
+          margin: 0;
+          a,i{
+              color: transparent;
+            display: inline;
+          }
+          background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+          color: transparent;
+          background-clip: text;
+          -webkit-background-clip: text;
+          text-transform: uppercase;
+          font-size: 36px;
+          font-weight: 900;
+          }
+        .menu-item-box{
+          display: none;
+        }
+        .menu-item.mobile{
+          position: relative;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          a{
+            color: #fff;
+          }
+          .category-link{
+            text-align: center;
+            position: relative;
+            a{
+              text-decoration: none;
+              color: #fff;
+            }
+          }
+          .sub-categories-links-box{
+            position: relative;
+            border-width: 1px 0 0 0;
+            border-style: solid;
+            border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+            border-image-slice: 1;
+            width: 80%;
+            margin: auto;
+            display: none;
+            padding-bottom: 15px;
+          }
+          .sub-categories-links{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            a{
+              font-size: 14px;
+              font-weight: normal;
+              line-height: 16px;
+              opacity: 0.7;
+              margin-top: 5px;
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+          }
+        }
       }
       
     }
   }
   #content{
+    .contacts{
+      height: auto;
+    }
     .slider{
       
       .viewport{

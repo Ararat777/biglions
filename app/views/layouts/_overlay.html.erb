@@ -2,11 +2,10 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12 col-xs-12 top-menu-opened-item flex-column">
-          <div class="top-menu-item services">
-            <h4><%= link_to 'Услуги',services_path %></h4>
-            <div class="top-menu-item-hovered">
-              <div class="top-battlements"></div>
-              <div class="menu-item">
+          <div class="top-menu-item-mobile services">
+            <h4><%= link_to 'Услуги',services_path %> <i class="fa fa-caret-down caret-btn" aria-hidden="true"></i></h4>
+            <div class="menu-item-box">
+              <div class="menu-item mobile">
                 <% Category.find_by(:title => 'services').categories.each do |item| %>
                 <div class="category-link">
                   <%= link_to item.name,services_category_path(item.title) %>
@@ -25,32 +24,31 @@
                 </div>
                 </div>
                 <% end %>
-              </div>
-              <div class="bottom-battlements"></div>
+            </div>
             </div>
           </div>
-          <div class="top-menu-item company">
-            <h4><%= link_to 'Компания',about_path %></h4>
-            <div class="top-menu-item-hovered">
-              <div class="top-battlements"></div>
-              <div class="menu-item">
+          <div class="top-menu-item-mobile company">
+            <h4><%= link_to 'Компания',about_path %> <i class="fa fa-caret-down caret-btn" aria-hidden="true"></i></h4>
+            
+              <div class="menu-item-box">
+                <div class="menu-item mobile">
                 <% Category.find_by(:title => 'about').pages.each do |item| %>
                 <%= link_to item.name,about_path(anchor: item.title) %>
                 <% end %>
               </div>
-              <div class="bottom-battlements"></div>
-            </div>
+              </div>
+           
           </div>
     </div>
     <div class="col-sm-12 col-xs-12 top-menu-opened-item flex-column">
-          <div class="top-menu-item portfolio">
+          <div class="top-menu-item-mobile portfolio">
             <h4>Портфолио</h4>
             <div class="top-menu-item-hovered">
               <div class="top-battlements"></div>
               <div class="bottom-battlements"></div>
             </div>
           </div>
-          <div class="top-menu-item contacts">
+          <div class="top-menu-item-mobile contacts">
             <h4><%= link_to 'Контакты', contacts_path %></h4>
             <div class="top-menu-item-hovered">
               <div class="top-battlements"></div>

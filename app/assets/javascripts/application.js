@@ -287,6 +287,9 @@ $(window).on('load',function(){
     $('.hamburger.mobile').on("click",function(){
       $('.overlay').slideToggle(500);
     })
+    $('.caret-btn').on("click",function(){
+      $(this).parent().siblings(".menu-item-box").slideToggle();
+    })
   }
 });
 

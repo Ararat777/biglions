@@ -1,7 +1,7 @@
 <div class="contacts">
   <div class="container">
      <div class="row">
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-6 offset-md-3 col-12 col-sm-12">
       <h2 class="title text-center">
         Почтовые голуби<br>уже не в моде?
       </h2>
@@ -14,8 +14,8 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-10 offset-md-1">
-      <div class="row">
+    <div class="col-md-10 offset-md-1 col-12 col-sm-12">
+      <div class="row <% if mobile_device? %> flex-column <% end %>">
           <div class="contact message text-center">
             <p><%= image_tag '/assets/icon-message.svg',class: 'img-fluid' %></p>
             <a href="#">info@biglions.org</a>
