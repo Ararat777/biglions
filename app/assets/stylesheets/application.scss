@@ -845,32 +845,7 @@ a,a:focus,a:visited{
                 margin-top: 5px;
               }
             }
-            &.reviews{
-              .review-box{
-                position: relative;
-                background: rgba(0,0,0,0.2);
-                padding: 10px;
-                margin-bottom: 30px;
-                h4{
-                  font-size: 24px;
-                  font-weight: 700;
-                  line-height: 31px;
-                  color: #fff;
-                }
-                span{
-                  font-size: 18px;
-                  line-height: 23px;
-                  color: rgba(255,255,255,0.5);
-                  
-                }
-                p{
-                  font-size: 16px;
-                  line-height: 21px;
-                  color: #fff;
-                  margin-top: 20px;
-                }
-              }
-            }
+            
             .category-box{
               width: 100%;
               height: 100%;
@@ -1016,6 +991,30 @@ a,a:focus,a:visited{
           
         }
       }
+    }
+  }
+  .review-box{
+    position: relative;
+    background: rgba(0,0,0,0.2);
+    padding: 10px;
+    margin-bottom: 30px;
+    h4{
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 31px;
+      color: #fff;
+    }
+    span{
+      font-size: 18px;
+      line-height: 23px;
+      color: rgba(255,255,255,0.5);
+
+    }
+    p{
+      font-size: 16px;
+      line-height: 21px;
+      color: #fff;
+      margin-top: 20px;
     }
   }
   .main.slider{
@@ -2032,15 +2031,22 @@ a,a:focus,a:visited{
             background-position: center;
             padding: 0;
             height: calc(100vh - 70px);
-             .title{
-               font-size: 36px;
-               line-height: 42px;
-             }
-             .number{
-               font-size: 34px;
-               line-height: 40px;
-             }
+            
            }
+            .green{
+              background-color: #27AE60;
+              padding: 5px;
+              padding-right: 0;
+              
+            }
+            .phrase{
+              font-weight: 700;
+            }
+            .author{
+              font-style: italic;
+              font-weight: normal;
+            }
+            
           }
           
         }
@@ -2052,6 +2058,97 @@ a,a:focus,a:visited{
         width: 70px;
         margin-left: 10px;
       }
+    }
+    .page{
+      .page-content{
+        padding-top: 15px;
+        .justify-box{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+
+          flex-direction: column;
+          &.horizontal{
+            flex-direction: row;
+          }
+        }
+        .line{
+          width: 20%;
+          background: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+          height: 3px;
+          
+        }
+        .title{
+          font-weight: 900;
+          text-transform: uppercase;
+          color: #fff;
+          text-align: center;
+        }
+        .description{
+          font-size: 18px;
+          color: #fff;
+          line-height: 21px;
+        }
+        &.work .number{
+          margin-right: 8px;
+          font-size: 40px;
+          line-height: 65px;
+          font-weight: 900;
+          background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+          color: transparent;
+          background-clip: text;
+          -webkit-background-clip: text;
+        }
+        .certif-image{
+          text-align: center;
+          margin-bottom: 8px;
+        }
+      }
+    }
+    .about.page{
+      background: url("/assets/about-bg.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+@media (min-width: 412px) and (max-width: 768px){
+  #content .slider .viewport .slidewrapper .slide-item .slide-content,#content .page .page-content{
+    .title{
+      font-size: 36px;
+      line-height: 42px;
+    }
+    .number{
+      font-size: 34px;
+      line-height: 40px;
+    }
+  }
+}
+@media (min-width: 360px) and (max-width: 411px){
+  #content .slider .viewport .slidewrapper .slide-item .slide-content,#content .page .page-content{
+    .title{
+      font-size: 30px;
+      line-height: 36px;
+    }
+    .number{
+      font-size: 28px;
+      line-height: 20px;
+    }
+  }
+}
+@media (max-width: 359px){
+  #content .slider .viewport .slidewrapper .slide-item .slide-content,#content .page .page-content{
+    .title{
+      font-size: 24px;
+      line-height: 22px;
+    }
+    .number{
+      font-size: 24px;
+      line-height: 8px;
+    }
+    .first{
+      margin-bottom: 10px;
     }
   }
 }

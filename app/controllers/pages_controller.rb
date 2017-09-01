@@ -26,7 +26,11 @@ class PagesController < ApplicationController
   
   def render_page
     if mobile_device?
-      render "main_mobile.html.erb"
+      if @category.title == 'main'
+        render "main_mobile.html.erb"
+      else
+        render "index_mobile.html.erb"
+      end
     else
       render 'index.html.erb'
     end

@@ -1,0 +1,10 @@
+<div class="<%= @category.title %> page">
+ <div class="container-fluid">
+   <% @pages.each do |page| %>
+   <div class="page-content <%= page.title %>">
+    <%= render "pages/#{@category.title}/#{page.title}",page: page,category: @category %>
+   </div>
+   <% end %>
+ </div>
+  
+</div>
