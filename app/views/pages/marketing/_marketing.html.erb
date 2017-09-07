@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="col-md-4 offset-md-3">
-   <div class="category-box">
+   <div class="category-box justify-box">
      <div class="sub-categories">
       <% @category.categories.each do |item| %>
         <%= link_to item.name,services_sub_category_path(page.title,item.title) %>

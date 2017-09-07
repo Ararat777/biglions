@@ -1,29 +1,15 @@
 <div class="row">
   <div class="col-md-6">
-    <div class="row">
-      <div class="col-md-4">
-        <%= image_tag '/assets/adaptive.svg', class: 'img-fluid' %>
-      </div>
-    </div>
     <h2 class="title">
       <%= page.name %>
     </h2>
-    <div class="row">
-      <% page.indents.each do |item| %>
-      <div class="col-md-6 text-left">
-        <h2 class="number adaptive-number">
-          <%= item.title %>
-        </h2>
-        <p class="description">
-          <%= item.body %>
-        </p>
-      </div>
-      <% end %>
-    </div>
+    <p class="description">
+      <%= page.indents.first.body %>
+    </p>
   </div>
   <div class="col-md-4 offset-md-2">
-   <div class="justify-box">
-     <div class="adaptive form-box">
+    <div class="form-justify">
+     <div class="polygraph form-box">
     <p class="description">
       Закажи самый адаптивный сайт в животном мире, и получи скидку 10%
     </p>
@@ -43,6 +29,5 @@
           <% end %>
    </div>
    </div>
-    
   </div>
 </div>

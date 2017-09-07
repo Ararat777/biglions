@@ -12,7 +12,7 @@
                 <div class="sub-categories-links-box <%= item.title %>">
                  <div class="sub-categories-links">
                   <div class="row">
-                    <% item.categories.in_groups_of(3,false).each do |group| %>
+                    <% item.categories.in_groups_of(2,false).each do |group| %>
                     <div class="col-md-6">
                     <% group.each do |sub_item| %>
                       <%= link_to sub_item.name,services_sub_category_path(item.title,sub_item.title) %><br>
@@ -125,7 +125,7 @@
                 <div class="sub-categories-links-box <%= item.title %>">
                  <div class="sub-categories-links">
                   <div class="row">
-                    <% item.categories.in_groups_of(3,false).each do |group| %>
+                    <% item.categories.in_groups_of(2,false).each do |group| %>
                     <div class="col-md-6">
                     <% group.each do |sub_item| %>
                       <%= link_to sub_item.name,services_sub_category_path(item.title,sub_item.title) %><br>

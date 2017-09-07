@@ -17,6 +17,21 @@ ActiveAdmin.register Page do
   filter :title
   filter :name,label: 'Название'
   filter :nav_name,label: 'Навигационное название'
+  
+  show do
+    attributes_table do
+      row :title
+      row :name
+      row :nav_name
+      row :category
+    end
+    table_for page.indents do
+      column :title
+      column :image_id
+      column :body
+    end
+  
+  end
 #
 # or
 #

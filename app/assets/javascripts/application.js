@@ -291,6 +291,11 @@ $(window).on('load',function(){
       $(this).parent().siblings(".menu-item-box").slideToggle();
     })
   }
+  /*Fix justify-box height for Safari Mac */
+  $('.justify-box').each(function(){
+    var parentBlockHeight = $(this).parent().css("height");
+    $(this).css("height",parentBlockHeight);
+  });
 });
 
 

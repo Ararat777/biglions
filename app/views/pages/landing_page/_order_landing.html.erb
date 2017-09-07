@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-md-9">
+    <h2 class="title">
+      <%= page.name %>
+    </h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-box">
+      <%= form_for :project,url: '#' do |f| %>
+          <div class="row">
+            <div class="col-md-6">
+                <div class="input-group">
+                  <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?' %>
+                </div>
+                <div class="input-group">
+                  <%= f.text_field :phone, class: 'form-control',placeholder: 'Ваш номер телефона' %>
+                </div>
+              <div class="input-group">
+                  <%= f.text_field :email, class: 'form-control',placeholder: 'Электронная почта' %>
+                </div>
+              <div class="input-group">
+               <%= f.text_field :site, class: 'form-control',placeholder: 'Чем занимаетесь?' %>
+              </div>
+                
+            </div>
+            <div class="col-md-6">
+              <div class="input-group">
+                <%= f.text_area :projectm, class: 'form-control',placeholder: 'Опишите кратко свой проект' %>
+              </div>
+            </div>
+            <div class="actions">
+             <div class="container">
+               <div class="row">
+            <div class="col-md-12">
+              <div class="input-group">
+                <%= f.submit 'Обсудить проект', class: 'button' %>
+              </div>
+            </div>
+              </div>
+             </div>
+              
+              
+            </div>
+            
+          </div>
+       <% end %>
+    </div>
+  </div>
+</div>

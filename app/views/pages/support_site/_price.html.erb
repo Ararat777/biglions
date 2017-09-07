@@ -2,9 +2,9 @@
   <%= page.name %>
 </h2>
 <div class="row">
-  <% category.tariffs.each_with_index do |item,number| %>
-  <div class="col-md-<%= (number + 1) == 1 ? 5 : 3 %>">
-    <div class="tariff-box text-center">
+  <% category.tariffs.each do |item| %>
+   <div class="col-md-3">
+     <div class="tariff-box text-center">
       <h4>
         <%= item.title %>
       </h4>
@@ -15,7 +15,7 @@
         $<%= item.price %>
       </div>
     </div>
-  </div>
+   </div>
   <% end %>
   <div class="col-md-3">
     <div class="justify-box">
@@ -26,5 +26,6 @@
         Заказать консультацию
       </div>
     </div>
+    
   </div>
 </div>

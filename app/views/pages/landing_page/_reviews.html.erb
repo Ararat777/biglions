@@ -1,0 +1,14 @@
+<h2 class="title">
+  <%= page.name %>
+</h2>
+  <div class="row">
+    <% Review.all.each do |item| %>
+    <div class="col-md-6">
+      <div class="review-box">
+        <h4><%= item.name %></h4>
+        <span><%= item.site %></span>
+        <p><%= item.body %></p>
+      </div>
+    </div>
+    <%end %>
+  </div>

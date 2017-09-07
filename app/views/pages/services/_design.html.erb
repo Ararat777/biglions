@@ -16,7 +16,7 @@
     <%= link_to 'Показать больше',services_category_path(page.title), class: 'show-more button' %>
   </div>
   <div class="col-md-4 offset-md-3">
-   <div class="category-box">
+   <div class="category-box justify-box">
      <div class="sub-categories">
       <% @category.categories.find_by(:title => page.title).categories.each do |item| %>
         <%= link_to item.name,services_sub_category_path(page.title,item.title) %>

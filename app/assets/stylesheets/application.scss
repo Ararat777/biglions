@@ -1309,6 +1309,24 @@ a,a:focus,a:visited{
         margin-bottom: 20px;
       }
     }
+    .slide-content.price{
+      .prototype-price{
+        background: rgba(6,6,6,0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span{
+          font-size: 36px;
+          line-height: 34px;
+          font-weight: 900;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+      }
+      .button{
+        margin-bottom: 15px;
+      }
+    }
     
     
   }
@@ -1359,7 +1377,7 @@ a,a:focus,a:visited{
       }
     }
     .sales{
-      
+      background: radial-gradient(29.74px at 29.04% 99.59%, #FDDB86 0%, rgba(240, 105, 66, 0) 100%), radial-gradient(38.57px at 31.72% 92.92%, #F2C94C 0%, rgba(255, 0, 0, 0) 100%), linear-gradient(159.86deg, #00A3FF 5.92%, rgba(53, 171, 213, 0) 77.32%), linear-gradient(0deg, #E11B7E, #E11B7E), #2D9CDB;
       line-height: 17px;
       padding: 8px;
     }
@@ -1453,7 +1471,199 @@ a,a:focus,a:visited{
                   background: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
               }
     }
-    .circle-inner{
+    
+  }
+  .polygraph.slider{
+    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/polygraph-blured.png') no-repeat;
+      background-size: 110% 110%;
+      background-position: center;
+  }
+  .support_site.slider{
+    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/support-blured.png') no-repeat;
+      background-size: 110% 110%;
+      background-position: center;
+    .slide-content.support_sites{
+      .justify-box{
+        border: 1px solid white;
+        align-items: center;
+        padding: 15px;
+        .phrase{
+          text-align: center;
+          font-size: 18px;
+          line-height: 21px;
+          font-weight: 700;
+          color: white;
+          margin-bottom: 10px;
+        }
+        .advice{
+          text-align: center;
+          font-size: 18px;
+          line-height: 21px;
+          font-weight: normal;
+          font-style: normal;
+          color: white;
+          margin-bottom: 10px;
+        }
+        .sales{
+          padding: 8px;
+          line-height: 17px;
+          margin-bottom: 15px;
+        }
+        .button{
+          width: 80%;
+        }
+      }
+    }
+    .slide-content.order_support{
+      .title{
+        margin-bottom: 20px !important;
+      }
+      .form-box{
+        input[type=text],textarea{
+          border-radius: 0;
+          border: 1px solid transparent;
+          padding: 10px;
+          color: #fff;
+          background: rgba(6,6,6,0.5);
+          &:focus{
+            border: 1px solid;
+            border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+            border-image-slice: 1;
+          }
+        }
+      }
+    }
+    .slide-content.price{
+      .justify-box{
+        justify-content: space-between;
+        .button{
+          line-height: 34px;
+        }
+      }
+    }
+    
+  }
+  .internet_shop.slider{
+    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/internet-shop-blured.png') no-repeat;
+      background-size: 110% 110%;
+      background-position: center;
+    .slide-content.internet_shop{
+      .indent-box{
+        border: 1px solid white;
+        padding: 13px;
+      }
+    }
+    .slide-content.stages_internet_shop{
+      .number{
+        background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+        color: transparent !important;
+        background-clip: text;
+        -webkit-background-clip: text;
+        line-height: 70px;
+        margin-right: 5px;
+      }
+    }
+    .slide-content.price{
+      .title.price{
+          margin-top: 0;
+          margin-bottom: 20px !important;
+          background-color: #EB5757;
+          display: inline-block;
+          padding: 5px 5px;
+        }
+      .form-box{
+        border: 1px solid white;
+        padding: 10px;
+        input[type=text],textarea{
+          border-radius: 0;
+          border: 1px solid transparent;
+          padding: 10px;
+          color: #fff;
+          background: rgba(6,6,6,0.5);
+          &:focus{
+            border: 1px solid;
+            border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+            border-image-slice: 1;
+          }
+        }
+      }
+    }
+  }
+  .landing_page.slider{
+    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/landing-blured.png') no-repeat;
+      background-size: 110% 110%;
+      background-position: center;
+    .slide-content.for_whom{
+      .row{
+        margin-bottom: 20px;
+      }
+    }
+    .slide-content.order_landing{
+      input[type=text],textarea{
+          border-radius: 0;
+          border: 1px solid transparent;
+          padding: 10px;
+          color: #fff;
+          background: rgba(6,6,6,0.5);
+          &:focus{
+            border: 1px solid;
+            border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+            border-image-slice: 1;
+          }
+        }
+      textarea{
+        height: 212px;
+      }
+    }
+    .slide-content.stages_landing{
+      .number{
+        background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+        color: transparent !important;
+        background-clip: text;
+        -webkit-background-clip: text;
+        line-height: 70px;
+        margin-right: 5px;
+      }
+    }
+    .slide-content.price{
+      .tariff-box.gold{
+        border-width: 4px;
+        border-style: solid;
+        border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+        border-image-slice: 1;
+        .button{
+          border-width: 3px 0 0 0;
+        }
+      }
+    }
+  }
+  .prototyping.slider,.internet_shop.slider,.landing_page.slider{
+    .scroll-box{
+      &::-webkit-scrollbar-track
+        {
+
+          background-color: transparent;
+        }
+
+        &::-webkit-scrollbar
+        {
+            width: 4px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb
+        {
+
+            background: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);;
+        }
+        max-height: 400px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+  }
+  .audit.slider,.support_site.slider{
+    
+   }.circle-inner{
       height: 400px;
     }
     .circle-box{
@@ -1578,8 +1788,7 @@ a,a:focus,a:visited{
         transform: rotate(300deg);
       }
     }
-  }
-  .adaptive.form-box,.auditing.form-box{
+  .adaptive.form-box,.auditing.form-box,.polygraph.form-box{
     float: right;
     width: 90%;
       padding: 20px;
@@ -1927,7 +2136,7 @@ a,a:focus,a:visited{
       cursor: pointer;
       font-family: "Proxima Nova Condensed", sans-serif;
       color: #fff;
-      font-size: 16px;
+      font-size: 18px;
       border: 3px solid;
       border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
       border-image-slice: 1;
@@ -2227,4 +2436,11 @@ a,a:focus,a:visited{
     }
   }
 }
+
+
+
+
+
+
+
 

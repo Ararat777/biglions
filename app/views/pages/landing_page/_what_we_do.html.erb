@@ -1,0 +1,23 @@
+
+<div class="row">
+  <div class="col-md-7">
+    <h2 class="title">
+      <%= page.name %>
+    </h2>
+    <p class="description">
+      <%= page.indents.first.body %>
+    </p>
+  </div>
+  <div class="col-md-5">
+    <h4 class="indent-title">
+      Пример контента
+    </h4>
+    <div class="row">
+      <% page.indents.offset(1).each do |item| %>
+      <div class="col-md-6">
+        <%= image_tag item.image_url, class: 'img-fluid' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

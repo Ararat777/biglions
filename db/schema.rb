@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170826135930) do
+ActiveRecord::Schema.define(version: 20170906151748) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -104,6 +104,7 @@ ActiveRecord::Schema.define(version: 20170826135930) do
     t.integer  "category_id"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.string   "image_url"
     t.index ["category_id"], name: "index_tariffs_on_category_id", using: :btree
   end
 
