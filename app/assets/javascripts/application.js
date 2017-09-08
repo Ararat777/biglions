@@ -264,16 +264,16 @@ $(window).on('load',function(){
  });
  
   if(window.location.pathname != '/'){
-     $('.slider').on('mousewheel', function(event){
-        if(event.deltaY > 0){
-     
+     $(window).on("mousewheel",function(e){
+       
+       if(!($(e.target).parents().hasClass("scroll-box")) && !($(e.target).parents().hasClass("questions-container")) && !($(e.target).parents().hasClass("statements-box"))){
+        if(e.deltaY > 0){
           prevSlide();
-        }else if(event.deltaY < 0){
-    
+        }else if(e.deltaY < 0){
           nextSlide();
         }
-   
-      });
+       }
+     });
     $(window).on("keydown", function(event){
       if(event.which == 37){
         prevSlide();
@@ -282,6 +282,14 @@ $(window).on('load',function(){
       }
       
     });
+    $('.more-less-button').on("click",function(){
+      if($(this).data("direct") == "more"){
+        $('.indents-wrapper').css("transform","translateX(-50%)");
+      }else{
+        $('.indents-wrapper').css("transform","translateX(0%)");
+      }
+      
+    })
   }
   if(screenWidth <= 768){
     $('.hamburger.mobile').on("click",function(){

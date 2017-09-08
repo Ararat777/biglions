@@ -2,20 +2,64 @@
   <%= raw(page.name) %>
 </h2>
 <div class="row">
-  <% page.indents.each_with_index do |item,number| %>
-  <div class="col-md-3">
-    <div class="justify-box horizontal">
-      <span class="number"><%= number + 1 %></span>
-      <div class="indent-box">
-        <h4 class="indent-title">
-          <%= item.title %>
-        </h4>
-        <p class="description">
-          <%= item.body %>
-        </p>
+  <div class="col-md-12">
+    <div class="overflow-indents-box">
+      <div class="indents-wrapper">
+        <div class="indents-box">
+          <div class="row">
+            <% page.indents.limit(3).each_with_index do |item,number| %>
+            <div class="col-md-3 indent-box">
+              <div class="justify-box horizontal">
+                <span class="number"><%= number + 1 %></span>
+                <div>
+                  <h4 class="indent-title">
+                    <%= item.title %>
+                  </h4>
+                  <p class="description">
+                    <%= item.body %>
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <%end %>
+            <div class="col-md-3">
+              <div class="justify-box text-center">
+                <div class="button more-less-button" data-direct="more">
+                  Больше <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="indents-box">
+          <div class="row">
+          <div class="col-md-3">
+              <div class="justify-box text-center">
+                <div class="button more-less-button" data-direct="less">
+                  <i class="fa fa-arrow-left" aria-hidden="true"></i> Меньше 
+                </div>
+              </div>
+            </div>
+          <% page.indents.offset(3).each_with_index do |item,number| %>
+            <div class="col-md-3 indent-box">
+              <div class="justify-box horizontal">
+                <span class="number"><%= number + 4 %></span>
+                <div>
+                  <h4 class="indent-title">
+                    <%= item.title %>
+                  </h4>
+                  <p class="description">
+                    <%= item.body %>
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <%end %>
+          </div>
+        </div>
       </div>
-      
-    </div>
+   </div>
   </div>
-  <%end %>
 </div>

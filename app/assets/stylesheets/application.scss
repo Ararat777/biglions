@@ -113,7 +113,7 @@ a,a:focus,a:visited{
             margin-right: 8px;
           }
         }
-        input[type=submit]{
+        button{
           border: 3px solid;
           border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
           border-image-slice: 1;
@@ -121,12 +121,6 @@ a,a:focus,a:visited{
           color: #fff;
           width: 100%;
           cursor: pointer;
-          &:hover{
-            background: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%) !important;
-            color: black !important;
-          }
-          
-          
         }
         
       }
@@ -609,7 +603,7 @@ a,a:focus,a:visited{
             margin-right: 8px;
           }
         }
-        input[type=submit]{
+        button{
           border: 3px solid;
           border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
           border-image-slice: 1;
@@ -618,10 +612,6 @@ a,a:focus,a:visited{
           width: 100%;
           cursor: pointer;
           transition: all 0.5s;
-          &:hover{
-            background: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%) !important;
-            color: black !important;
-          }
         }
         
       }
@@ -726,6 +716,29 @@ a,a:focus,a:visited{
             display: flex;
             justify-content: center;
             align-items: center;
+            .overflow-indents-box{
+              min-width: 100%;
+              white-space: nowrap;
+              overflow: hidden;
+              position: relative;
+              .indents-wrapper{
+                width: 200%;
+                position: relative;
+                transition: transform 0.5s;
+              }
+              .indents-box{
+                width: 50%;
+                display: inline-block;
+                float: left;
+                .button{
+                  width: 60%;
+                  align-self: center;
+                }
+              }
+              .description{
+                white-space: normal;
+              }
+            }
             .questions-container{
               &::-webkit-scrollbar-track
               {
@@ -748,10 +761,10 @@ a,a:focus,a:visited{
               overflow-y: scroll;
               overflow-x: hidden;
               .row{
-                margin-bottom: 20px;
+                padding-bottom: 20px;
               }
               .row:last-child{
-                margin-bottom: 0;
+                padding-bottom: 0;
               }
               .question-box{
                 position: relative;
@@ -914,7 +927,7 @@ a,a:focus,a:visited{
                   }
 
                 }
-                    input[type=submit]{
+                    button{
                     border: 3px solid;
                     border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
                     border-image-slice: 1;
@@ -959,7 +972,7 @@ a,a:focus,a:visited{
         justify-content: center;
         .show-all-projects.button{
           
-          
+          width: 50%;
           height: 54px;
           margin: auto;
         }
@@ -967,14 +980,17 @@ a,a:focus,a:visited{
             .indent-image{
           height: 49px;
       }
-      .indent-title{
-        color: #fff;
-        font-size: 20px;
-        line-height: 23px;
-        font-weight: 700;
-        margin: 10px 0 5px 0;
-        
-      }
+            .indent-box{
+              margin-top: 26px;
+            }
+            .indent-title{
+              color: #fff;
+              font-size: 20px;
+              line-height: 23px;
+              font-weight: 700;
+              margin: 10px 0 0 0;
+
+            }
           }
           .intro-development{
             background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url(/assets/intro_1.png) no-repeat;
@@ -991,6 +1007,16 @@ a,a:focus,a:visited{
           
         }
       }
+    }
+  }
+  .slide-content.reviews,.slide-content.our_work{
+    .row{
+      margin-top: 50px;
+    }
+  }
+  .slide-content.form{
+    .gift-form-box{
+      margin-top: 30px;
     }
   }
   .review-box{
@@ -1149,7 +1175,7 @@ a,a:focus,a:visited{
         }
       }
       
-      &.why_advancement .indent-title,&.internet_marketing .indent-title{
+      &.why_advancement .indent-title{
         min-height: 50px;
       }
       .price.form-box{
@@ -1172,7 +1198,7 @@ a,a:focus,a:visited{
         }
         
       }
-          input[type=submit]{
+          button{
           border: 3px solid;
           border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
           border-image-slice: 1;
@@ -1254,6 +1280,13 @@ a,a:focus,a:visited{
     .how_work-button{
       width: 80%;
     }
+    .slide-content.price{
+      .tariff-box{
+        h4{
+          min-height: 68px;
+        }
+      }
+    }
   }
   .webdevelopment.slider{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/development-blured.png') no-repeat;
@@ -1281,6 +1314,11 @@ a,a:focus,a:visited{
       justify-content: center;
       align-items: center;
     }
+    .slide-content.adaptive{
+      .title{
+        margin-top: 20px;
+      }
+    }
     
     
   }
@@ -1295,7 +1333,12 @@ a,a:focus,a:visited{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/prototype-blured.png') no-repeat;
       background-size: 110% 110%;
       background-position: center;
-    
+    .slide-content.prototyping{
+      .sales{
+        width: 100%;
+        padding: 5px;
+      }
+    }
     .slide-content.site_prototype{
       .indent-title{
         margin-left: 10px !important;
@@ -1306,7 +1349,7 @@ a,a:focus,a:visited{
       }
       .justify-box{
         align-items: center;
-        margin-bottom: 20px;
+        
       }
     }
     .slide-content.price{
@@ -1325,6 +1368,17 @@ a,a:focus,a:visited{
       }
       .button{
         margin-bottom: 15px;
+      }
+    }
+    .slide-content.order_prototype{
+      .scroll-box{
+        margin-top: 30px;
+      }
+      .indent-box{
+        margin-top: 0 !important;
+        img{
+          height: 61px;
+        }
       }
     }
     
@@ -1360,7 +1414,7 @@ a,a:focus,a:visited{
       }
       .justify-box{
         align-items: center;
-        margin-bottom: 20px;
+        
       }
     }
     
@@ -1380,6 +1434,11 @@ a,a:focus,a:visited{
       background: radial-gradient(29.74px at 29.04% 99.59%, #FDDB86 0%, rgba(240, 105, 66, 0) 100%), radial-gradient(38.57px at 31.72% 92.92%, #F2C94C 0%, rgba(255, 0, 0, 0) 100%), linear-gradient(159.86deg, #00A3FF 5.92%, rgba(53, 171, 213, 0) 77.32%), linear-gradient(0deg, #E11B7E, #E11B7E), #2D9CDB;
       line-height: 17px;
       padding: 8px;
+    }
+    .slide-content{
+      .indent-title{
+        text-transform: uppercase;
+      }
     }
   }
   .auditing.slider{
@@ -1402,7 +1461,7 @@ a,a:focus,a:visited{
       }
       .justify-box{
         align-items: center;
-        margin-bottom: 20px;
+        
       }
     }
     .tariff-column{
@@ -1434,6 +1493,7 @@ a,a:focus,a:visited{
       }
     }
     .statements-box{
+      margin-top: 33px;
       width: 100%;
       white-space:nowrap;
       overflow-x: scroll;
@@ -1477,6 +1537,27 @@ a,a:focus,a:visited{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/polygraph-blured.png') no-repeat;
       background-size: 110% 110%;
       background-position: center;
+    .scroll-box{
+      margin-top: 30px;
+    }
+    .slide-content.work{
+      .indent-box{
+        margin-top: 0 !important;
+        margin-bottom: 25px;
+      }
+    }
+    .slide-content.price{
+      .description{
+        margin-bottom: 0;
+      }
+      .justify-box{
+        justify-content: baseline;
+      }
+      .indent-box{
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+    }
   }
   .support_site.slider{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/support-blured.png') no-repeat;
@@ -1508,9 +1589,10 @@ a,a:focus,a:visited{
           padding: 8px;
           line-height: 17px;
           margin-bottom: 15px;
+          width: 100%;
         }
         .button{
-          width: 80%;
+          width: 100%;
         }
       }
     }
@@ -1535,6 +1617,7 @@ a,a:focus,a:visited{
     }
     .slide-content.price{
       .justify-box{
+        padding-top: 33px;
         justify-content: space-between;
         .button{
           line-height: 34px;
@@ -1551,6 +1634,12 @@ a,a:focus,a:visited{
       .indent-box{
         border: 1px solid white;
         padding: 13px;
+        margin-top: 0 !important;
+      }
+    }
+    .slide-content.capabilities{
+      .title{
+        margin-bottom: 30px !important;
       }
     }
     .slide-content.stages_internet_shop{
@@ -1636,8 +1725,19 @@ a,a:focus,a:visited{
         }
       }
     }
+    .slide-content.why_prototype{
+      .scroll-box{
+        margin-top: 30px;
+      }
+      .indent-box{
+        margin-top: 0 !important;
+        img{
+          height: 61px;
+        }
+      }
+    }
   }
-  .prototyping.slider,.internet_shop.slider,.landing_page.slider{
+  .prototyping.slider,.internet_shop.slider,.landing_page.slider,.polygraph.slider{
     .scroll-box{
       &::-webkit-scrollbar-track
         {
@@ -1814,7 +1914,7 @@ a,a:focus,a:visited{
         }
         
       }
-          input[type=submit]{
+          button{
           border: 3px solid;
           border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
           border-image-slice: 1;
@@ -1830,6 +1930,7 @@ a,a:focus,a:visited{
       margin-top: 20px;
     }
   .slide-content .tariff-box{
+    margin-top: 33px;
     background: rgba(6,6,6, 0.5);
     position: relative;
     padding-top: 30px;
@@ -2148,7 +2249,7 @@ a,a:focus,a:visited{
   &:hover{
     transition: color;
     transition-delay: 0.4s;
-    color: #000;
+    color: #000 !important;
   }
   &:after{
     content: '';
