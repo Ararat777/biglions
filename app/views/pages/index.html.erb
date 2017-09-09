@@ -1,7 +1,7 @@
 <div class="<%= @category.title %> slider">
  <div class="viewport">
    <div class="slidewrapper">
-     <% @pages.each_with_index do |page,number| %>
+     <% @pages.order(:priority).each_with_index do |page,number| %>
      <div class="slide-item">
        <div class="slide-content <%= page.title %>">
          <div class="container">
@@ -25,9 +25,9 @@
 </div>
 <div class="navigation">
  <% if @category.title == 'main' %>
-  <%= render 'main_navigation',pages: @pages %>
+  <%= render 'main_navigation',pages: @pages.order(:priority) %>
  <% else %>
-  <%= render 'page_navigation',pages: @pages %>
+  <%= render 'page_navigation',pages: @pages.order(:priority) %>
  <% end %>
 </div>
 <% unless @category.title == 'main' %>

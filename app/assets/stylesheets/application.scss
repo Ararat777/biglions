@@ -1159,11 +1159,19 @@ a,a:focus,a:visited{
           margin-bottom: 0 !important;
         }
         .title.price{
+          width: 27%;
           margin-top: 0;
           margin-bottom: 20px !important;
           background-color: #EB5757;
-          display: inline-block;
+          display: block;
+          float: left;
           padding: 0 5px;
+          position: relative;
+          &:after{
+            content: url("/assets/price-arrow.png");
+            position: absolute;
+            top: -32%;
+          }
         }
         
        
@@ -1179,6 +1187,10 @@ a,a:focus,a:visited{
         min-height: 50px;
       }
       .price.form-box{
+        padding: 10px;
+        border: 2px solid;
+        border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+        border-image-slice: 1;
         form{
       .input-group{
         position: relative;
@@ -1325,8 +1337,10 @@ a,a:focus,a:visited{
   .design.slider{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/design.jpg') no-repeat;
     background-size: cover;
-    .design-button{
-      
+    .slide-content.tasks_prototype{
+      .indent-title{
+        margin-left: 10px !important;
+      }
     }
   }
   .prototyping.slider{
@@ -1388,6 +1402,7 @@ a,a:focus,a:visited{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/redesign-blured.png') no-repeat;
       background-size: 110% 110%;
       background-position: center;
+    
     
   }
   .branding.slider{
@@ -1635,6 +1650,12 @@ a,a:focus,a:visited{
         border: 1px solid white;
         padding: 13px;
         margin-top: 0 !important;
+        &:before{
+          content: url('/assets/drujko.png');
+          position: absolute;
+          top: -120px;
+          left: -80px;
+        }
       }
     }
     .slide-content.capabilities{
@@ -1687,6 +1708,69 @@ a,a:focus,a:visited{
         margin-bottom: 20px;
       }
     }
+    .slide-content.why_landing{
+      .scroll-box{
+        margin-top: 30px;
+      }
+      table{
+        width: 100%;
+        height: 100%;
+        color: white;
+        border-collapse: separate;
+        td{
+          border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+          border-image-slice: 1;
+        }
+        thead{
+          th{
+            border-top: none;
+            border-bottom-width: 1px;
+            text-align: center;
+            padding-top: 30px;
+            &:last-child{
+              border-width: 1px 1px 0 1px;
+              border-style: solid;
+              border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+              border-image-slice: 1;
+              background-color: rgba(6,6,6,0.5);
+            }
+          }
+        }
+        tbody{
+          tr{
+            td{
+              border-width: 1px 0 0 0;
+              border-style: solid;
+              text-align: center;
+              height: 41px;
+              &:first-child{
+                text-align: right;
+                width: 35%;
+              }
+              &:last-child{
+                background-color: rgba(6,6,6,0.5);
+              }
+            }
+            td:last-child{
+                border-width: 1px 1px 0px 1px;
+            }
+            &:first-child{
+              td{
+                border-top-width: 0px;
+                &:last-child{
+                  border-width: 0px 1px 0px 1px;
+                }
+              }
+            }
+            &:last-child{
+              td:last-child{
+                border-width: 1px 1px 1px 1px;
+              }
+            }
+          }
+        }
+      }
+    }
     .slide-content.order_landing{
       input[type=text],textarea{
           border-radius: 0;
@@ -1716,11 +1800,11 @@ a,a:focus,a:visited{
     }
     .slide-content.price{
       .tariff-box.gold{
-        border-width: 4px;
+        border-width: 3px;
         border-style: solid;
         border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
         border-image-slice: 1;
-        .button{
+        .price-box{
           border-width: 3px 0 0 0;
         }
       }
@@ -1952,6 +2036,25 @@ a,a:focus,a:visited{
       line-height: 19px;
       color: #fff;
       margin-bottom: 30px;
+    }
+    .price-box{
+      padding: 10px 15px;
+      border: 3px solid;
+      border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+      border-image-slice: 1;
+      color: white;
+      font-size: 36px;
+      line-height: 34px;
+      font-weight: 900;
+    }
+    &.gold{
+        border-width: 3px;
+        border-style: solid;
+        border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+        border-image-slice: 1;
+        .price-box{
+          border-width: 3px 0 0 0;
+        }
     }
     
   }

@@ -3,7 +3,7 @@ ActiveAdmin.register Page do
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
   menu label: 'Страницы',priority: 2
-  permit_params :title, :name, :nav_name, :category_id
+  permit_params :title, :name, :nav_name, :category_id, :priority
   index do
     selectable_column
     column :title
@@ -23,6 +23,7 @@ ActiveAdmin.register Page do
       row :title
       row :name
       row :nav_name
+      row :priority
       row :category
     end
     table_for page.indents do

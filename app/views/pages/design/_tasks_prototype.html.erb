@@ -2,7 +2,7 @@
   <%= page.name %>
 </h2>
 <div class="row">
-  <% page.indents.limit(6).each do |item| %>
+  <% page.indents.each do |item| %>
   <div class="col-md-4 indent-box">
     <div class="justify-box horizontal">
       <%= image_tag '/assets/point-icon.svg', class: 'point img-fluid' %>
@@ -12,16 +12,4 @@
     </div>
   </div>
   <% end %>
-</div>
-<div class="row">
-  <div class="col-md-4 indent-box">
-    <h4 class="indent-title">
-      <%= page.indents.last.title %>
-    </h4>
-  </div>
-  <div class="col-md-3 indent-box">
-    <div class="button">
-      Да! Листать дальше
-    </div>
-  </div>
 </div>
