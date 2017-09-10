@@ -86,7 +86,7 @@ a,a:focus,a:visited{
           min-height: 156px;
           resize: none;
         }
-        #project_file{
+        #projects_document{
           width: 0.1px;
           height: 0.1px;
           opacity: 0;
@@ -94,7 +94,7 @@ a,a:focus,a:visited{
           position: absolute;
           z-index: -1;
         }
-        #project_file + label{
+        #projects_document + label{
           font-family: "Proxima Nova Condensed", sans-serif;
           background-color: #000;
           cursor: pointer;
@@ -2561,6 +2561,52 @@ a,a:focus,a:visited{
             flex-direction: row;
           }
         }
+        .indent-mobile{
+          margin-top: 80px;
+        }
+        .number{
+          color: white;
+          font-weight: 900;
+        }
+        .indent-title{
+              color: #fff;
+              font-size: 20px;
+              line-height: 16px;
+              font-weight: 700;
+              margin: 10px 0 10px 0;
+
+        }
+        .mobile-image{
+          text-align: center;
+        }
+        .category-box{
+              width: 100%;
+              height: 100%;
+              display: flex;
+              position: relative;
+              justify-content: center;
+              align-content: center;
+              flex-direction: column;
+          .button{
+            margin-bottom: 10px;
+          }
+            }
+            .sub-categories{
+              margin-top: 20px;
+              margin-bottom: 10px;
+              
+              border-image-slice: 1; 
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              text-align: left;
+              a{
+                color: #fff;
+                font-size: 18px;
+                line-height: 32px;
+                text-decoration: underline;
+              }
+            }
         .line{
           width: 20%;
           background: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
@@ -2568,6 +2614,7 @@ a,a:focus,a:visited{
           
         }
         .title{
+          margin-top: 30px;
           font-weight: 900;
           text-transform: uppercase;
           color: #fff;
@@ -2598,6 +2645,28 @@ a,a:focus,a:visited{
       background: url("/assets/about-bg.png") no-repeat;
       background-size: cover;
       background-position: center;
+    }
+    .services.page{
+      background: url("/assets/services.jpg") no-repeat;
+      background-size: cover;
+      background-position: center;
+      .service-image{
+        text-align: center;
+      }
+      .sales{
+        width: 100%;
+      }
+    }
+    .webdevelopment.page{
+      background: url("/assets/development-blured.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+      .service-image{
+        text-align: center;
+      }
+      .form-box{
+        width: 100%;
+      }
     }
   }
 }
@@ -2633,7 +2702,7 @@ a,a:focus,a:visited{
     }
     .number{
       font-size: 24px;
-      line-height: 8px;
+      line-height: 22px;
     }
     .first{
       margin-bottom: 10px;
