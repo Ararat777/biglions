@@ -166,10 +166,10 @@
             <h4><%= link_to 'Контакты', contacts_path %></h4>
             <div class="top-menu-item-hovered">
               <div class="top-battlements"></div>
-              <div class="menu-item">
-                <p class="mobile"><a href="tel:+380943425163">(094) <b>342-51-63</b></a></p>
-                <a href="#">info@biglions.org</a>
-                <a href="#"><%= image_tag '/assets/icon-scype.svg',class: 'img-fluid' %> biglions</a>
+              <div class="menu-item contacts-box">
+                <p class="mobile"><a href="tel:+380943425163" class="phone">(094) <b>342-51-63</b></a></p>
+                <a href="#" class="mail">info@biglions.org</a>
+                <a href="#" class="skype"><%= image_tag '/assets/icon-scype.svg',class: 'img-fluid' %> biglions</a>
                 <p>Украина, г.Харьков, ул.Грековская 5 </p>
                 <%= link_to 'Просмотреть все контакты',contacts_path,class: 'view-contacts' %>
               </div>

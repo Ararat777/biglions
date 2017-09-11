@@ -10,7 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
-
+ *= require magnificPopup
  */
 
 @import "font-awesome-sprockets";
@@ -101,7 +101,7 @@ a,a:focus,a:visited{
           border: 1px solid;
           border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
           border-image-slice: 1;
-          padding: 12.5px 7px;
+          padding: 7px 7px;
           font-size: 16px;
           color: #fff;
           display: flex;
@@ -121,6 +121,8 @@ a,a:focus,a:visited{
           color: #fff;
           width: 100%;
           cursor: pointer;
+          padding-top: 3.5px;
+          padding-bottom: 3.5px;
         }
         
       }
@@ -137,6 +139,7 @@ a,a:focus,a:visited{
       img{
         width: 25px;
         height: 25px;
+        margin-bottom: 10px;
       }
       p{
         margin: 0;
@@ -394,6 +397,17 @@ a,a:focus,a:visited{
           justify-content: center;
           align-items: center;
           color: #fff;
+          &.contacts-box{
+            .phone,.mail,.skype{
+              transition: color 0.5s;
+              &:hover{
+                background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+                color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+              }
+            }
+          }
           .category-link{
             text-align: center;
             position: relative;
@@ -511,6 +525,7 @@ a,a:focus,a:visited{
             opacity: 1;
             transition: opacity 1s;
             transition-delay: 0.5s;
+            text-decoration: none;
           }
         }
         .bottom-battlements{
@@ -742,7 +757,7 @@ a,a:focus,a:visited{
               
             }
             .image-box{
-                padding: 20px;
+                margin-bottom: 30px;
               }
             .stages{
               margin-top: 20px;
@@ -839,9 +854,10 @@ a,a:focus,a:visited{
                 background: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
                 height: 3px;
                 margin-top: 20px;
+                margin-bottom: 3px;
               }
             .title{
-              margin-bottom: 8px;
+              margin-bottom: 10px;
               font-weight: 900;
               font-size: 44px;
               line-height: 45px;
@@ -858,6 +874,10 @@ a,a:focus,a:visited{
               font-size: 18px;
               color: #fff;
               line-height: 21px;
+              a{
+                color: #fff;
+                text-decoration: underline;
+              }
               
             }
             .number{
@@ -895,6 +915,8 @@ a,a:focus,a:visited{
 
             }
             .sub-categories{
+              padding-top: 10px;
+              padding-bottom: 10px;
               padding-left: 10px;
               border-width: 0 0 0 3px;
               border-style: solid;
@@ -960,7 +982,8 @@ a,a:focus,a:visited{
                     color: #fff;
                     width: 100%;
                     cursor: pointer;
-                    
+                    padding-top: 3.5px;
+                    padding-bottom: 3.5px;
                   }
               }
             }
@@ -1011,9 +1034,9 @@ a,a:focus,a:visited{
             .indent-title{
               color: #fff;
               font-size: 20px;
-              line-height: 23px;
+              line-height: 25px;
               font-weight: 700;
-              margin: 10px 0 0 0;
+              margin: 10px 0 15px 0;
 
             }
           }
@@ -1111,6 +1134,39 @@ a,a:focus,a:visited{
       background: url('/assets/crew-about.png') no-repeat;
       background-size: cover;
     }
+    .mfp-no-margins img.mfp-img {
+	padding: 0;
+    }
+    /* position of shadow behind the image */
+    .mfp-no-margins .mfp-figure:after {
+        top: 0;
+        bottom: 0;
+    }
+    /* padding for main container */
+    .mfp-no-margins .mfp-container {
+        padding: 0;
+    }
+    .mfp-with-zoom .mfp-container,
+    .mfp-with-zoom.mfp-bg {
+        opacity: 0;
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: all 0.3s ease-out; 
+        -moz-transition: all 0.3s ease-out; 
+        -o-transition: all 0.3s ease-out; 
+        transition: all 0.3s ease-out;
+    }
+
+    .mfp-with-zoom.mfp-ready .mfp-container {
+            opacity: 1;
+    }
+    .mfp-with-zoom.mfp-ready.mfp-bg {
+            opacity: 0.8;
+    }
+
+    .mfp-with-zoom.mfp-removing .mfp-container, 
+    .mfp-with-zoom.mfp-removing.mfp-bg {
+        opacity: 0;
+  }
   }
   .show-more.button{
       color: white;
@@ -1120,6 +1176,17 @@ a,a:focus,a:visited{
       text-decoration: none;
     }
   .services.slider{
+    .show-more{
+      width: 60%;
+    }
+    .sales{
+      width: 55.862069%;
+      position: absolute;
+      left: 15px;
+      bottom: 0;
+      z-index: 2;
+      transform: translateY(80%);
+    }
     .title{
       margin-top: 20px;
     }
@@ -1243,7 +1310,8 @@ a,a:focus,a:visited{
           color: #fff;
           width: 100%;
           cursor: pointer;
-          
+          padding-top: 3.5px;
+          padding-bottom: 3.5px;
         }
     }
       }
@@ -1333,6 +1401,11 @@ a,a:focus,a:visited{
       background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/development.jpg') no-repeat;
       background-size: cover;
     }
+    .slide-content.sites{
+      .indent-title{
+        text-transform: uppercase;
+      }
+    }
     .show-price-bg{
       width: 100%;
       height: 100%;
@@ -1373,6 +1446,8 @@ a,a:focus,a:visited{
       background-size: 110% 110%;
       background-position: center;
     .slide-content.prototyping{
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/prototype.png') no-repeat;
+      background-size: cover;
       .sales{
         width: 100%;
         padding: 5px;
@@ -1427,6 +1502,10 @@ a,a:focus,a:visited{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/redesign-blured.png') no-repeat;
       background-size: 110% 110%;
       background-position: center;
+    .slide-content.redesign{
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/redesign.png') no-repeat;
+      background-size: cover;
+    }
     
     
   }
@@ -1434,6 +1513,10 @@ a,a:focus,a:visited{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/branding-blured.png') no-repeat;
       background-size: 110% 110%;
       background-position: center;
+    .slide-content.branding{
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/branding.png') no-repeat;
+      background-size: cover;
+    }
   }
   .promo_sites.slider{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/promo-sites-blured.png') no-repeat;
@@ -1443,6 +1526,10 @@ a,a:focus,a:visited{
       width: 100%;
       line-height: 17px;
       padding: 8px;
+    }
+    .slide-content.promo_sites{
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/promo-sites.png') no-repeat;
+      background-size: cover;
     }
     .slide-content.why_us{
       .indent-title{
@@ -1463,6 +1550,10 @@ a,a:focus,a:visited{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/smm-blured.png') no-repeat;
       background-size: 110% 110%;
       background-position: center;
+    .slide-content.smm{
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/smm.png') no-repeat;
+      background-size: cover;
+    }
     .social-icons{
       margin-bottom: 10px;
       img{
@@ -1485,6 +1576,10 @@ a,a:focus,a:visited{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/auditing-blured.png') no-repeat;
       background-size: 110% 110%;
       background-position: center;
+    .slide-content.auditing{
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/auditing.png') no-repeat;
+      background-size: cover;
+    }
     .sales{
       position: relative;
       width: 70%;
@@ -1577,6 +1672,10 @@ a,a:focus,a:visited{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/polygraph-blured.png') no-repeat;
       background-size: 110% 110%;
       background-position: center;
+    .slide-content.polygraph{
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/polygraph.png') no-repeat;
+      background-size: cover;
+    }
     .scroll-box{
       margin-top: 30px;
     }
@@ -1604,6 +1703,8 @@ a,a:focus,a:visited{
       background-size: 110% 110%;
       background-position: center;
     .slide-content.support_sites{
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/support.png') no-repeat;
+      background-size: cover;
       .justify-box{
         border: 1px solid white;
         align-items: center;
@@ -1671,6 +1772,8 @@ a,a:focus,a:visited{
       background-size: 110% 110%;
       background-position: center;
     .slide-content.internet_shop{
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/support.png') no-repeat;
+      background-size: cover;
       .indent-box{
         border: 1px solid white;
         padding: 13px;
@@ -1728,6 +1831,10 @@ a,a:focus,a:visited{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/landing-blured.png') no-repeat;
       background-size: 110% 110%;
       background-position: center;
+    .slide-content.landing_page{
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/landing.png') no-repeat;
+      background-size: cover;
+    }
     .slide-content.for_whom{
       .row{
         margin-bottom: 20px;
@@ -1781,9 +1888,8 @@ a,a:focus,a:visited{
             }
             &:first-child{
               td{
-                border-top-width: 0px;
                 &:last-child{
-                  border-width: 0px 1px 0px 1px;
+                  border-width: 1px 1px 0px 1px;
                 }
               }
             }
@@ -1814,13 +1920,18 @@ a,a:focus,a:visited{
       }
     }
     .slide-content.stages_landing{
+      .indent-title{
+        margin-top: 15px !important;
+      }
       .number{
+        font-weight: 900 !important;
         background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
         color: transparent !important;
         background-clip: text;
         -webkit-background-clip: text;
-        line-height: 70px;
-        margin-right: 5px;
+        font-size: 45px;
+        line-height: 55px;
+        margin-right: -10px;
       }
     }
     .slide-content.price{
@@ -2031,7 +2142,8 @@ a,a:focus,a:visited{
           color: #fff;
           width: 100%;
           cursor: pointer;
-          
+          padding-top: 3.5px;
+          padding-bottom: 3.5px;
         }
     }
     }

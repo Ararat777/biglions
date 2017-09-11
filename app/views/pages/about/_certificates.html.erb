@@ -3,8 +3,8 @@
 </h2>
 <div class="row">
   <% page.indents.each do |item| %>
-  <div class="col-md-3 certif-image">
-    <%= image_tag item.image_url,class: 'img-fluid' %>
+  <div class="col-md-3 certif-image indent-box">
+    <a class="popup-image" href="<%= item.image_url %>"><%= image_tag item.image_url,class: 'img-fluid' %></a>
   </div>
   <% end %>
 </div>

@@ -136,6 +136,20 @@ $(window).on('load',function(){
       
     }
   }
+  $('.popup-image').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300 // don't foget to change the duration also in CSS
+		}
+	});
   
   $('.nav-btn').on("click",function(){
      var barNumber = +$(this).data('number');
@@ -232,6 +246,17 @@ $(window).on('load',function(){
      $(this).parent().siblings('.answer').stop().slideUp();
      $(this).removeClass("on").addClass("off");
      $(this).find("img").attr("src","/assets/arrow-down.svg");
+   }
+ })
+ $('.question-row').on("click",function(){
+   if($(this).children(".switch").hasClass("off")){
+     $(this).siblings(".answer").stop().slideDown();
+     $(this).children(".switch").removeClass("off").addClass("on");
+     $(this).children(".switch").find("img").attr("src","/assets/arrow-up.svg");
+   }else{
+     $(this).siblings(".answer").stop().slideUp();
+     $(this).children(".switch").removeClass("on").addClass("off");
+     $(this).children(".switch").find("img").attr("src","/assets/arrow-down.svg");
    }
  })
  
