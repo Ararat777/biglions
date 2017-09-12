@@ -262,7 +262,7 @@ $(window).on('load',function(){
  
  var currentInputValue = '';
   
- $(".gift.form-box input[type=text], .gift.form-box textarea").on("click",function(){
+ $(".gift.form-box input[type=text], .gift.form-box textarea").on("focus",function(){
    currentInputValue = $(this).val();
  });
  $(".gift.form-box input[type=text],.gift.form-box textarea").on("input", function(){
