@@ -1,0 +1,5 @@
+$('.tariff-modal-window').html("<%= j (render 'pages/auditing/tariff_window',tariff: @tariff) %>");
+$('.tariff-close').on("click", function(){
+  $('.tariff-modal-window').fadeOut();
+});
+$('.tariff-modal-window').fadeIn();

@@ -315,6 +315,7 @@ $(window).on('load',function(){
       }
       
     })
+    
   }
   if(screenWidth <= 768){
     $('.hamburger.mobile').on("click",function(){
