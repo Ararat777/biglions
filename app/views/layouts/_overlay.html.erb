@@ -42,24 +42,22 @@
     </div>
     <div class="col-sm-12 col-xs-12 top-menu-opened-item flex-column">
           <div class="top-menu-item-mobile portfolio">
-            <h4>Портфолио</h4>
+            <h4>Портфолио <i class="fa fa-caret-down caret-btn" aria-hidden="true"></i></h4>
             <div class="top-menu-item-hovered">
               <div class="top-battlements"></div>
               <div class="bottom-battlements"></div>
             </div>
           </div>
           <div class="top-menu-item-mobile contacts">
-            <h4><%= link_to 'Контакты', contacts_path %></h4>
-            <div class="top-menu-item-hovered">
-              <div class="top-battlements"></div>
-              <div class="menu-item">
+            <h4><%= link_to 'Контакты', contacts_path %> <i class="fa fa-caret-down caret-btn" aria-hidden="true"></i></h4>
+            <div class="menu-item-box">
+              <div class="menu-item mobile contacts-menu">
                 <p class="mobile"><a href="tel:+380943425163">(094) <b>342-51-63</b></a></p>
                 <a href="#">info@biglions.org</a>
                 <a href="#"><%= image_tag '/assets/icon-scype.svg',class: 'img-fluid' %> biglions</a>
                 <p>Украина, г.Харьков, ул.Грековская 5 </p>
                 <%= link_to 'Просмотреть все контакты',contacts_path,class: 'view-contacts' %>
               </div>
-              <div class="bottom-battlements"></div>
             </div>
           </div>
         </div>
@@ -94,7 +92,7 @@
             <% end %>
           </div>
           <div class="input-group">
-            <%= f.submit 'Обсудить проект', class: 'button' %>
+            <%= f.button 'Обсудить проект', class: 'button' %>
           </div>
           <% end %>
           <p class="agreement">Отправляя форму, вы соглашаетесь с "Правилами поведения", и положением о переписи квартиры.</p>

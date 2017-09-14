@@ -10,6 +10,16 @@
 </div>
 <div class="row">
   <div class="col-md-12">
+    <% if mobile_device? %>
+    <div class="row">
+      <% page.indents.offset(1).each do |item| %>
+        <div class="col-12 col-sm-12 indent-box">
+          <h4 class="indent-title"><%= item.title %></h4>
+          <p class="description"><%= item.body %></p>
+        </div>
+     <% end %>
+    </div>
+    <% else %>
     <div class="overflow-indents-box">
       <div class="indents-wrapper">
         <div class="indents-box">
@@ -50,5 +60,6 @@
         </div>
       </div>
    </div>
+    <% end %>
   </div>
 </div>

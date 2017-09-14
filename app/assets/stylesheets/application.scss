@@ -2673,6 +2673,17 @@ a,a:focus,a:visited{
           justify-content: center;
           align-items: center;
           color: #fff;
+          &.contacts-menu{
+            .mobile{
+              font-size: 24px;
+            }
+            .view-contacts{
+              background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+              color: transparent;
+              background-clip: text;
+              -webkit-background-clip: text;
+            }
+          }
           a{
             color: #fff;
           }
@@ -2761,6 +2772,100 @@ a,a:focus,a:visited{
     .page{
       .page-content{
         padding-top: 15px;
+        &.questions{
+          .questions-container{
+              &::-webkit-scrollbar-track
+              {
+
+                background-color: transparent;
+              }
+
+              &::-webkit-scrollbar
+              {
+                  width: 4px;
+                  background-color: transparent;
+              }
+
+              &::-webkit-scrollbar-thumb
+              {
+
+                  background: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);;
+              }
+              max-height: 400px;
+              overflow-y: scroll;
+              overflow-x: hidden;
+              .row{
+                padding-bottom: 20px;
+              }
+              .row:last-child{
+                padding-bottom: 0;
+              }
+              .question-box{
+                position: relative;
+
+                background: rgba(0,0,0,0.2);
+
+
+                .question-row{
+                  height: 62px;
+                  display: flex;
+                  flex-direction: row;
+                }
+                .answer{
+                  display: none;
+                  width: 100%;
+                  color: #fff;
+                  line-height: 21px;
+                  font-size: 16px;
+                  margin-left: 5%;
+                  padding-bottom: 20px;
+                }
+
+                .switch{
+                  width: 10%;
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  cursor: pointer;
+                }
+                .question{
+                  display: flex;
+                  align-items: center;
+                  text-align: left;
+                  color: #fff;
+                  font-weight: 700;
+                  font-size: 18px;
+                  line-height: 22px;
+                  height: 100%;
+                }
+              }
+     
+            }
+        }
+        &.our_work{
+          .project-box{
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              text-align: left;
+              height: 150px;
+              background: rgba(0,0,0,0.6);
+              margin-bottom: 30px;
+              padding: 10px;
+             .project-title{
+               font-size: 36px;
+               line-height: 34px;
+               font-weight: 900;
+               color: #fff;
+             }
+             .project-category{
+               font-size: 18px;
+               line-height: 21px;
+               color: #fff;
+             }
+         }
+        }
         .justify-box{
           width: 100%;
           height: 100%;
@@ -2770,6 +2875,13 @@ a,a:focus,a:visited{
           flex-direction: column;
           &.horizontal{
             flex-direction: row;
+          }
+        }
+        .indent-box{
+          margin-top: 25px;
+          text-align: center;
+          .description{
+            text-align: left;
           }
         }
         .indent-mobile{
@@ -2850,6 +2962,51 @@ a,a:focus,a:visited{
           text-align: center;
           margin-bottom: 8px;
         }
+        .tariff-box{
+            margin-top: 33px;
+            background: rgba(6,6,6, 0.5);
+            position: relative;
+            padding-top: 30px;
+
+            h4,.tariff-button{
+              font-family: "Proxima Nova", sans-serif;
+              font-size: 36px;
+              line-height: 34px;
+              font-weight: 900;
+              color: #fff;
+            }
+            h4{
+              margin-bottom: 40px;
+            }
+            p{
+              padding-right: 5px;
+              padding-left: 5px;
+              font-size: 16px;
+              line-height: 19px;
+              color: #fff;
+              margin-bottom: 30px;
+            }
+            .price-box{
+              padding: 10px 15px;
+              border: 3px solid;
+              border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+              border-image-slice: 1;
+              color: white;
+              font-size: 36px;
+              line-height: 34px;
+              font-weight: 900;
+            }
+            &.gold{
+                border-width: 3px;
+                border-style: solid;
+                border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+                border-image-slice: 1;
+                .price-box{
+                  border-width: 3px 0 0 0;
+                }
+            }
+
+          }
       }
     }
     .about.page{
@@ -2877,6 +3034,195 @@ a,a:focus,a:visited{
       }
       .form-box{
         width: 100%;
+      }
+    }
+    .marketing.page{
+      background: url("/assets/marketing-blured.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+      .service-image{
+        text-align: center;
+      }
+      .sales{
+        width: 100%;
+      }
+      .page-content.why_advancement{
+        .indent-box{
+          img{
+            width: 50px;
+          }
+        }
+      }
+      .page-content.price{
+        .title{
+          margin-bottom: 0;
+        }
+        .title.price{
+          background-color: #EB5757;
+          margin-top: 0;
+          margin-right: auto;
+          margin-left: auto;
+          margin-bottom: 10px;
+          padding: 0 5px;
+          display: inline-block;
+          width: 40%;
+        }
+      }
+    }
+    .design.page{
+      background: url("/assets/design-blured.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+      .service-image{
+        text-align: center;
+      }
+      .indent-box{
+        a{
+          color: #fff;
+        }
+      }
+    }
+    .promo_sites.page{
+      background: url("/assets/promo-sites-blured.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+      .sales{
+        width: 100%;
+        padding: 5px;
+      }
+      .page-content.price_contain{
+        .indent-box{
+          img{
+            width: 37px;
+          }
+        }
+      }
+    }
+    .internet_shop.page{
+      background: url("/assets/internet-shop-blured.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+      .page-content.stages_internet_shop{
+        .indent-title{
+          text-align: left;
+        }
+        .number{
+          margin-right: 8px;
+          font-size: 40px;
+          line-height: 65px;
+          font-weight: 900;
+          background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+          color: transparent;
+          background-clip: text;
+          -webkit-background-clip: text;
+        }
+      }
+      .page-content.price{
+        .title.price{
+          margin-top: 0;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          display: block;
+          background-color: #EB5757;
+          padding: 0 5px;
+          width: 45%;
+        }
+        .form-box{
+          padding: 5px;
+          border: 1px solid white;
+          margin-top: 30px;
+          text-align: center;
+        }
+      }
+    }
+    .landing_page.page{
+      background: url("/assets/landing-blured.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+      .page-content.order_landing{
+        #timer-box{
+          margin-top: 30px;
+          .digit{
+            font-size: 96px;
+            line-height: 90px;
+            width: 100%;
+            text-align: center;
+            background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            font-family: "Proxima Nova Thin", sans-serif;
+
+          }
+          .time-value{
+            font-size: 14px;
+            font-weight: 13px;
+            font-family: "Proxima Nova", sans-serif;
+            color: #fff;
+            display: block;
+            text-align: center;
+            margin-bottom: 25px;
+          }
+        }
+      }
+      .page-content.stages_landing{
+        .indent-title{
+          text-align: left;
+        }
+        .number{
+          margin-right: 8px;
+          font-size: 40px;
+          line-height: 65px;
+          font-weight: 900;
+          background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+          color: transparent;
+          background-clip: text;
+          -webkit-background-clip: text;
+        }
+      }
+    }
+    .support_site.page{
+      background: url("/assets/support-blured.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+      
+      .page-content.support_sites{
+        .justify-box{
+          padding: 5px;
+          border: 1px solid white;
+          .sales{
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 20px;
+          }
+          .phrase{
+            text-align: center;
+            font-size: 18px;
+            line-height: 21px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+          }
+          .advice{
+            text-align: center;
+            font-size: 18px;
+            line-height: 21px;
+            font-weight: normal;
+            font-style: normal;
+            color: white;
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .page-content.services{
+        .circle-inner{
+          overflow: hidden;
+          .circle-box{
+            width: 200%;
+            left: -50%;
+          }
+        }
       }
     }
   }
