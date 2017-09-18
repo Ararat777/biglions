@@ -3,10 +3,10 @@
 </h2>
 <div class="row">
   <% page.indents.each do |item| %>
-    <div class="col-md-5">
-      <p class="description">
-        <%= item.body %>
-      </p>
+    <div class="col-md-6">
+      <div class="description">
+        <%= raw(item.body) %>
+      </div>
     </div>
   <%end%>
 </div>
