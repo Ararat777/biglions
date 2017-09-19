@@ -18,6 +18,11 @@ ActiveAdmin.register Category do
       column :name do |page|
         link_to page.name, admin_page_path(page)
       end
+      column :nav_name
+      column :actions do |page|
+        span link_to "Edit", edit_admin_page_path(page)
+        span link_to "Delete", admin_page_path(page),method: :delete
+      end
     end
   end
 # or
