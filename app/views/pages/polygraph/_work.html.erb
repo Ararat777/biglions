@@ -1,0 +1,14 @@
+<h2 class="title">
+  <%= page.name %>
+</h2>
+<div class="scroll-box">
+  <div class="row">
+  <% page.indents.each do |item| %>
+  <div class="col-md-4 indent-box">
+    <p class="description">
+      <%= item.body %>
+    </p>
+  </div>
+  <% end %>
+</div>
+</div>

@@ -1,0 +1,33 @@
+<h2 class="title text-center">
+  <%= page.name %>
+</h2>
+<div class="row">
+  <div class="col-md-3 offset-md-2">
+    <div class="tariff-box text-center">
+      <h4>
+        <%= category.tariffs.first.title %>
+      </h4>
+      <%= image_tag category.tariffs.first.image_url, class: 'img-fluid' %>
+      <p>
+        <%= raw(category.tariffs.first.body) %>
+      </p>
+      <div class="price-box">
+        $<%= category.tariffs.first.price %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="tariff-box text-center gold">
+      <h4>
+        <%= category.tariffs.last.title %>
+      </h4>
+      <%= image_tag category.tariffs.last.image_url, class: 'img-fluid' %>
+      <p>
+        <%= raw(category.tariffs.last.body) %>
+      </p>
+      <div class="price-box gold">
+        $<%= category.tariffs.last.price %>
+      </div>
+    </div>
+  </div>
+</div>

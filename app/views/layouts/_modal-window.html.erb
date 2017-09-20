@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-10 offset-md-1">
             <h2>Обсудить проект</h2>
-          <%= form_for :project,url: '#' do |f| %>
+          <%= form_for :projects,url: projects_path do |f| %>
           <div class="row">
             <div class="col-md-6">
                 <div class="input-group">
@@ -28,8 +28,8 @@
                <div class="row">
                 <div class="col-md-6">
               <div class="input-group file">
-                <%= f.file_field :file, class: 'form-control' %>
-                <%= f.label :file do %>
+                <%= f.file_field :document, class: 'form-control' %>
+                <%= f.label :document do %>
                 <%= image_tag '/assets/attach.svg' %>
                 Прикрепить тех. задание
                 <% end %>
@@ -37,7 +37,7 @@
             </div>
             <div class="col-md-6">
               <div class="input-group">
-                <%= f.submit 'Обсудить проект', class: 'button' %>
+                <%= f.button 'Обсудить проект', class: 'button' %>
               </div>
             </div>
               </div>
@@ -57,7 +57,7 @@
     
   </div>
   <div class="close-modal-form">
-    <%= image_tag '/assets/close-form.svg',class: 'img-fluid' %>
+    <%= image_tag '/assets/close.svg',class: 'img-fluid' %>
   </div>
   
 </div>

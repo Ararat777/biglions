@@ -1,5 +1,5 @@
 
-<div class="row">
+<div class="row hidden-sm-down">
   <div class="col-md-6">
    <h2 class="title">
       <%= page.name %>
@@ -9,7 +9,7 @@
     </p>
   </div>
   <div class="col-md-4 offset-md-1">
-   <div class="category-box">
+   <div class="category-box justify-box">
      <div class="sub-categories">
       <% @category.categories.each do |item| %>
         <%= link_to item.name,services_sub_category_path('marketing',item.title) %>

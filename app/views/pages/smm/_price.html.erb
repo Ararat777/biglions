@@ -5,14 +5,14 @@
   <% category.tariffs.each_with_index do |item,number| %>
   <% if number == 2 %>
   <div class="col-md-6">
-    <div class="tariff-box text-center">
+    <div class="tariff-box text-center gold">
       <h4>
         <%= item.title %>
       </h4>
       <p>
         <%= raw(item.body) %>
       </p>
-      <div class="tariff-button button">
+      <div class="price-box">
         $<%= item.price %>
       </div>
     </div>
@@ -27,7 +27,7 @@
       <p>
         <%= raw(item.body) %>
       </p>
-      <div class="tariff-button button">
+      <div class="price-box">
         $<%= item.price %>
       </div>
     </div>

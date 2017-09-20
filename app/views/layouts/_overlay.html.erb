@@ -12,7 +12,7 @@
                 <div class="sub-categories-links-box <%= item.title %>">
                  <div class="sub-categories-links">
                   <div class="row">
-                    <% item.categories.in_groups_of(3,false).each do |group| %>
+                    <% item.categories.in_groups_of(2,false).each do |group| %>
                     <div class="col-md-6">
                     <% group.each do |sub_item| %>
                       <%= link_to sub_item.name,services_sub_category_path(item.title,sub_item.title) %><br>
@@ -42,24 +42,22 @@
     </div>
     <div class="col-sm-12 col-xs-12 top-menu-opened-item flex-column">
           <div class="top-menu-item-mobile portfolio">
-            <h4>Портфолио</h4>
+            <h4>Портфолио <i class="fa fa-caret-down caret-btn" aria-hidden="true"></i></h4>
             <div class="top-menu-item-hovered">
               <div class="top-battlements"></div>
               <div class="bottom-battlements"></div>
             </div>
           </div>
           <div class="top-menu-item-mobile contacts">
-            <h4><%= link_to 'Контакты', contacts_path %></h4>
-            <div class="top-menu-item-hovered">
-              <div class="top-battlements"></div>
-              <div class="menu-item">
+            <h4><%= link_to 'Контакты', contacts_path %> <i class="fa fa-caret-down caret-btn" aria-hidden="true"></i></h4>
+            <div class="menu-item-box">
+              <div class="menu-item mobile contacts-menu">
                 <p class="mobile"><a href="tel:+380943425163">(094) <b>342-51-63</b></a></p>
                 <a href="#">info@biglions.org</a>
                 <a href="#"><%= image_tag '/assets/icon-scype.svg',class: 'img-fluid' %> biglions</a>
                 <p>Украина, г.Харьков, ул.Грековская 5 </p>
                 <%= link_to 'Просмотреть все контакты',contacts_path,class: 'view-contacts' %>
               </div>
-              <div class="bottom-battlements"></div>
             </div>
           </div>
         </div>
@@ -94,7 +92,7 @@
             <% end %>
           </div>
           <div class="input-group">
-            <%= f.submit 'Обсудить проект', class: 'button' %>
+            <%= f.button 'Обсудить проект', class: 'button' %>
           </div>
           <% end %>
           <p class="agreement">Отправляя форму, вы соглашаетесь с "Правилами поведения", и положением о переписи квартиры.</p>
@@ -125,10 +123,10 @@
                 <div class="sub-categories-links-box <%= item.title %>">
                  <div class="sub-categories-links">
                   <div class="row">
-                    <% item.categories.in_groups_of(3,false).each do |group| %>
+                    <% item.categories.in_groups_of(2,false).each do |group| %>
                     <div class="col-md-6">
                     <% group.each do |sub_item| %>
-                      <%= link_to sub_item.name,services_sub_category_path(item.title,sub_item.title) %><br>
+                      <%= link_to sub_item.name,services_sub_category_path(item.title,sub_item.title) %><br><br>
                     <% end %>
                     </div>
                     <% end %>
@@ -166,10 +164,10 @@
             <h4><%= link_to 'Контакты', contacts_path %></h4>
             <div class="top-menu-item-hovered">
               <div class="top-battlements"></div>
-              <div class="menu-item">
-                <p class="mobile"><a href="tel:+380943425163">(094) <b>342-51-63</b></a></p>
-                <a href="#">info@biglions.org</a>
-                <a href="#"><%= image_tag '/assets/icon-scype.svg',class: 'img-fluid' %> biglions</a>
+              <div class="menu-item contacts-box">
+                <p class="mobile"><a href="tel:+380943425163" class="phone">(094) <b>342-51-63</b></a></p>
+                <a href="#" class="mail">info@biglions.org</a>
+                <a href="#" class="skype"><%= image_tag '/assets/icon-scype.svg',class: 'img-fluid' %> biglions</a>
                 <p>Украина, г.Харьков, ул.Грековская 5 </p>
                 <%= link_to 'Просмотреть все контакты',contacts_path,class: 'view-contacts' %>
               </div>
@@ -177,7 +175,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3 top-menu-opened-discuss-project flex-column">
+        <div class="col-md top-menu-opened-discuss-project flex-column">
           <%= image_tag '/assets/logo.svg',width: '50',height: '50'%>
           <h2>Обсудить<br>проект</h2>
           <%= form_for :project,url: '#' do |f| %>
@@ -201,10 +199,10 @@
             <% end %>
           </div>
           <div class="input-group">
-            <%= f.submit 'Обсудить проект', class: 'button' %>
+            <%= f.button 'Обсудить проект', class: 'button' %>
           </div>
           <% end %>
-          <p class="agreement">Отправляя форму, вы соглашаетесь с "Правилами поведения", и положением о переписи квартиры.</p>
+          <p class="agreement">Отправляя форму, вы соглашаетесь с <a href="#" style="text-decoration: underline; color: #fff">"Правилами поведения"</a>, и положением о переписи квартиры.</p>
           <h4>BigLions © 2015-2017</h4>
         </div>
          

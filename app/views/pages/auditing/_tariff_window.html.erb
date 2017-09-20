@@ -1,0 +1,17 @@
+<div class="tariff-window">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h4 class="indent-title text-center">
+          <%= tariff.title %> - $<%= tariff.price %>
+        </h4>
+        <p class="description">
+          <%= tariff.body %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="tariff-close">
+    <%= image_tag "/assets/close.svg", class: "img-fluid" %>
+  </div>
+</div>

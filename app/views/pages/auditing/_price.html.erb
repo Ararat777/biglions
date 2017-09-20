@@ -16,11 +16,14 @@
     <div class="col-md-<%= column_width + number %> tariff-column">
       <div class="auditing-tariff-box">
         <span><%= item.title %> - $<%=item.price%> </span>
-        <div class="button">Подробно</div>
+        <%= link_to "Подробно", tariff_path(item),remote: true,class: 'button' %>
       </div>
     </div>
    
     <% end %>
    </div>
   </div>
+</div>
+<div class="tariff-modal-window">
+  
 </div>

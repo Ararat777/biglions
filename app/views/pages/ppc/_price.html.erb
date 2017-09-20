@@ -1,29 +1,30 @@
+<h2 class="title">
+  <%= page.name %>
+</h2>
 <div class="row">
-  <div class="col-md-8">
-    <h2 class="title">
-      <%= page.name %>
-    </h2>
-    <p class="description">
-      <%= page.indents.first.body %>
-    </p>
-  </div>
-  <div class="col-md-3 offset-md-1">
-    <div class="price-button modal-btn button">
-      Заказать консультацию
-    </div>
-  </div>
-</div>
-<div class="row">
-  <% page.indents.offset(1).each do |item| %>
-  <div class="col-md-6">
-    <div class="price-box">
-      <h4 class="indent-title">
+  <% category.tariffs.each_with_index do |item,number| %>
+  <div class="col-md-<%= (number + 1) == 1 ? 5 : 3 %>">
+    <div class="tariff-box text-center">
+      <h4>
         <%= item.title %>
       </h4>
-      <p class="description">
-        <%= item.body %>
+      <p>
+        <%= raw(item.body) %>
       </p>
+      <div class="price-box">
+        $<%= item.price %>
+      </div>
     </div>
   </div>
   <% end %>
+  <div class="col-md-3">
+    <div class="justify-box">
+      <p class="description">
+        <%= page.indents.first.body %>
+      </p>
+      <div class="button modal-btn">
+        Заказать консультацию
+      </div>
+    </div>
+  </div>
 </div>

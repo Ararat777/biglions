@@ -1,3 +1,10 @@
 <h2 class="title">
   <%= page.name %>
 </h2>
+<div class="row">
+  <% page.indents.each do |item| %>
+  <div class="col-md-2 indent-box col-6 col-sm-6">
+    <%= image_tag item.image_url, class: 'img-fluid' %>
+  </div>
+  <% end %>
+</div>
