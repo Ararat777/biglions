@@ -330,10 +330,11 @@ $(window).on('load',function(){
     var parentBlockHeight = $(this).parent().css("height");
     $(this).css("height",parentBlockHeight);
   });
-  
-  $('.slider').on("swipeleft", function(){
-    prevSlide();
-  })
 });
 
 
+$(document).on("pageinit",function(){
+  $(window).on("swipeleft", function(){
+    alert("ara");
+  });
+});
