@@ -333,8 +333,3 @@ $(window).on('load',function(){
 });
 
 
-$(document).on("pageinit",function(){
-  $(window).on("swipeleft", function(){
-    alert("ara");
-  });
-});
