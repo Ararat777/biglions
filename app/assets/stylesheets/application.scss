@@ -2072,7 +2072,7 @@ a,a:focus,a:visited{
       left: 0;
       top: 15%;
       .circle-arrows{
-        z-index: 2;
+        z-index: 1;
         position: absolute;
         height: 0;
         top: 12%;
@@ -2781,6 +2781,9 @@ a,a:focus,a:visited{
       }
     }
     .page{
+      background-size: 200% 105% !important;
+      background-position: center -5px !important;
+      background-attachment: fixed !important;
       .page-content{
         padding-top: 15px;
         &.questions{
@@ -3022,13 +3025,11 @@ a,a:focus,a:visited{
     }
     .about.page{
       background: url("/assets/about-bg.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+     
     }
     .services.page{
       background: url("/assets/services.jpg") no-repeat;
-      background-size: cover;
-      background-position: center;
+    
       .service-image{
         text-align: center;
       }
@@ -3038,8 +3039,7 @@ a,a:focus,a:visited{
     }
     .webdevelopment.page{
       background: url("/assets/development-blured.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+
       .service-image{
         text-align: center;
       }
@@ -3049,8 +3049,7 @@ a,a:focus,a:visited{
     }
     .marketing.page{
       background: url("/assets/marketing-blured.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+   
       .service-image{
         text-align: center;
       }
@@ -3082,8 +3081,7 @@ a,a:focus,a:visited{
     }
     .design.page{
       background: url("/assets/design-blured.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+  
       .service-image{
         text-align: center;
       }
@@ -3095,8 +3093,7 @@ a,a:focus,a:visited{
     }
     .promo_sites.page{
       background: url("/assets/promo-sites-blured.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+   
       .sales{
         width: 100%;
         padding: 5px;
@@ -3111,8 +3108,7 @@ a,a:focus,a:visited{
     }
     .internet_shop.page{
       background: url("/assets/internet-shop-blured.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+    
       .page-content.stages_internet_shop{
         .indent-title{
           text-align: left;
@@ -3149,8 +3145,7 @@ a,a:focus,a:visited{
     }
     .landing_page.page{
       background: url("/assets/landing-blured.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+    
       .page-content.order_landing{
         #timer-box{
           margin-top: 30px;
@@ -3195,8 +3190,7 @@ a,a:focus,a:visited{
     }
     .support_site.page{
       background: url("/assets/support-blured.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+    
       
       .page-content.support_sites{
         .justify-box{
@@ -3238,8 +3232,11 @@ a,a:focus,a:visited{
     }
     .smm.page{
       background: url("/assets/smm-blured.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+      .page-content.smm{
+        .social-icons{
+          text-align: center;
+        }
+      }
       .sales{
         width: 100%;
         padding: 5px;
@@ -3247,13 +3244,60 @@ a,a:focus,a:visited{
     }
     .ppc.page{
       background: url("/assets/ppc-blured.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+      .page-content.ppc{
+        .shadow-cloud{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          .shadow-img{
+            position: absolute;
+            width: 100%;
+            top: 25%;
+            left: 0;
+            
+            img{
+              width: 100%;
+            }
+          }
+          .cloud-text{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 75%;
+            .jdun-text{
+              font-size: 24px;
+              line-height: 23px;
+              color: white;
+              font-weight: 900;
+              text-align: center;
+            }
+            .title{
+              font-size: 44px;
+              font-weight: 45px;
+              text-align: center;
+            }
+            .description{
+              text-align: center;
+            }
+            .cloud-button{
+              width: 60%;
+              margin-left: auto;
+              margin-right: auto;
+            }
+          }
+        }
+      }
+      .page-content.what_is_ppc{
+        .margin-indent{
+          margin-top: 250px;
+        }
+      }
     }
     .auditing.page{
       background: url("/assets/auditing-blured.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+     
       .page-content.auditing{
         .form-box{
           width: 100%;
@@ -3271,11 +3315,58 @@ a,a:focus,a:visited{
           }
         }
       }
+      .page-content.price{
+        .tariff-column{
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .tariff-modal-window{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        .tariff-window{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/auditing-blured.png') no-repeat;
+          background-size: 180% 105%;
+          background-position: center;
+          .tariff-close{
+            position: absolute;
+            right: 2.5%;
+            top: 3%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+          }
+          .indent-title{
+            font-size: 36px;
+            line-height: 35px;
+            font-weight: 900;
+            text-transform: uppercase;
+          }
+        }
+      }
+        .auditing-tariff-box{
+          text-align: center;
+          span{
+            font-size: 30px;
+            font-weight: 900;
+            
+            color: white;
+          }
+        }
+      }
     }
     .prototyping.page{
       background: url("/assets/prototype-blured.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+   
       .service-image{
         text-align: center;
       }
@@ -3286,24 +3377,21 @@ a,a:focus,a:visited{
     }
     .redesign.page{
       background: url("/assets/redesign-blured.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+    
       .service-image{
         text-align: center;
       }
     }
     .branding.page{
       background: url("/assets/branding-blured.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+     
       .service-image{
         text-align: center;
       }
     }
     .polygraph.page{
       background: url("/assets/polygraph-blured.png") no-repeat;
-      background-size: cover;
-      background-position: center;
+      
       .page-content.polygraph{
         .form-box{
           width: 100%;

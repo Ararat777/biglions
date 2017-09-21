@@ -7,7 +7,17 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <div class="overflow-indents-box">
+   <% if mobile_device? %>
+   <div class="row">
+      <% page.indents.each do |item| %>
+        <div class="col-12 col-sm-12 indent-box">
+          <h4 class="indent-title"><%= item.title %></h4>
+          <p class="description"><%= item.body %></p>
+        </div>
+     <% end %>
+    </div>
+   <% else %>
+   <div class="overflow-indents-box">
       <div class="indents-wrapper">
         <div class="indents-box">
           <div class="row">
@@ -47,6 +57,7 @@
         </div>
       </div>
    </div>
+   <% end %>
   </div>
 </div>
 
