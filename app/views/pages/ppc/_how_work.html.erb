@@ -3,7 +3,7 @@
 </h2>
 <div class="row">
   <% page.indents.each_with_index do |item,number| %>
-  <div class="col-md-5 text-left indent-box">
+  <div class="col-md-5 indent-box">
     <%= image_tag item.image_url, class: 'indent-image img-fluid' %>
     <h4 class="indent-title"><%= item.title %></h4>
     <p class="description"><%= item.body %></p>

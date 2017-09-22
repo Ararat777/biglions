@@ -314,6 +314,19 @@ $(window).on('load',function(){
     $('.caret-btn').on("click",function(){
       $(this).parent().siblings(".menu-item-box").slideToggle();
     })
+    
+    $(window).on("scroll",function(){
+      if($(this).scrollTop() > 500){
+        $("#backToTop").fadeIn();
+      }else{
+        $("#backToTop").fadeOut();
+      }
+    });
+    $("#backToTop").on("click",function(){
+      $('html,body').animate({
+        scrollTop: 0
+      }, 700);
+    })
   }
   /*Fix justify-box height for Safari Mac */
   $('.justify-box').each(function(){
