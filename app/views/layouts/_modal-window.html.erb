@@ -18,7 +18,7 @@
                   <%= f.text_field :email, class: 'form-control',placeholder: 'Электронная почта' %>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 inputs-mobile">
               <div class="input-group">
                <%= f.text_area :comment, class: 'form-control',placeholder: 'Опишите кратко свой проект' %>
               </div>
@@ -26,18 +26,18 @@
             <div class="actions">
              <div class="container">
                <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 action-mobile">
               <div class="input-group file">
-                <%= f.file_field :document, class: 'form-control' %>
+                <%= f.file_field :document, class: 'form-control', :onclick => "ga('send', 'event', 'discuss_project_page', 'add_tz')" %>
                 <%= f.label :document do %>
                 <%= image_tag '/assets/attach.svg' %>
                 Прикрепить тех. задание
                 <% end %>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 action-mobile">
               <div class="input-group">
-                <%= f.button 'Обсудить проект', class: 'button' %>
+                <%= f.button 'Обсудить проект', class: 'button', :onclick => "ga('send', 'event', 'discuss_project_page_1', 'send_discuss_project')" %>
               </div>
             </div>
               </div>

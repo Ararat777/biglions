@@ -237,17 +237,7 @@ $(window).on('load',function(){
    $(this).children('.sub-categories-links-box').stop().slideUp();
  });
   
- $('.switch').on("click",function(){
-   if($(this).hasClass("off")){
-     $(this).parent().siblings('.answer').stop().slideDown();
-     $(this).removeClass("off").addClass("on");
-     $(this).find("img").attr("src","/assets/arrow-up.svg");
-   }else{
-     $(this).parent().siblings('.answer').stop().slideUp();
-     $(this).removeClass("on").addClass("off");
-     $(this).find("img").attr("src","/assets/arrow-down.svg");
-   }
- })
+ 
  $('.question-row').on("click",function(){
    if($(this).children(".switch").hasClass("off")){
      $(this).siblings(".answer").stop().slideDown();

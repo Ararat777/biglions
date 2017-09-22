@@ -2609,6 +2609,12 @@ a,a:focus,a:visited{
   .modal_box{
     .modal_content{
       width: 100%;
+      .action-mobile,.inputs-mobile{
+        margin-top: 15px;
+      }
+    }
+    .close-modal-form{
+      right: 5%;
     }
   }
 #top-menu{

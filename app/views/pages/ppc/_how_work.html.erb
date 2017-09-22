@@ -8,7 +8,7 @@
     <h4 class="indent-title"><%= item.title %></h4>
     <p class="description"><%= item.body %></p>
     <% if number == 1 %>
-    <div class="how_work-button modal-btn button">
+    <div class="how_work-button modal-btn button" onclick="ga('send', 'event', '<%= page.category.title %>_<%= page.title %>_page', 'turn_to_experienced_specialists')">
       Обратится к опытным специалистам
     </div>
     <%end%>

@@ -29,7 +29,7 @@
             <%= f.text_field :email, class: 'form-control',placeholder: 'Электронная почта' %>
           </div>
           <div class="input-group">
-            <%= f.button 'Обсудить проект', class: 'button' %>
+            <%= f.button 'Обсудить проект', class: 'button', :onclick => "ga('send', 'event', '#{page.category.title}_#{page.title}_page', 'send_discuss_project_11')" %>
           </div>
           <% end %>
    </div>

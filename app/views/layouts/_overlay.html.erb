@@ -161,7 +161,7 @@
             </div>
           </div>
           <div class="top-menu-item contacts">
-            <h4><%= link_to 'Контакты', contacts_path %></h4>
+            <h4><%= link_to 'Контакты', contacts_path, :onclick => "ga('send', 'event', 'site_visitka_what_we_do_page', 'send_discuss_project_2')" %></h4>
             <div class="top-menu-item-hovered">
               <div class="top-battlements"></div>
               <div class="menu-item contacts-box">
@@ -169,7 +169,7 @@
                 <a href="#" class="mail">info@biglions.org</a>
                 <a href="#" class="skype"><%= image_tag '/assets/icon-scype.svg',class: 'img-fluid' %> biglions</a>
                 <p>Украина, г.Харьков, ул.Грековская 5 </p>
-                <%= link_to 'Просмотреть все контакты',contacts_path,class: 'view-contacts' %>
+                <%= link_to 'Просмотреть все контакты',contacts_path,class: 'view-contacts', :onclick => "ga('send', 'event', 'menu_page_3', 'view_contacts')" %>
               </div>
               <div class="bottom-battlements"></div>
             </div>
@@ -192,14 +192,14 @@
             <%= f.text_area :comment, class: 'form-control',placeholder: 'Опишите кратко свой проект' %>
           </div>
           <div class="input-group file">
-            <%= f.file_field :file, class: 'form-control' %>
+            <%= f.file_field :file, class: 'form-control', :onclick => "ga('send', 'event', 'menu_page', 'add_tz_1')" %>
             <%= f.label :file do %>
               <%= image_tag '/assets/attach.svg' %>
               Прикрепить тех. задание
             <% end %>
           </div>
           <div class="input-group">
-            <%= f.button 'Обсудить проект', class: 'button' %>
+            <%= f.button 'Обсудить проект', class: 'button', :onclick => "ga('send', 'event', 'menu_page_1', 'send_discuss_project_1')" %>
           </div>
           <% end %>
           <p class="agreement">Отправляя форму, вы соглашаетесь с <a href="#" style="text-decoration: underline; color: #fff">"Правилами поведения"</a>, и положением о переписи квартиры.</p>

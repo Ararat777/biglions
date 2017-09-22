@@ -22,7 +22,7 @@
       <p class="description">
         <%= page.indents.first.body %>
       </p>
-      <div class="button modal-btn">
+      <div class="button modal-btn" onclick="ga('send', 'event', '<%= page.category.title %>_<%= page.title %>_page', 'order_consultation_1')">
         Заказать консультацию
       </div>
     </div>
