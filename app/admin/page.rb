@@ -31,8 +31,8 @@ ActiveAdmin.register Page do
       column :image_id
       column :body
       column :actions do |indent|
-        span link_to "Edit", edit_admin_indent_path(indent)
-        span link_to "Delete", admin_indent_path(indent),method: :delete
+        span link_to "Edit", edit_biglionsadmin13_indent_path(indent)
+        span link_to "Delete", biglionsadmin13_indent_path(indent),method: :delete
       end
     end
   
@@ -43,7 +43,7 @@ ActiveAdmin.register Page do
       @page = Page.new(permitted_params[:page])
       
       if @page.save
-        redirect_to admin_category_path(@page.category)
+        redirect_to biglionsadmin13_category_path(@page.category)
       else
         render :new
       end
@@ -53,7 +53,7 @@ ActiveAdmin.register Page do
       @page = Page.find(params[:id])
       
       if @page.update(permitted_params[:page])
-        redirect_to admin_category_path(@page.category)
+        redirect_to biglionsadmin13_category_path(@page.category)
       else
         render :edit
       end
@@ -63,7 +63,7 @@ ActiveAdmin.register Page do
       @page = Page.find(params[:id])
       @page.destroy
       
-      redirect_to admin_category_path(@page.category)
+      redirect_to biglionsadmin13_category_path(@page.category)
     end
   end
 #

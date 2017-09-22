@@ -159,7 +159,7 @@ a,a:focus,a:visited{
   top: 0;
   z-index: 1;
   .menu{
-    width: 100%;
+    width: calc(100% - 100px);
     margin-left: 25px;
     position: relative;
   }
@@ -2743,7 +2743,11 @@ a,a:focus,a:visited{
     .contacts{
       height: auto;
     }
-    
+    .form-box{
+      .inputs-mobile{
+        margin-top: 15px;
+      }
+    }
     .slider{
       
       .viewport{

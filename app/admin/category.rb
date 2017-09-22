@@ -16,12 +16,12 @@ ActiveAdmin.register Category do
     table_for category.pages do
       column :title
       column :name do |page|
-        link_to page.name, admin_page_path(page)
+        link_to page.name, biglionsadmin13_page_path(page)
       end
       column :nav_name
       column :actions do |page|
-        span link_to "Edit", edit_admin_page_path(page)
-        span link_to "Delete", admin_page_path(page),method: :delete
+        span link_to "Edit", edit_biglionsadmin13_page_path(page)
+        span link_to "Delete", biglionsadmin13_page_path(page),method: :delete
       end
     end
   end

@@ -10,7 +10,7 @@ permit_params :title, :image_url, :body, :page_id
       @indent = Indent.new(permitted_params[:indent])
       
       if @indent.save
-        redirect_to admin_page_path(@indent.page)
+        redirect_to biglionsadmin13_page_path(@indent.page)
       else
         render :new
       end
@@ -20,7 +20,7 @@ permit_params :title, :image_url, :body, :page_id
       @indent = Indent.find(params[:id])
       
       if @indent.update(permitted_params[:indent])
-        redirect_to admin_page_path(@indent.page)
+        redirect_to biglionsadmin13_page_path(@indent.page)
       else
         render :edit
       end
@@ -30,7 +30,7 @@ permit_params :title, :image_url, :body, :page_id
       @indent = Indent.find(params[:id])
       @indent.destroy
       
-      redirect_to admin_page_path(@indent.page)
+      redirect_to biglionsadmin13_page_path(@indent.page)
     end
   end
 #
