@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-5 col-12 col-sm-12 indent-mobile">
+  <div class="col-md-6 col-12 col-sm-12 indent-mobile">
     <div class="row">
       <div class="col-md-5 col-12 col-sm-12">
         <div class="service-image">
@@ -11,7 +11,7 @@
       <%= page.name %>
     </h2>
     <p class="description">
-      <%= page.indents.first.body %>
+      <%= raw(page.indents.first.body) %>
     </p>
     <% unless mobile_device? %>
     <%= link_to 'Показать больше',services_category_path(page.title), class: 'show-more button' %>
