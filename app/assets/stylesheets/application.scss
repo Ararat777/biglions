@@ -3073,6 +3073,9 @@ a,a:focus,a:visited{
       .form-box{
         width: 100%;
       }
+      .stages img{
+        width: 100%;
+      }
     }
     .marketing.page{
       background: url("/assets/marketing-blured.png") no-repeat;
@@ -3281,7 +3284,9 @@ a,a:focus,a:visited{
     .support_site.page{
       background: url("/assets/support-blured.png") no-repeat;
     
-      
+      .stages img{
+        width: 100%;
+      }
       .page-content.support_sites{
         .justify-box{
           padding: 5px;

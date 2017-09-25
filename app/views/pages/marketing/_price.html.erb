@@ -26,6 +26,7 @@
        Заполни форму и получи мощную скидку!
      </p>
      <%= form_for :project,url: '#' do |f| %>
+     <%= f.hidden_field :form_place, :value => "#{page.category.name}/#{page.name}" %>
           <div class="input-group">
             <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?' %>
           </div>

@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   
-  before_action :get_category,except: ['contacts']
+  before_action :get_category
   
   def main
     
