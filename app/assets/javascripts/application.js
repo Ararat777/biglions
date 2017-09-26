@@ -329,7 +329,7 @@ $(window).on('load',function(){
     })
   }
   /*Fix justify-box height for Safari Mac */
-  $('.justify-box').each(function(){
+  $('.justify-box, .button-box').each(function(){
     var parentBlockHeight = $(this).parent().css("height");
     $(this).css("height",parentBlockHeight);
   });
