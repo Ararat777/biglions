@@ -1314,7 +1314,7 @@ a,a:focus,a:visited{
             width: 80% !important;
             margin-left: auto;
             margin-right: auto;
-            margin-top: calc(50% - 27px);
+            margin-top: calc(80% - 27px);
           }
       }
       .price.form-box{
@@ -1451,7 +1451,7 @@ a,a:focus,a:visited{
         width: 80% !important;
         margin-left: auto;
         margin-right: auto;
-        margin-top: calc(50% - 27px);
+        margin-top: calc(80% - 27px);
       }
     }
   }
@@ -2410,7 +2410,7 @@ a,a:focus,a:visited{
     min-width: 100%;
     display: flex;
     justify-content: center;
-    bottom: 30px;
+    bottom: 15px;
     z-index: 1;
     .nav-item{
       display: inline-block;
