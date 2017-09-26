@@ -30,7 +30,7 @@ Rails.application.configure do
    :port                 => 465,
    :user_name            => "info@biglions.org",
    :password             => "infobiglions13",
-   :authentication       => "plain",
+   :authentication       => "login",
    :enable_starttls_auto => true,
    :ssl => true 
   }
