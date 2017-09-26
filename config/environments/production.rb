@@ -28,11 +28,12 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
    :address              => "smtp.beget.com",
    :port                 => 465,
+   :domain               => "beget.com",
    :user_name            => "info@biglions.org",
    :password             => "infobiglions13",
    :authentication       => "login",
    :enable_starttls_auto => true,
-   :ssl => true 
+   :ssl                  => true 
   }
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
