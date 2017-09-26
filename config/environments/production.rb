@@ -27,7 +27,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
    :address              => "smtp.beget.com",
-   :port                 => 2525,
+   :port                 => 465,
    :user_name            => "info@biglions.org",
    :password             => "infobiglions13",
    :authentication       => "login",
