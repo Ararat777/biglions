@@ -1033,14 +1033,14 @@ a,a:focus,a:visited{
           height: 49px;
       }
             .indent-box{
-              margin-top: 26px;
+              margin-top: 15px;
             }
             .indent-title{
               color: #fff;
               font-size: 20px;
               line-height: 25px;
               font-weight: 700;
-              margin: 10px 0 15px 0;
+              margin: 10px 0 8px 0;
 
             }
           }
@@ -1273,11 +1273,6 @@ a,a:focus,a:visited{
        
       }
        
-      &.why_advancement,&.why_us{
-        .title{
-          margin-bottom: 50px;
-        }
-      }
       
       &.why_advancement{
         .indent-title{
@@ -1299,7 +1294,13 @@ a,a:focus,a:visited{
             margin-right: 8px;
           }
         }
-      } 
+      }
+      &.why_us{
+        .description{
+          margin-bottom: 0;
+        }
+      }
+      
       
       .price.form-box{
         padding: 10px;
