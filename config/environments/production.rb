@@ -30,7 +30,7 @@ Rails.application.configure do
    :port                 => 2525,
    :user_name            => "info@biglions.org",
    :password             => "infobiglions13",
-   :authentication       => "plain",
+   :authentication       => "login",
   :enable_starttls_auto => true
   }
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
