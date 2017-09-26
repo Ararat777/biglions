@@ -26,10 +26,10 @@ Rails.application.configure do
   config.assets.compile = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-   :address              => "smtp.gmail.com",
-   :port                 => 587,
-   :user_name            => "danielpogosyan18@gmail.com",
-   :password             => "N1ce0129",
+   :address              => "smtp.beget.com",
+   :port                 => 465,
+   :user_name            => "info@biglions.org",
+   :password             => "infobiglions13",
    :authentication       => "plain",
   :enable_starttls_auto => true
   }
