@@ -1,11 +1,11 @@
 
 <div class="row hidden-sm-down">
-  <div class="col-md-6">
+  <div class="col-md-7">
    <h2 class="title">
       <%= page.name %>
    </h2>
     <p class="description">
-      <%= page.indents.first.body %>
+      <%= raw(page.indents.first.body) %>
     </p>
   </div>
   <div class="col-md-4 offset-md-1">

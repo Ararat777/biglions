@@ -3,9 +3,11 @@
 </h2>
 <div class="row">
   <% page.indents.each do |item| %>
-  <div class="col-md-3 indent-box">
-    <%= image_tag item.image_url, class: 'indent-image img-fluid' %>
-    <h4 class="indent-title"><%= item.title %></h4>
+  <div class="col-md-6 indent-box">
+    <div class="justify-horizontal">
+      <%= image_tag item.image_url, class: 'indent-image img-fluid' %>
+      <h4 class="indent-title"><%= item.title %></h4>
+    </div>
     <p class="description">
       <%= item.body %>
     </p>
