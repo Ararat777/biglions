@@ -1284,15 +1284,19 @@ a,a:focus,a:visited{
         margin: 0 !important;
 
        }
+        .description{
+          margin-bottom: 0;
+        }
+        
         .justify-horizontal{
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
           align-items: center;
-          margin-bottom: 15px;
+          margin-bottom: 10px;
           img{
-            height: 43px;
-            margin-right: 5px;
+            height: 40px;
+            margin-right: 8px;
           }
         }
       } 
