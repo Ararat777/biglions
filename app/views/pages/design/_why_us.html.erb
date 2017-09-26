@@ -10,9 +10,9 @@
   <% page.indents.each_with_index do |item| %>
   <div class="col-md-3 indent-box">
     <div class="line"></div>
-    <p class="description">
-      <%= item.body %>
-    </p>
+    <div class="description">
+      <%= raw(item.body) %>
+    </div>
   </div>
   <% end %>
 </div>
