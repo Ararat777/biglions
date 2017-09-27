@@ -4,17 +4,17 @@
       <%= page.name %> <span>*</span>
     </h2>
     <div class="row gift-form-box">
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-4">
         <div class="ball-box">
           <svg id="fillgauge1" width="100%" height="207"></svg>
         </div>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-7 col-sm-7">
         <div class="gift form-box">
           <%= form_for :project,url: '#' do |f| %>
           <%= f.hidden_field :form_place, :value => "#{page.category.name}/#{page.name}" %>
           <div class="row">
-            <div class="col-md-6 inputs-mobile">
+            <div class="col-md-6 inputs-mobile col-sm-6">
                 <div class="input-group">
                   <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?' %>
                 </div>
@@ -25,7 +25,7 @@
                   <%= f.text_field :email, class: 'form-control',placeholder: 'Электронная почта' %>
                 </div>
             </div>
-            <div class="col-md-6 inputs-mobile">
+            <div class="col-md-6 inputs-mobile col-sm-6">
               <div class="input-group">
                <%= f.text_area :comment, class: 'form-control',placeholder: 'Опишите кратко свой проект' %>
               </div>
