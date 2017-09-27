@@ -3,7 +3,7 @@
 
 
 <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-9 col-sm-8">
     <div class="justify-box">
       <h2 class="title">
         <%= page.name %>
@@ -20,12 +20,12 @@
        </div>
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 col-sm-4">
    <div class="price form-box">
      <p class="description text-center hidden-sm-down">
        Заполни форму и получи мощную скидку!
      </p>
-     <%= form_for :project,url: '#' do |f| %>
+     <%= form_for :project,url: projects_path do |f| %>
      <%= f.hidden_field :form_place, :value => "#{page.category.name}/#{page.name}" %>
           <div class="input-group">
             <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?' %>

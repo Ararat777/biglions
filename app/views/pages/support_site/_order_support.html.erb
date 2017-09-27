@@ -4,7 +4,7 @@
 <div class="row">
   <div class="col-md-6 offset-md-3">
     <div class="form-box">
-      <%= form_for :project,url: '#' do |f| %>
+      <%= form_for :project,url: projects_path do |f| %>
       <%= f.hidden_field :form_place, :value => "#{page.category.name}/#{page.name}" %>
           <div class="row">
             <div class="col-md-6 inputs-mobile">
