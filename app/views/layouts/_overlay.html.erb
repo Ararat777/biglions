@@ -178,7 +178,7 @@
         <div class="col-md top-menu-opened-discuss-project flex-column">
           <%= image_tag '/assets/logo.svg',width: '50',height: '50'%>
           <h2>Обсудить<br>проект</h2>
-          <%= form_for :project,url: projects_path do |f| %>
+          <%= form_for :projects,url: projects_path do |f| %>
           
           <div class="input-group">
             <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?' %>
