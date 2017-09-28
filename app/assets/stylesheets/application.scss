@@ -595,7 +595,7 @@ a,a:focus,a:visited{
           min-height: 130px;
           resize: none;
         }
-        #project_file{
+        #projects_file{
           width: 0.1px;
           height: 0.1px;
           opacity: 0;
@@ -603,7 +603,7 @@ a,a:focus,a:visited{
           position: absolute;
           z-index: -1;
         }
-        #project_file + label{
+        #projects_file + label{
           font-family: "Proxima Nova Condensed", sans-serif;
           background-color: #000;
           cursor: pointer;
