@@ -1,0 +1,232 @@
+.portfolio-header{
+  padding-top: 2.5px;
+  width: 100%;
+  height: 75px;
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  .logo{
+    height: 70px;
+    width: 70px;
+    margin: auto;
+  }
+  .back{
+    width: 30px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .discuss-project{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+  }
+}
+#portfolio{
+  width: 100%;
+  position: relative;
+  background: #000;
+  overflow: auto;
+  .about-project-box{
+    margin-top: 200px;
+    width: 100%;
+    .about-project{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .little-word{
+        font-size: 14px;
+        line-height: 16px;
+        color: white;
+      }
+      .title{
+        font-size: 64px;
+        line-height: 75px;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+      }
+      .hor-line{
+        width: 67px;
+        height: 0.5px;
+        background: #fff;
+        margin-bottom: 30px;
+      }
+      .category{
+        font-size: 18px;
+        line-height: 21px;
+        color: white;
+        margin-bottom: 35px;
+      }
+      .vert-line{
+        width: 1px;
+        height: 87px;
+        background: #fff;
+        margin-bottom: 37px;
+      }
+      .description{
+        text-align: center;
+        font-size: 18px;
+        line-height: 21px;
+        color: white;
+        margin-bottom: 30px;
+        margin-top: 35px;
+      }
+    }
+  }
+  .images-box{
+    .image{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  .indents-box{
+    margin-top: 100px;
+    .indent-left{
+      border-right: 0.5px solid white;
+    }
+    .indent-right{
+      border-left: 0.5px solid white;
+    }
+    .indent{
+      padding-bottom: 70px;
+    }
+    .indent.left{
+      padding-right: 50px;
+    }
+    .indent.right{
+      padding-left: 50px;
+    }
+    .indent-title{
+      text-align: left;
+      font-size: 20px;
+      line-height: 24px;
+      color: white;
+      font-weight: 700;
+    }
+    .description{
+      text-align: left;
+      font-size: 18px;
+      line-height: 21px;
+      color: white;
+    }
+  }
+  .review-box{
+    margin-bottom: 100px;
+    .review{
+      padding-top: 40px;
+      padding-bottom: 40px;
+      border: 1px solid white;
+      .title{
+        font-size: 24px;
+        line-height: 31px;
+        font-weight: 900;
+        color: white;
+      }
+      .site{
+        font-size: 18px;
+        line-height: 23px;
+        color: rgba(255,255,255, 0.7);
+      }
+      .body{
+        font-size: 16px;
+        line-height: 21px;
+        color: white;
+      }
+    }
+  }
+  .form-title{
+    text-align: center;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+  }
+  .form-box{
+  
+
+  form{
+      width: 100%;
+      .actions{
+        width: 100%;
+        margin-top: 15px;
+      }
+      .input-group:not(:first-child){
+        margin-top: 15px;
+      }
+      .input-group{
+        position: relative;
+        width: 100%;
+        display: flex;
+        input[type=text],textarea{
+          border-radius: 0;
+          border: 1px solid transparent;
+          padding: 10px;
+          background: #060606;
+          
+          &:focus{
+            border: 1px solid;
+            border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+            border-image-slice: 1;
+          }
+        }
+        textarea{
+          min-height: 156px;
+          resize: none;
+        }
+        #projects_document{
+          width: 0.1px;
+          height: 0.1px;
+          opacity: 0;
+          overflow: hidden;
+          position: absolute;
+          z-index: -1;
+        }
+        #projects_document + label{
+          font-family: "Proxima Nova Condensed", sans-serif;
+          background-color: #000;
+          cursor: pointer;
+          border: 1px solid;
+          border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+          border-image-slice: 1;
+          padding: 7px 7px;
+          font-size: 16px;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          margin: 0;
+          img{
+            margin-right: 8px;
+          }
+        }
+        button{
+          border: 3px solid;
+          border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+          border-image-slice: 1;
+          background: transparent;
+          color: #fff;
+          width: 100%;
+          cursor: pointer;
+          padding-top: 3.5px;
+          padding-bottom: 3.5px;
+        }
+        
+      }
+   }
+    .social-links{
+      margin-top: 50px;
+      margin-bottom: 300px;
+    }
+ }
+  
+}

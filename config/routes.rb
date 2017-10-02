@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get '/services' => "pages#services"
   get '/services/:category' => "pages#services",as: 'services_category'
   get '/services/:category/:sub_category' => "pages#services",as: 'services_sub_category'
+  get '/case' => "cases#show"
   
 end

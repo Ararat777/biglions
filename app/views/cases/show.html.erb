@@ -1,0 +1,163 @@
+<div class="container-fluid">
+  <div class="about-project-box">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="about-project">
+          <span class="little-word">Заказчик</span>
+          <h2 class="title">Lofthall</h2>
+          <div class="hor-line"></div>
+          <span class="category">Разработка сайта и фирменного стиля</span>
+          <div class="vert-line"></div>
+          <span class="little-word">Задача</span>
+          <div class="description">
+            Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+            Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+            Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+          </div>
+          <div class="vert-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="images-box">
+    <div class="image">
+      <%= image_tag "/assets/lion.jpg", class: "img-fluid" %>
+    </div>
+    <div class="image">
+      <%= image_tag "/assets/lion.jpg", class: "img-fluid" %>
+    </div>
+    <div class="image">
+      <%= image_tag "/assets/lion.jpg", class: "img-fluid" %>
+    </div>
+  </div>
+  <div class="indents-box">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-6 indent-left">
+            <div class="indent left">
+              <h4 class="indent-title">Заголовок</h4>
+              <p class="description">
+                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 indent-right">
+            <div class="indent right">
+              <h4 class="indent-title">Заголовок</h4>
+              <p class="description">
+                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="review-box">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="review">
+          <div class="row">
+            <div class="col-md-4 review-image text-center">
+              <%= image_tag "/assets/review.png", class: "img-fluid" %>
+            </div>
+            <div class="col-md-6">
+              <h4 class="title"><%= Review.all.first.name %></h4>
+              <span class="site"><%= Review.all.first.site %></span>
+              <p class="body"><%= Review.all.first.body %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="form-title">
+        Хотите так-же решить свои проблемы?
+      </h2>
+    </div>
+  </div>
+  <div class="form-box">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <%= form_for :projects,url: projects_path do |f| %>
+          
+            <div class="row">
+              <div class="col-md-6 inputs-mobile col-sm-6">
+                  <div class="input-group">
+                    <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?' %>
+                  </div>
+                  <div class="input-group">
+                    <%= f.text_field :phone, class: 'form-control',placeholder: 'Ваш номер телефона' %>
+                  </div>
+                  <div class="input-group">
+                    <%= f.text_field :email, class: 'form-control',placeholder: 'Электронная почта' %>
+                  </div>
+              </div>
+              <div class="col-md-6 inputs-mobile col-sm-6">
+                <div class="input-group">
+                 <%= f.text_area :comment, class: 'form-control',placeholder: 'Опишите кратко свой проект' %>
+                </div>
+              </div>
+              <div class="actions">
+               <div class="container">
+                 <div class="row">
+              <div class="col-md-12">
+                <div class="input-group">
+                  <%= f.button 'Обсудить проект', class: 'button'%>
+                </div>
+              </div>
+                </div>
+               </div>
+
+
+              </div>
+
+            </div>
+          <% end %>
+            <div class="social-links">
+              <div class="row">
+                <div class="contact message text-center col-md-6">
+                  <p><%= image_tag '/assets/icon-message.svg',class: 'img-fluid' %></p>
+                  <a href="#">info@biglions.org</a>
+                </div>
+
+
+                <div class="contact mobile text-center col-md-6">
+                  <p><%= image_tag '/assets/icon-mobile.svg',class: 'img-fluid' %></p>
+                  <p><a href="tel:05775077130">(057) 750-77-130</a></p>
+                  <p><a href="tel:0948507713">(094) 850-77-13</a></p>
+                </div>
+
+
+                <div class="contact map text-center col-md-6">
+                  <p><%= image_tag '/assets/icon-map.svg',class: 'img-fluid' %></p>
+                  <p>улица Грековская 5</p>
+                  <p>Харьков, Харьковская область</p>
+                  <div class="map-button button" onclick="ga('send', 'event', 'contacts_page', 'on_map')">
+                    Мы на карте
+                  </div>
+                </div>
+
+
+                <div class="contact time text-center col-md-6">
+                  <p><%= image_tag '/assets/icon-time.svg',class: 'img-fluid' %></p>
+                  <p>Работаем с 10:00 до 22:00,</p>
+                  <p>без выходных и праздников</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
