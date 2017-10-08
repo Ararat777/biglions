@@ -4,9 +4,14 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      ProjectMailer.send_project_mail(@project).deliver
-      redirect_to root_url
+      #ProjectMailer.send_project_mail(@project).deliver
+      respond_to do |format|
+        format.js{render :js => "alert('Ваше письмо отправлено')"}
+      end
     else
+      respond_to do |format|
+        format.js{render :js => "alert(#{@project.errors.full_messages})"}
+      end
     end
   end
   

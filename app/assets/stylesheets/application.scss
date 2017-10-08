@@ -1269,9 +1269,13 @@ a,a:focus,a:visited{
           padding: 0 5px;
           position: relative;
           &:after{
-            content: url("/assets/price-arrow.png");
+            content: '';
+            background: url("/assets/price-arrow.png") no-repeat center;
+            background-size: cover;
             position: absolute;
-            top: -32%;
+            width: 550px;
+            height: 45px;
+            top: 0;
           }
         }
         
@@ -2676,6 +2680,14 @@ a,a:focus,a:visited{
     }
   }
   #content{
+    .circle-inner{
+      height: 600px;
+      overflow: hidden;
+      .circle-box{
+        width: 150%;
+        left: -25%;
+      }
+    }
     .support_site.slider{
       .slide-content.price{
         .justify-box{
@@ -2687,6 +2699,18 @@ a,a:focus,a:visited{
       }
     }
     .ppc.slider{
+      .shadow-cloud{
+        top: -260px;
+        left: -230px;
+        .shadow-img{
+          transform: rotate(45deg);
+        }
+        .cloud-text{
+          transform: rotate(45deg);
+          top: -30px;
+          left: 50px;
+        }
+      }
       .slide-content.price{
         .justify-box{
           .button{
@@ -2700,6 +2724,14 @@ a,a:focus,a:visited{
       .slide-content .sales{
         padding: 5px;
       }
+      .slide-content.price{
+        .title.price{
+          width: 35%;
+          &:after{
+            width: 420px;
+          }
+        }
+      }
     }
     .auditing.slider{
       .auditing-tariff-box span{
@@ -2708,7 +2740,7 @@ a,a:focus,a:visited{
     } 
   }    
 }
-@media (max-width: 768px){
+@media (max-width: 767px){
   .modal_box{
     .modal_content{
       width: 100%;
@@ -2863,8 +2895,10 @@ a,a:focus,a:visited{
         .slidewrapper{
           .slide-item{
            .slide-content{
+             &.mobile{
+               padding: 0;
+             }
             background-position: center;
-            padding: 0;
             height: calc(100vh - 70px);
             
            }

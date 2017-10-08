@@ -33,8 +33,9 @@
   </div>
 </div>
 <script>
-  var circleWidth = $('.circle-inner').css("width");
-  alert(circleWidth);
+    $(window).on("load",function(){
+    var circleWidth = $('.circle-box').css("width");
+    
     $('.circle .indent').first().addClass("active");
     $('.circle-box').css("height",circleWidth);
     var rotateValue = 0;
@@ -64,4 +65,5 @@
       }
       
     })
+  });
 </script>
