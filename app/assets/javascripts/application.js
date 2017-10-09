@@ -213,6 +213,17 @@ $(window).on('load',function(){
       $('.modal_box').fadeOut();
     }
   })
+  $('.agreement span').on("click",function(){
+    $('.agreement-modal').fadeIn();
+  });
+  $('.close-agreement').on("click",function(){
+    $('.agreement-modal').fadeOut();
+  })
+  $(window).on("click",function(event){
+    if(event.target.className == 'agreement-modal' || event.target.className == 'bg'){
+      $('.agreement-modal').fadeOut();
+    }
+  })
   
   if(window.location.hash){
     var anchor = window.location.hash
