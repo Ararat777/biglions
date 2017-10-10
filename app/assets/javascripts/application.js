@@ -224,6 +224,14 @@ $(window).on('load',function(){
       $('.agreement-modal').fadeOut();
     }
   })
+  $('.close-response-box').on("click",function(){
+    $('.discuss-project-response-box').fadeOut();
+  })
+  $(window).on("click",function(event){
+    if(event.target.className == 'discuss-project-response-box' || event.target.className == 'bg'){
+      $('.discuss-project-response-box').fadeOut();
+    }
+  })
   
   if(window.location.hash){
     var anchor = window.location.hash

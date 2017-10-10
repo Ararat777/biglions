@@ -6,11 +6,11 @@ class ProjectsController < ApplicationController
     if @project.save
       #ProjectMailer.send_project_mail(@project).deliver
       respond_to do |format|
-        format.js{render :js => "alert('Ваше письмо отправлено')"}
+        format.js{}
       end
     else
       respond_to do |format|
-        format.js{render :js => "alert(#{@project.errors.full_messages})"}
+        format.js{}
       end
     end
   end
