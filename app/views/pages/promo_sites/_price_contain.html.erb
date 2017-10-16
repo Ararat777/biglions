@@ -4,12 +4,12 @@
 <div class="row">
   <div class="col-md-12">
     <div class="indent-title">
-      <%= page.indents.first.title %>
+      <%= page.indents.last.title %>
     </div>
   </div>
 </div>
 <div class="row">
-  <% page.indents.offset(1).each do |item| %>
+  <% page.indents.limit(6).each do |item| %>
   <div class="col-md-4 indent-box text-center">
     <%= image_tag item.image_url, class: 'indent-image img-fluid' %>
         <h4 class="indent-title"><%= item.title %></h4>
