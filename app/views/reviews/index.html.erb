@@ -1,0 +1,38 @@
+<div class="reviews slider">
+ <div class="viewport">
+   <div class="slidewrapper">
+     <%@reviews.in_groups_of(4,false).each do |group|%>
+     <div class="slide-item">
+       <div class="slide-content">
+         <div class="container">
+           <div class="row">
+             <div class="col-md-11">
+               <div class="row">
+                 <% group.each do |item| %>
+                 <div class="col-md-6">
+                  <div class="review-box">
+                    <h4><%= item.name %></h4>
+                    <span><%= item.site %></span>
+                    <p><%= item.body %></p>
+                  </div>
+                 </div>
+                 <% end %>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <% end %>
+   </div>
+ </div>
+  
+</div>
+<div class="slide-arrows">
+  <div class="arrow arrowPrev" data-slide="prev">
+    <%= image_tag '/assets/to-left.svg', class: 'img-fluid' %>
+  </div>
+  <div class="arrow arrowNext" data-slide="next">
+    <%= image_tag '/assets/to-right.svg', class: 'img-fluid' %>
+  </div>
+</div>

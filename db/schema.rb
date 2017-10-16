@@ -104,9 +104,13 @@ ActiveRecord::Schema.define(version: 20171010093208) do
   create_table "reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "site"
-    t.text     "body",       limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "body"
+    t.string   "type_of_work"
+    t.string   "industry"
+    t.integer  "category_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["category_id"], name: "index_reviews_on_category_id", using: :btree
   end
 
   create_table "tariffs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

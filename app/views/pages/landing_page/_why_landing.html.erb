@@ -2,6 +2,13 @@
   <%= page.name %>
 </h2>
 <div class="row">
+  <div class="col-md-8 offset-md-2">
+    <div class="description">
+      <%= raw(page.indents.first.body) %>
+    </div>
+  </div>
+</div>
+<div class="row">
   <div class="col-md-10 offset-md-1">
     <div class="scroll-box">
       <table>

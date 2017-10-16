@@ -2,8 +2,15 @@
   <%= page.name %>
 </h2>
 <div class="row">
+  <div class="col-md-8">
+    <div class="description">
+        <%= raw(page.indents.first.body) %>
+      </div>
+  </div>
+</div>
+<div class="row">
   <% category.tariffs.each_with_index do |item,number| %>
-  <div class="col-xl-<%= (number + 1) == 1 ? 5 : 3 %> col-md-4">
+  <div class="col-xl-4 col-md-4">
     <div class="tariff-box text-center">
       <h4>
         <%= item.title %>
@@ -11,20 +18,10 @@
       <p>
         <%= raw(item.body) %>
       </p>
-      <div class="price-box">
+      <div class="price-box modal-btn">
         $<%= item.price %>
       </div>
     </div>
   </div>
   <% end %>
-  <div class="col-xl-3 col-md-3">
-    <div class="justify-box">
-      <p class="description">
-        <%= page.indents.first.body %>
-      </p>
-      <div class="button modal-btn" onclick="ga('send', 'event', '<%= page.category.title %>_<%= page.title %>_page', 'order_consultation_1')">
-        Заказать консультацию
-      </div>
-    </div>
-  </div>
 </div>

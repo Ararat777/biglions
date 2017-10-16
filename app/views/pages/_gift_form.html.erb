@@ -11,7 +11,7 @@
       </div>
       <div class="col-md-7 col-sm-7">
         <div class="gift form-box">
-          <%= form_for :projects,url: projects_path do |f| %>
+          <%= form_for :projects,url: projects_path,remote: true do |f| %>
           <%= f.hidden_field :form_place, :value => "#{page.category.name}/#{page.name}" %>
           <div class="row">
             <div class="col-md-6 inputs-mobile col-sm-6">

@@ -13,7 +13,7 @@
     <p class="description">
       Закажи самый адаптивный сайт в животном мире, и получи скидку 10%
     </p>
-     <%= form_for :projects,url: projects_path do |f| %>
+     <%= form_for :projects,url: projects_path,remote: true do |f| %>
        <%= f.hidden_field :form_place, :value => "#{page.category.name}/#{page.name}" %>
           <div class="input-group">
             <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?' %>

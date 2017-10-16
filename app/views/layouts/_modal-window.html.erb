@@ -6,7 +6,6 @@
           <div class="col-md-10 offset-md-1">
             <h2>Обсудить проект</h2>
           <%= form_for :projects,url: projects_path,remote: true do |f| %>
-          <%= f.hidden_field :form_path, :value => "/#{category.parent.name if category.parent}/#{category.name}" %>
           <div class="row">
             <div class="col-md-6">
                 <div class="input-group">
@@ -42,11 +41,15 @@
               </div>
             </div>
               </div>
+               <div class="row">
+                 <div class="col-md-6">
+                   <div class="uploaded-file">
+                     
+                   </div>
+                 </div>
+               </div>
              </div>
-              
-              
             </div>
-            
           </div>
           <% end %>
           <p class="agreement">Отправляя форму, вы соглашаетесь с <span style="text-decoration: underline; color: #fff">"Правилами поведения"</span>, и положением о переписи квартиры.</p>

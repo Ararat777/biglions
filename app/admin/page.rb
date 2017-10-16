@@ -28,7 +28,7 @@ ActiveAdmin.register Page do
     end
     table_for page.indents do
       column :title
-      column :image_id
+      column :image_url
       column :body
       column :actions do |indent|
         span link_to "Edit", edit_biglionsadmin13_indent_path(indent)

@@ -36,6 +36,11 @@ $(window).on('load',function(){
   }else{
     $('.slide-item').css("width", (100 / slideCount) + '%');
   }
+  $("#projects_document").on("change", function(){
+    
+    var arr = $(this).val().split('\\');
+    $(".uploaded-file").html("Файл: " + arr[arr.length - 1]);
+  })
   var slideNow = 1;
   var translateWidth = 0;
   

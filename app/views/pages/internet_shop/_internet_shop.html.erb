@@ -3,9 +3,9 @@
 </h2>
 <div class="row">
   <div class="col-md-5">
-    <p class="description">
-      <%= page.indents.first.body %>
-    </p>
+    <div class="description">
+      <%= raw(page.indents.first.body) %>
+    </div>
   </div>
   <div class="col-md-4 offset-md-3 hidden-sm-down">
       <div class="indent-box">
@@ -15,8 +15,8 @@
         <p class="description">
           <%= page.indents.last.body %>
         </p>
-        <div class="slide-next button">
-          Листать дальше
+        <div class="modal-btn button">
+          Заказать интернет-магазин
         </div>
       </div>
   </div>

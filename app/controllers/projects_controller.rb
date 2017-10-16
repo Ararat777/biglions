@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      #ProjectMailer.send_project_mail(@project).deliver
+      ProjectMailer.send_project_mail(@project).deliver
       respond_to do |format|
         format.js{}
       end

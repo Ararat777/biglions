@@ -67,7 +67,12 @@ a,a:focus,a:visited{
       .actions{
         width: 100%;
         margin-top: 15px;
+        min-height: 74px;
       }
+    .uploaded-file{
+      margin-top: 10px;
+      color: white;
+    }
       .input-group:not(:first-child){
         margin-top: 15px;
       }
@@ -358,6 +363,7 @@ a,a:focus,a:visited{
         margin: 0;
         a{
             color: transparent;
+          
         }
         background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
         color: transparent;
@@ -441,7 +447,7 @@ a,a:focus,a:visited{
             a{
               font-size: 14px;
               font-weight: normal;
-              line-height: 16px;
+              line-height: 12px;
               opacity: 0.7;
               margin-top: 5px;
               &:hover{
@@ -457,6 +463,9 @@ a,a:focus,a:visited{
             color: #fff;
             opacity: 0;
             
+              &:hover,&:focus{
+                text-decoration: underline !important;
+              }
           }
           .mobile{
             a{
@@ -578,6 +587,16 @@ a,a:focus,a:visited{
       .input-group:not(:first-child){
         margin-top: 15px;
       }
+      .input-group:last-child{
+        margin-top: 0;
+      }
+      .uploaded-file{
+        width: 100%;
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+        min-height: 20px;
+      }
       .input-group{
         position: relative;
         width: 100%;
@@ -597,7 +616,7 @@ a,a:focus,a:visited{
           min-height: 130px;
           resize: none;
         }
-        #projects_file{
+        #projects_document{
           width: 0.1px;
           height: 0.1px;
           opacity: 0;
@@ -605,14 +624,14 @@ a,a:focus,a:visited{
           position: absolute;
           z-index: -1;
         }
-        #projects_file + label{
+        #projects_document + label{
           font-family: "Proxima Nova Condensed", sans-serif;
           background-color: #000;
           cursor: pointer;
           border: 1px solid;
           border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
           border-image-slice: 1;
-          padding: 8px 7px;
+          padding: 12px 7px;
           font-size: 16px;
           color: #fff;
           display: flex;
@@ -650,7 +669,7 @@ a,a:focus,a:visited{
       line-height: 16px;
       text-align: center;
       color: rgba(255,255,255,0.45);
-      margin-top: 10px;
+      margin-top: 5px;
       margin-bottom: 0;
   span{
     cursor: pointer;
@@ -741,7 +760,7 @@ a,a:focus,a:visited{
             align-items: center;
             .overflow-indents-box{
               min-width: 100%;
-              white-space: nowrap;
+              
               overflow: hidden;
               position: relative;
               .indents-wrapper{
@@ -1188,6 +1207,10 @@ a,a:focus,a:visited{
       width: 80%;
       text-decoration: none;
     }
+  .reviews.slider{
+    background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/reviews-bg.png') no-repeat;
+    background-size: cover;
+  }
   .services.slider{
     .show-more{
       width: 60%;
@@ -1212,7 +1235,8 @@ a,a:focus,a:visited{
         height: 54px;
         cursor: pointer;
         position: relative;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
         border: 3px solid transparent;
         border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
         border-image-slice: 1;
@@ -1819,6 +1843,7 @@ a,a:focus,a:visited{
     .slide-content.price{
       .description{
         margin-bottom: 0;
+        margin-left: 10px;
       }
       .justify-box{
         justify-content: baseline;
@@ -1909,12 +1934,7 @@ a,a:focus,a:visited{
         border: 1px solid white;
         padding: 13px;
         margin-top: 0 !important;
-        &:before{
-          content: url('/assets/drujko.png');
-          position: absolute;
-          top: -120px;
-          left: -80px;
-        }
+        
       }
     }
     .slide-content.capabilities{
@@ -1972,6 +1992,9 @@ a,a:focus,a:visited{
       background-size: cover;
     }
     .slide-content.for_whom{
+      .indent-title{
+        margin-left: 10px;
+      }
       .row{
         margin-bottom: 20px;
       }
@@ -2985,7 +3008,7 @@ a,a:focus,a:visited{
             a{
               font-size: 14px;
               font-weight: normal;
-              line-height: 16px;
+              line-height: 12px;
               opacity: 0.7;
               margin-top: 5px;
               &:hover{

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'pages#main'
   resources :projects,only: [:new,:create]
   resources :tariffs,only: [:show]
+  resources :reviews,only: [:index,:show,:create,:update]
   get '/about' => "pages#about"
   get '/contacts' => "pages#contacts"
   get '/services' => "pages#services"
