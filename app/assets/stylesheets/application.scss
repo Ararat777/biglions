@@ -711,6 +711,94 @@ a,a:focus,a:visited{
   
   position: relative;
   overflow: hidden;
+  .filter-form-box{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    left: 0;
+    top: 120px;
+    padding-left: 100px;
+    .title{
+      margin-bottom: 10px;
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 45px;
+      text-transform: uppercase;
+      color: #fff; 
+      margin: 0;
+    }
+    .filter{
+      text-align: center;
+      color: white;
+      font-size: 18px;
+      line-height: 21px;
+      padding: 12px 0;
+    }
+    .filter-form{
+      padding: 2.5px 0;
+    }
+/* Styles for Select */
+    .s-hidden {
+      visibility:hidden;
+      padding-right:10px;
+    }
+    .select {
+        cursor:pointer;
+        display:inline-block;
+        position:relative;
+        font-family: "Proxima Nova Condensed", sans-serif;
+        font-size: 18px;
+        line-height: 21px;
+      text-align: center;
+        color:white;
+      height: 40px;
+      margin-right: 20px;
+      
+        
+    }
+    
+    .styledSelect {
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        background-color:transparent;
+        font-weight:bold;
+      border: 1px solid;
+        border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+        border-image-slice: 1;
+      padding:8.5px 10px;
+    }
+    .styledSelect.active{
+      border-bottom-width: 0;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .options {
+        font-family: "Proxima Nova Condensed", sans-serif;
+        font-size: 18px;
+        line-height: 21px;
+        display:none;
+        position:absolute;
+        top:100%;
+        right:0;
+        left:0;
+        z-index:999;
+        margin:0 0;
+        padding:0 0;
+        list-style:none;
+        border:1px solid;
+        border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+        border-image-slice: 1;
+        border-top-width: 0;
+        background-color: rgba(0,0,0,0.7);
+    }
+    .options li {
+        margin:0 0;
+        padding:9.5px 10px;
+    }
+  }
+  /* Styles for Select */
   .slider{
     width: 100%;
     margin: 0;

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171010093208) do
+ActiveRecord::Schema.define(version: 20171016151855) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -72,6 +72,12 @@ ActiveRecord::Schema.define(version: 20171010093208) do
     t.index ["page_id"], name: "index_indents_on_page_id", using: :btree
   end
 
+  create_table "industries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "name"
@@ -105,12 +111,14 @@ ActiveRecord::Schema.define(version: 20171010093208) do
     t.string   "name"
     t.string   "site"
     t.string   "body"
-    t.string   "type_of_work"
-    t.string   "industry"
+    t.integer  "work_type_id"
+    t.integer  "industry_id"
     t.integer  "category_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.index ["category_id"], name: "index_reviews_on_category_id", using: :btree
+    t.index ["industry_id"], name: "index_reviews_on_industry_id", using: :btree
+    t.index ["work_type_id"], name: "index_reviews_on_work_type_id", using: :btree
   end
 
   create_table "tariffs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -122,6 +130,12 @@ ActiveRecord::Schema.define(version: 20171010093208) do
     t.datetime "updated_at",                null: false
     t.string   "image_url"
     t.index ["category_id"], name: "index_tariffs_on_category_id", using: :btree
+  end
+
+  create_table "work_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "cases", "categories"

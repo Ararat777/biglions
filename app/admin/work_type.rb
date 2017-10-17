@@ -1,8 +1,8 @@
-ActiveAdmin.register Review do
+ActiveAdmin.register WorkType do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-  permit_params :category_id, :name, :site, :body,:industry_id, :work_type_id
+  permit_params :title
 #
 # or
 #
