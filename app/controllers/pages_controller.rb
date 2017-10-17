@@ -24,6 +24,10 @@ class PagesController < ApplicationController
   end
   private
   
+  def not_found
+    render :file => "#{Rails.root}/public/404.html", :status => 404, :layout => false
+  end
+  
   def render_page
     if mobile_device?
       if @category.title == 'main'
@@ -37,11 +41,11 @@ class PagesController < ApplicationController
   end
   
   def get_category
-    @category = Category.find_by :title => params[:action]
+    @category = Category.find_by(:title => params[:action]) or not_found
     if params[:sub_category]
-      @category = @category.categories.find_by(:title => params[:category]).categories.find_by(:title => params[:sub_category])
+      @category = @category.categories.find_by(:title => params[:category]).categories.find_by(:title => params[:sub_category]) or not_found
     elsif params[:category]
-      @category = @category.categories.find_by(:title => params[:category])  
+      @category = @category.categories.find_by(:title => params[:category]) or not_found  
     end
   end
 end
