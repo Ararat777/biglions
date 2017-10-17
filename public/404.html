@@ -38,6 +38,50 @@
       font-weight: 900;
       text-transform: uppercase;
     }
+    .lion-box{
+      width: 350px;
+      height: 250px;
+      position: relative;
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+    .lion-box img{
+      position: absolute;
+    }
+    .lion-box .lion{
+      left: -50px;
+      animation: fuckBrain 0.8s linear infinite;
+    }
+    .lion-box .brain{
+      top: 90px;
+      left: 45px;
+    }
+    .lion-box .censor{
+      top: 90px;
+      left: 45px;
+      z-index: 5;
+      opacity: 1;
+    }
+    .error-message{
+      color: white;
+      width: 300px;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+    .button{
+      display: block;
+      text-decoration: none;
+      width: 235px;
+      font-size: 18px;
+      line-height: 21px;
+      padding: 9.5px 0;
+      color: white;
+      margin: auto;
+      border: 3px solid;
+      border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+      border-image-slice: 1;
+    }
   .rails-default-error-page div.dialog > div {
     border: 1px solid #CCC;
     border-right-color: #999;
@@ -71,6 +115,11 @@
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
+    @keyframes fuckBrain{
+      0%{transform: rotate(0);}
+      50%{transform: rotate(10deg);}
+      100%{transform: rotate(0);}
+    }
   </style>
 </head>
 
@@ -82,5 +131,16 @@
   <h2 class="title">
     Упс<br>404
   </h2>
+  <div class="lion-box">
+    <img src="/assets/Group.svg" class="lion">
+    <img src="/assets/Group-1.svg" class="brain">
+    <img src="/assets/Group-2.svg" class="censor">
+  </div>
+  <div class="error-message">
+    Вы перешли туда куда не следует переходить а то ваш мозг будет....
+  </div>
+  <a href="/" class="button">
+    На главную
+  </a>
 </body>
 </html>
