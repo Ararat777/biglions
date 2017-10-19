@@ -3,6 +3,6 @@ class CasesController < ApplicationController
     @cases = Case.all
   end
   def show
-    
+    render layout: 'portfolio'
   end
 end

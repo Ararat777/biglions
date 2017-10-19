@@ -32,6 +32,11 @@
   position: relative;
   background: #000;
   overflow: auto;
+  .little-word{
+        font-size: 14px;
+        line-height: 16px;
+        color: white;
+      }
   .about-project-box{
     margin-top: 200px;
     width: 100%;
@@ -41,11 +46,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      .little-word{
-        font-size: 14px;
-        line-height: 16px;
-        color: white;
-      }
+      
       .title{
         font-size: 64px;
         line-height: 75px;
@@ -86,9 +87,60 @@
       width: 100%;
       margin-bottom: 20px;
     }
+    .mobile-version{
+      position: relative;
+      text-align: center;
+      padding-top: 80px;
+      padding-bottom: 80px;
+      .little-word{
+        margin-bottom: 20px;
+        display: block;
+      }
+      &:after{
+        content: '';
+        width: 1px;
+        height: 46px;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+      }
+    }
+  }
+  .branding-box{
+    &:before{
+      content: '';
+        width: 1px;
+        height: 46px;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 50%;
+    }
+    position: relative;
+    padding: 60px 130px;
+    background-color: white;
+    height: 700px;
+    text-align: center;
+    .little-word{
+      color: black;
+      display: block;
+      margin-top: 40px;
+    }
+    .branding-images{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: translateY(50px);
+      img{
+        float: left;
+        width: 50%;
+        height: 50%;
+      }
+    }
   }
   .indents-box{
-    margin-top: 100px;
+    margin-top: 46px;
     .indent-left{
       border-right: 0.5px solid white;
     }
@@ -100,9 +152,11 @@
     }
     .indent.left{
       padding-right: 50px;
+      padding-top: 50px;
     }
     .indent.right{
       padding-left: 50px;
+      padding-top: 50px;
     }
     .indent-title{
       text-align: left;

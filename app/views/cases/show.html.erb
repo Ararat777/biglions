@@ -29,6 +29,26 @@
     <div class="image">
       <%= image_tag "/assets/lion.jpg", class: "img-fluid" %>
     </div>
+    <div class="mobile-version">
+      <div class="container">
+        <span class="little-word">Мобильная версия</span>
+        <div class="row">
+          <% 4.times do %>
+          <div class="col-md-3">
+            <%= image_tag "/assets/review.png", class: 'img-fluid' %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="branding-box">
+    <span class="little-word">Брендинг</span>
+    <div class="branding-images">
+      <% 4.times do %>
+      <%= image_tag "/assets/lion.jpg", class: "img-fluid" %>
+      <% end %>
+    </div>
   </div>
   <div class="indents-box">
     <div class="row">

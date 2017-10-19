@@ -408,6 +408,7 @@ a,a:focus,a:visited{
           justify-content: center;
           align-items: center;
           color: #fff;
+          width: 80%;
           &.contacts-box{
             .phone,.mail,.skype{
               transition: color 0.5s;
@@ -422,6 +423,7 @@ a,a:focus,a:visited{
           .category-link{
             text-align: center;
             position: relative;
+            width: 100%;
             a{
               text-decoration: none;
             }
@@ -436,7 +438,7 @@ a,a:focus,a:visited{
             width: 80%;
             margin: auto;
             display: none;
-            padding-bottom: 15px;
+            padding-bottom: 5px;
           }
           .sub-categories-links{
             width: 100%;
@@ -576,16 +578,17 @@ a,a:focus,a:visited{
     text-align: center;
     h2{
       font-weight: 900;
-      font-size: 36px;
+      font-size: 32px;
       text-transform: uppercase;
       color: #fff;
-      margin: 14px 0;
+      margin-top: 10px;
+      margin-bottom: 0;
       text-align: center;
     }
     form{
       width: 100%;
       .input-group:not(:first-child){
-        margin-top: 15px;
+        margin-top: 10px;
       }
       .input-group:last-child{
         margin-top: 0;
@@ -661,6 +664,7 @@ a,a:focus,a:visited{
       opacity: 0.3;
       color: #fff;
       margin-top: 10px;
+      margin-bottom: 0;
     }
   }
 }
@@ -1347,6 +1351,18 @@ a,a:focus,a:visited{
   .cases.slider{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/services.jpg') no-repeat;
       background-size: cover;
+    .green{
+      background-color: #27AE60;
+      padding: 8px 0;
+      text-align: center;
+      font-size: 18px;
+      line-height: 21px;
+      color: white;
+      margin-bottom: 20px;
+    }
+    .button{
+      width: 60%;
+    }
   }
   .services.slider{
     .show-more{
@@ -1769,6 +1785,7 @@ a,a:focus,a:visited{
       width: 100%;
       line-height: 17px;
       padding: 8px;
+      margin-top: 20px;
     }
     .slide-content.promo_sites{
       background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/promo-sites.png') no-repeat;
@@ -3120,6 +3137,7 @@ a,a:focus,a:visited{
           .category-link{
             text-align: center;
             position: relative;
+            width: 100%;
             a{
               text-decoration: none;
               color: #fff;

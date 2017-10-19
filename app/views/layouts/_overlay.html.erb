@@ -122,15 +122,20 @@
                   <%= link_to item.name,services_category_path(item.title) %>
                 <div class="sub-categories-links-box <%= item.title %>">
                  <div class="sub-categories-links">
-                  <div class="row">
-                    <% item.categories.in_groups_of(2,false).each do |group| %>
-                    <div class="col-md-6">
-                    <% group.each_with_index do |sub_item,i| %>
-                      <%= link_to sub_item.name,services_sub_category_path(item.title,sub_item.title) %><br><br>
+                    <% item.categories.in_groups_of(2,false).each_with_index do |group,i| %>
+                    <div class="row">
+                    
+                    <% group.each do |sub_item| %>
+                      <div class="col-md-6">
+                      <%= link_to sub_item.name,services_sub_category_path(item.title,sub_item.title) %>
+                        </div>
                     <% end %>
                     </div>
+                    <% if i != item.categories.in_groups_of(2,false).size - 1 %>
+                    <br>
                     <% end %>
-                  </div>
+                    <% end %>
+                   
                  </div>
                 </div>
                 </div>

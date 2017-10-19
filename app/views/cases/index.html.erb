@@ -1,12 +1,8 @@
 <div class="filter-form-box">
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
-      <h2 class="title">
-        Наши кейсы
-      </h2>
-     </div>
-      <div class="col-md-2">
+      
+      <div class="col-md-2 offset-md-5">
         <div class="filter">
           Сортировать:
         </div>
@@ -25,7 +21,51 @@
 <div class="cases slider">
  <div class="viewport">
    <div class="slidewrapper">
-     <%@cases.in_groups_of(4,false).each do |group|%>
+     <div class="slide-item">
+       <div class="slide-content">
+         <div class="container">
+           <div class="row">
+             <div class="col-md-11">
+               <div class="row">
+                 <div class="col-md-6">
+                   <div class="justify-box">
+                     <h2 class="title">
+                      Наши кейсы
+                    </h2>
+                     <p class="description">
+                       Каждый проект схватка креативного мышления,технологичности и практичности
+                     </p>
+                     <div class="green">
+                       Нами было выиграно более 250 схваток
+                     </div>
+                     <div class="button slide-next">
+                       Показать больше кейсов
+                     </div>
+                   </div>
+                 </div>
+                 <div class="col-md-6">
+                   <div class="row">
+                     <% @cases.first(2).each do |item| %>
+                     <div class="col-md-12">
+                       <div class="project-box">
+                          <h4 class="project-title">
+                            <%= item.project_name %>
+                          </h4>
+                          <span class="project-category">
+                            <%= item.work_type.title %> | <%= item.industry.title %>
+                          </span>
+                        </div>
+                     </div>
+                     <% end %>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <%@cases.offset(2).in_groups_of(4,false).each do |group|%>
      <div class="slide-item">
        <div class="slide-content">
          <div class="container">
