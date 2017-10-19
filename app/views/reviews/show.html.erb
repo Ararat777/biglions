@@ -1,0 +1,40 @@
+<div class="review-show-box">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <%= link_to reviews_path, class: 'button' do %>
+        Вернуться ко всем отзывам
+        <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-11">
+        <div class="review">
+          <div class="row">
+            <% if @review.photo %>
+            <div class="col-md-4">
+              <div class="review-image">
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="review-text">
+                <h4><%= @review.name %></h4>
+                <span><%= @review.site %></span>
+                <div><%= @review.body %></div>
+              </div>
+            </div>
+            <% else %>
+            <div class="col-md-12">
+              <div class="review-text">
+                <h4><%= @review.name %></h4>
+                <span><%= @review.site %></span>
+                <div><%= @review.body %></div>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

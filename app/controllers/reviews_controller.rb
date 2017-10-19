@@ -7,6 +7,10 @@ class ReviewsController < ApplicationController
     @reviews = Review.all
     end
   end
+  
+  def show
+    @review = Review.find(params[:id])
+  end
     
     private
   

@@ -1,5 +1,7 @@
 class CasesController < ApplicationController
-  layout "portfolio"
+  def index
+    @cases = Case.all
+  end
   def show
     
   end

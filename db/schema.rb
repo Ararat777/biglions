@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171016151855) do
+ActiveRecord::Schema.define(version: 20171018212104) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -44,11 +44,15 @@ ActiveRecord::Schema.define(version: 20171016151855) do
   end
 
   create_table "cases", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name"
+    t.string   "project_name"
+    t.integer  "industry_id"
+    t.integer  "work_type_id"
     t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["category_id"], name: "index_cases_on_category_id", using: :btree
+    t.index ["industry_id"], name: "index_cases_on_industry_id", using: :btree
+    t.index ["work_type_id"], name: "index_cases_on_work_type_id", using: :btree
   end
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -87,6 +91,14 @@ ActiveRecord::Schema.define(version: 20171016151855) do
     t.datetime "updated_at",  null: false
     t.integer  "priority"
     t.index ["category_id"], name: "index_pages_on_category_id", using: :btree
+  end
+
+  create_table "photos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "image"
+    t.integer  "review_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["review_id"], name: "index_photos_on_review_id", using: :btree
   end
 
   create_table "projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -138,5 +150,4 @@ ActiveRecord::Schema.define(version: 20171016151855) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "cases", "categories"
 end

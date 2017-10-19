@@ -1,9 +1,9 @@
 <div class="filter-form-box">
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-4">
       <h2 class="title">
-        Отзывы
+        Наши кейсы
       </h2>
      </div>
       <div class="col-md-2">
@@ -13,24 +13,19 @@
       </div>
       <div class="col-md-4">
         <div class="filter-form">
-          <%= form_for :filter,url: reviews_path,html: {class: 'form-inline'},enforce_utf8: false,method: :get do |f| %>
+          <%= form_for :filter,url: cases_path,html: {class: 'form-inline'},enforce_utf8: false,method: :get do |f| %>
           <%= f.select(:work_type_id,options_for_select(WorkType.all.collect{|c| [c.title, c.id]}),{include_blank: "По типу работ"},{class: 'form-control'}) %>
           <%= f.select(:industry_id,options_for_select(Industry.all.collect{|c| [c.title, c.id]}),{include_blank: "По отрасли"},{class: 'form-control'}) %>
           <% end %>
         </div>
       </div>
-      <div class="col-md-2">
-        <div class="button">
-          Оставить отзыв
-        </div>
-      </div>
     </div>
   </div>
 </div>
-<div class="reviews slider">
+<div class="cases slider">
  <div class="viewport">
    <div class="slidewrapper">
-     <%@reviews.in_groups_of(4,false).each do |group|%>
+     <%@cases.in_groups_of(4,false).each do |group|%>
      <div class="slide-item">
        <div class="slide-content">
          <div class="container">
@@ -39,14 +34,15 @@
                <div class="row">
                  <% group.each do |item| %>
                  <div class="col-md-6">
-                   <%= link_to review_path(item.id),class: 'show-review' do %>
-                  <div class="review-box">
-                    <h4><%= item.name %></h4>
-                    <span><%= item.site %></span>
-                    <p><%= truncate(item.body,length: 60,separator: ' ') %></p>
+                    <div class="project-box">
+                      <h4 class="project-title">
+                        <%= item.project_name %>
+                      </h4>
+                      <span class="project-category">
+                        <%= item.work_type.title %> | <%= item.industry.title %>
+                      </span>
+                    </div>
                   </div>
-                   <% end %>
-                 </div>
                  <% end %>
                </div>
              </div>

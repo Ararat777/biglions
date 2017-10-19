@@ -50,16 +50,16 @@
       position: absolute;
     }
     .lion-box .lion{
-      left: -50px;
+      left: 0px;
       animation: fuckBrain 0.8s linear infinite;
     }
     .lion-box .brain{
       top: 90px;
-      left: 45px;
+      left: 95px;
     }
     .lion-box .censor{
       top: 90px;
-      left: 45px;
+      left: 95px;
       z-index: 5;
       opacity: 1;
     }
@@ -70,18 +70,55 @@
       margin-bottom: 30px;
     }
     .button{
-      display: block;
+      position: relative;
+      text-align: center;
       text-decoration: none;
       width: 235px;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+      font-family: "Proxima Nova Condensed", sans-serif;
+      color: #fff;
       font-size: 18px;
-      line-height: 21px;
-      padding: 9.5px 0;
-      color: white;
-      margin: auto;
       border: 3px solid;
       border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
       border-image-slice: 1;
+      overflow: hidden;
+      padding: 10.5px 15px;
+      height: auto;
+      z-index: 1;
+      display: block;
+      outline: none;
     }
+  .button:focus{
+    outline: none !important;
+  }
+  .button:hover{
+    transition: color;
+    transition-delay: 0.4s;
+    color: #000 !important;
+  }
+  .button:after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+   
+    height: 100%;
+    left: 100%;
+    top: 0;
+    transition: left 0.2s;
+    background: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+    z-index: -1;
+  }
+  .button:hover:after{
+    -webkit-animation: fillButton 0.4s linear 1 normal;
+    animation: fillButton 0.4s linear 1 normal;
+    left: 0;
+    left: 0;
+    height: 100%;
+  }
+
   .rails-default-error-page div.dialog > div {
     border: 1px solid #CCC;
     border-right-color: #999;
@@ -115,6 +152,16 @@
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
+    @-webkit-keyframes fillButton{
+      0% {left: 100%;visibility: hidden;}
+      50% {left: -100%;visibility: hidden;}
+      100% {left: 0;visibility: visible;}
+    }
+    @keyframes fillButton{
+      0% {left: 100%;visibility: hidden;}
+      50% {left: -100%;visibility: hidden;}
+      100% {left: 0;visibility: visible;}
+    }
     @keyframes fuckBrain{
       0%{transform: rotate(0);}
       50%{transform: rotate(10deg);}
@@ -126,7 +173,7 @@
 <body class="rails-default-error-page">
   <!-- This file lives in public/404.html -->
   <div class="logo-div">
-    <img src="/assets/logo.svg" width="50">
+    <a href="/"><img src="/assets/logo.svg" width="50"></a>
   </div>
   <h2 class="title">
     Упс<br>404
