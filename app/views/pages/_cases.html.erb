@@ -2,14 +2,14 @@
   <%= page.name %>
 </h2>
 <div class="row">
-  <% Case.all.each do |item| %>
+  <% category.cases.last(3).each do |item| %>
     <div class="col-md-6">
       <div class="project-box">
         <h4 class="project-title">
-          <%= item.name %>
+          <%= item.project_name %>
         </h4>
         <span class="project-category">
-          <%= item.category.parent.name %> | <%= item.category.name %>
+          <%= item.work_type.title %> | <%= item.industry.title %>
         </span>
       </div>
     </div>

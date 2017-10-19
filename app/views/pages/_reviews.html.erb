@@ -2,12 +2,12 @@
   <%= page.name %>
 </h2>
   <div class="row">
-    <% Review.all.last(4).each do |item| %>
+    <% category.reviews.last(4).each do |item| %>
     <div class="col-md-6">
       <div class="review-box">
         <h4><%= item.name %></h4>
         <span><%= item.site %></span>
-        <p><%= item.body %></p>
+        <p><%= truncate(item.body,length: 60,separator: ' ') %></p>
       </div>
     </div>
     <%end %>
