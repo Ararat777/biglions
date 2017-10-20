@@ -380,7 +380,14 @@ a,a:focus,a:visited{
               padding-bottom: 0;
             }
           }
-            
+          .cases-link{
+            margin-top: 0;
+            align-self: left;
+            background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+          }
         }
       }
       h4{
