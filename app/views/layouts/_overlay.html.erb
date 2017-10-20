@@ -162,6 +162,38 @@
             <h4>Портфолио</h4>
             <div class="top-menu-item-hovered">
               <div class="top-battlements"></div>
+              <div class="menu-item">
+                <span>По типу работ</span>
+                <div class="sub-categories-links">
+                  <div class="row">
+                    <% WorkType.all.in_groups_of(4,false).each do |group| %>
+                    <div class="col-md-6">
+                      <% group.each do |item| %>
+                    
+                      <%= link_to item.title,cases_path(filter: {:work_type => item.id}) %>
+                    
+                      <% end %>
+                    </div>
+                  <% end %>
+                  </div>
+                  
+                 </div>
+                <span>По отрасли</span>
+                <div class="sub-categories-links">
+                  <div class="row">
+                    <% Industry.all.in_groups_of(4,false).each do |group| %>
+                    
+                      <% group.each do |item| %>
+                        <div class="col-md-6">
+                      <%= link_to item.title,cases_path(filter: {:work_type => item.id}) %>
+                        </div>
+                      <% end %>
+                    
+                  <% end %>
+                  </div>
+                  
+                 </div>
+              </div>
               <div class="bottom-battlements"></div>
             </div>
           </div>
