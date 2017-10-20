@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171019171649) do
+ActiveRecord::Schema.define(version: 20171019232650) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20171019171649) do
 
   create_table "cases", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "project_name"
+    t.string   "task"
     t.integer  "industry_id"
     t.integer  "work_type_id"
     t.integer  "category_id"
@@ -73,6 +74,8 @@ ActiveRecord::Schema.define(version: 20171019171649) do
     t.integer  "page_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.integer  "case_id"
+    t.index ["case_id"], name: "index_indents_on_case_id", using: :btree
     t.index ["page_id"], name: "index_indents_on_page_id", using: :btree
   end
 
@@ -94,10 +97,13 @@ ActiveRecord::Schema.define(version: 20171019171649) do
   end
 
   create_table "photos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
     t.string   "image"
     t.integer  "review_id"
+    t.integer  "case_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["case_id"], name: "index_photos_on_case_id", using: :btree
     t.index ["review_id"], name: "index_photos_on_review_id", using: :btree
   end
 
@@ -128,8 +134,10 @@ ActiveRecord::Schema.define(version: 20171019171649) do
     t.integer  "work_type_id"
     t.integer  "industry_id"
     t.integer  "category_id"
+    t.integer  "case_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.index ["case_id"], name: "index_reviews_on_case_id", using: :btree
     t.index ["category_id"], name: "index_reviews_on_category_id", using: :btree
     t.index ["industry_id"], name: "index_reviews_on_industry_id", using: :btree
     t.index ["work_type_id"], name: "index_reviews_on_work_type_id", using: :btree

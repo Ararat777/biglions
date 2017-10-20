@@ -3,10 +3,11 @@
     <div class="modal-form-box">
       <div class="container">
         <div class="row">
-          <div class="col-md-10 offset-md-1">
+          <div class="col-md-10 offset-md-1 form-place">
             <h2>Обсудить проект</h2>
-          <%= form_for :projects,url: projects_path,remote: true do |f| %>
+          <%= form_for :projects,url: projects_path,html: {multipart: true},remote: true,authenticity_token: true do |f| %>
           <div class="row">
+            <%= f.hidden_field :form_path, class: 'form-path' %>
             <div class="col-md-6">
                 <div class="input-group">
                   <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?' %>
@@ -28,7 +29,7 @@
                <div class="row">
                 <div class="col-md-6 action-mobile">
               <div class="input-group file">
-                <%= f.file_field :document, class: 'form-control', :onclick => "ga('send', 'event', 'discuss_project_page', 'add_tz')" %>
+                <%= f.file_field :document, class: 'form-control file-field', :onclick => "ga('send', 'event', 'discuss_project_page', 'add_tz')" %>
                 <%= f.label :document do %>
                 <%= image_tag '/assets/attach.svg' %>
                 Прикрепить тех. задание
@@ -42,7 +43,7 @@
             </div>
               </div>
                <div class="row">
-                 <div class="col-md-6">
+                 <div class="col-md-5">
                    <div class="uploaded-file">
                      
                    </div>
@@ -65,3 +66,8 @@
   </div>
   
 </div>
+<script>
+  $(document).ready(function(){
+    $('.form-path').val(window.location.pathname);
+  })
+</script>

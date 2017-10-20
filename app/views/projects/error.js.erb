@@ -1,0 +1,7 @@
+<% if remotipart_submitted? %>
+$('.discuss-project-response-box .response-message').html("<%= j render('error').gsub('&quot;', "'") %>");
+  $(".discuss-project-response-box").fadeIn();
+<%else%> 
+$('.discuss-project-response-box .response-message').html("<%= j render('error') %>");
+  $(".discuss-project-response-box").fadeIn();
+<% end %>

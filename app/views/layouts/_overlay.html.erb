@@ -183,8 +183,8 @@
         <div class="col-md top-menu-opened-discuss-project flex-column">
           <%= image_tag '/assets/logo.svg',width: '50',height: '50'%>
           <h2>Обсудить<br>проект</h2>
-          <%= form_for :projects,url: projects_path,remote: true do |f| %>
-          
+          <%= form_for :projects,url: projects_path,html:{multipart: true},authenticity_token: true,remote: true do |f| %>
+          <%= f.hidden_field :form_path, class: 'form-path' %>
           <div class="input-group">
             <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?' %>
           </div>
@@ -196,16 +196,6 @@
           </div>
           <div class="input-group">
             <%= f.text_area :comment, class: 'form-control',placeholder: 'Опишите кратко свой проект' %>
-          </div>
-          <div class="uploaded-file">
-            
-          </div>
-          <div class="input-group file">
-            <%= f.file_field :document, class: 'form-control', :onclick => "ga('send', 'event', 'menu_page', 'add_tz_1')" %>
-            <%= f.label :document do %>
-              <%= image_tag '/assets/attach.svg' %>
-              Прикрепить тех. задание
-            <% end %>
           </div>
           <div class="input-group">
             <%= f.button 'Обсудить проект', class: 'button', :onclick => "ga('send', 'event', 'menu_page_1', 'send_discuss_project_1')" %>

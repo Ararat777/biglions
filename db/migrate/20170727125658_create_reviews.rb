@@ -7,6 +7,7 @@ class CreateReviews < ActiveRecord::Migration[5.0]
       t.belongs_to :work_type
       t.belongs_to :industry
       t.belongs_to :category
+      t.belongs_to :case
       t.timestamps
     end
   end

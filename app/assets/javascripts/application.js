@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+//= require jquery.remotipart
 //= require bootstrap-sprockets
 //= require_tree .
 
@@ -39,7 +39,12 @@ $(window).on('load',function(){
   $("#projects_document").on("change", function(){
     
     var arr = $(this).val().split('\\');
-    $(".uploaded-file").html("Файл: " + arr[arr.length - 1]);
+    var close = "<img src='/assets/close-form.svg' class='img-fluid'>";
+    $(".uploaded-file").html("Файл: " + arr[arr.length - 1] + close);
+    $('.uploaded-file img').on("click",function(){
+      $("#projects_document").val();
+      $(".uploaded-file").text('');
+    });
   })
   var slideNow = 1;
   var translateWidth = 0;

@@ -72,6 +72,10 @@ a,a:focus,a:visited{
     .uploaded-file{
       margin-top: 10px;
       color: white;
+      img{
+        margin-left: 10px;
+        cursor: pointer;
+      }
     }
       .input-group:not(:first-child){
         margin-top: 15px;
@@ -618,6 +622,7 @@ a,a:focus,a:visited{
         textarea{
           min-height: 130px;
           resize: none;
+          margin-bottom: 20px;
         }
         #projects_document{
           width: 0.1px;
@@ -2147,7 +2152,7 @@ a,a:focus,a:visited{
     }
     .slide-content.for_whom{
       .indent-title{
-        margin-left: 10px;
+        margin-left: 10px !important;
       }
       .row{
         margin-bottom: 20px;
