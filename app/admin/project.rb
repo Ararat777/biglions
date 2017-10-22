@@ -9,7 +9,7 @@ ActiveAdmin.register Project do
    column :phone
    column :email
    column :document do |project|
-     if project.document
+     if project.document.path
      link_to File.basename(project.document.path), biglionsadmin13_project_file_path(project.id) 
      end
    end
