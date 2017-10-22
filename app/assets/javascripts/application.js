@@ -14,7 +14,10 @@
 //= require jquery_ujs
 //= require jquery.remotipart
 //= require bootstrap-sprockets
-//= require_tree .
+//= require jquery.mobile.min
+//= require jquery.magnificPopup
+//= require jquery.mousewheel
+//= require liquidFillGauge
 
 $(window).on('load',function(){
   var screenWidth = $(window).width();
@@ -57,6 +60,12 @@ $(window).on('load',function(){
     var btnMiddlePosition = 0;
     
   }
+  
+  $(window).on("swipeleft",function(){
+    nextSlide();
+  }).on("swiperight", function(){
+    prevSlide();
+  })
   if(window.location.pathname == '/'){
     var slideInterval = 10000;
     var switchInterval = setInterval(nextSlide,slideInterval);
@@ -362,6 +371,7 @@ $(window).on('load',function(){
     var parentBlockHeight = $(this).parent().css("height");
     $(this).css("height",parentBlockHeight);
   });
+  
 });
 
 
