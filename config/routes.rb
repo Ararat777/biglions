@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :tariffs,only: [:show]
   resources :reviews,only: [:index,:show,:create,:update]
   resources :cases,only: [:index,:show]
+  get "/biglionsadmin13/projects/:id/file" => "biglionsadmin13/projects#download_file", as: :biglionsadmin13_project_file
   get '/about' => "pages#about"
   get '/contacts' => "pages#contacts"
   get '/services' => "pages#services"

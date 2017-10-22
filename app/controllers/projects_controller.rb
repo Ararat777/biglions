@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     if @project.save
       #ProjectMailer.send_project_mail(@project).deliver
+      @form_path = @project.form_path
       respond_to do |format|
         format.js{}
       end
@@ -15,9 +16,10 @@ class ProjectsController < ApplicationController
     end
   end
   
+  
   private
   
   def project_params
-    params.require(:projects).permit(:name,:phone,:comment,:email,:document, :form_path)
+    params.require(:projects).permit(:name,:phone,:comment,:email,:document, :form_path,:about_project,:about_work,:site_link)
   end
 end

@@ -328,12 +328,13 @@ $(window).on('load',function(){
        }
      });
     $(window).on("keydown", function(event){
-      if(event.which == 37){
+      if(event.target.tagName != 'INPUT' && event.target.tagName != 'TEXTAREA'){
+        if(event.which == 37){
         prevSlide();
-      }else if(event.which == 39){
+        }else if(event.which == 39){
         nextSlide();
+        }
       }
-      
     });
     $('.more-less-button').on("click",function(){
       if($(this).data("direct") == "more"){

@@ -111,11 +111,14 @@ ActiveRecord::Schema.define(version: 20171019232650) do
     t.string   "name"
     t.string   "phone"
     t.string   "email"
-    t.text     "comment",    limit: 65535
+    t.text     "comment",       limit: 65535
     t.string   "document"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "about_project"
+    t.string   "site_link"
+    t.string   "about_work"
     t.string   "form_path"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "questions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
