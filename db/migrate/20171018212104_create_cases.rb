@@ -1,7 +1,7 @@
 class CreateCases < ActiveRecord::Migration[5.0]
   def change
     create_table :cases do |t|
-      t.string :project_name
+      t.string :title
       t.string :task
       t.belongs_to :industry
       t.belongs_to :work_type

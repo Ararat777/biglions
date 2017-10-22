@@ -2,7 +2,7 @@ ActiveAdmin.register Case do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-  permit_params :project_name,:category_id,:industry_id,:work_type_id
+  permit_params :title,:category_id,:industry_id,:work_type_id,:task
 #
 # or
 #

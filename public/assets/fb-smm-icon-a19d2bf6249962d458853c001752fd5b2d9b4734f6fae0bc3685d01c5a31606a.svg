@@ -1,0 +1,28 @@
+<svg width="48" height="48" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Vector</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-20043 -14423)">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(20043 14423)" fill="#2D9CDB"/>
+<use xlink:href="#path0_fill" transform="translate(20043 14423)" fill="#E11B7E"/>
+<use xlink:href="#path0_fill" transform="translate(20043 14423)" fill="url(#paint2_linear)"/>
+<use xlink:href="#path0_fill" transform="translate(20043 14423)" fill="url(#paint3_radial)"/>
+<use xlink:href="#path0_fill" transform="translate(20043 14423)" fill="url(#paint4_radial)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint2_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(15.7734 43.0078 -43.0078 15.7734 26.7773 -7.88672)">
+<stop offset="0.04" stop-color="#00A3FF"/>
+<stop offset="1" stop-color="#35ABD5" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="paint3_radial" cx="0.5" cy="0.5" r="0.5" gradientUnits="userSpaceOnUse" gradientTransform="matrix(71.625 -52.2656 52.2656 71.625 -51.375 38.3203)">
+<stop offset="0.13" stop-color="#F2C94C"/>
+<stop offset="1" stop-color="#FF0000" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint4_radial" cx="0.5" cy="0.5" r="0.5" gradientUnits="userSpaceOnUse" gradientTransform="matrix(45.6094 -39.0937 39.0937 45.6094 -28.6406 44.7422)">
+<stop offset="0.01" stop-color="#FDDB86"/>
+<stop offset="1" stop-color="#F06942" stop-opacity="0"/>
+</radialGradient>
+<path id="path0_fill" d="M 45.351 0L 2.649 0C 1.185 0 0 1.185 0 2.649L 0 45.351C 0 46.815 1.185 48 2.649 48L 25.638 48L 25.638 29.412L 19.38 29.412L 19.38 22.17L 25.638 22.17L 25.638 16.821C 25.638 10.623 29.424 7.251 34.956 7.251C 37.605 7.251 39.882 7.443 40.545 7.533L 40.545 14.013L 36.705 14.013C 33.705 14.013 33.12 15.453 33.12 17.553L 33.12 22.173L 40.29 22.173L 39.36 29.433L 33.12 29.433L 33.12 48L 45.351 48C 46.815 48 48 46.815 48 45.351L 48 2.649C 48 1.185 46.815 0 45.351 0Z"/>
+</defs>
+</svg>

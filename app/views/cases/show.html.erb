@@ -4,15 +4,13 @@
       <div class="col-md-6 offset-md-3">
         <div class="about-project">
           <span class="little-word">Заказчик</span>
-          <h2 class="title">Lofthall</h2>
+          <h2 class="title"><%= @case.title %></h2>
           <div class="hor-line"></div>
-          <span class="category">Разработка сайта и фирменного стиля</span>
+          <span class="category"><%= @case.work_type.title %></span>
           <div class="vert-line"></div>
           <span class="little-word">Задача</span>
           <div class="description">
-            Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
-            Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
-            Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
+            <%= @case.task %>
           </div>
           <div class="vert-line"></div>
         </div>
@@ -20,15 +18,12 @@
     </div>
   </div>
   <div class="images-box">
+    <% @case.photos.each do |item| %>
     <div class="image">
-      <%= image_tag "/assets/lion.jpg", class: "img-fluid" %>
+      <%= image_tag item.image, class: "img-fluid" %>
     </div>
-    <div class="image">
-      <%= image_tag "/assets/lion.jpg", class: "img-fluid" %>
-    </div>
-    <div class="image">
-      <%= image_tag "/assets/lion.jpg", class: "img-fluid" %>
-    </div>
+    <% end %>
+    <% if @case.category.title == "webdevelopment" || @case.category.parent.title == "webdevelopment" %>
     <div class="mobile-version">
       <div class="container">
         <span class="little-word">Мобильная версия</span>
@@ -41,7 +36,9 @@
         </div>
       </div>
     </div>
+    <% end %>
   </div>
+  <% if @case.category.title == "design" || @case.category.parent.title == "design" %>
   <div class="branding-box">
     <span class="little-word">Брендинг</span>
     <div class="branding-images">
@@ -50,30 +47,22 @@
       <% end %>
     </div>
   </div>
+  <% end %>
   <div class="indents-box">
     <div class="row">
       <div class="col-md-10 offset-md-1">
         <div class="row">
-          <div class="col-md-6 indent-left">
-            <div class="indent left">
-              <h4 class="indent-title">Заголовок</h4>
-              <p class="description">
-                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
-                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
-                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
-              </p>
+          <% @case.indents.each_with_index do |item,i|%>
+          <% side = i == 0 ? 'left' : 'right' %>
+          <div class="col-md-6 indent-<%= side %>">
+            <div class="indent <%= side %>">
+              <h4 class="indent-title"><%= item.title %></h4>
+              <div class="description">
+                <%= raw(item.body) %>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 indent-right">
-            <div class="indent right">
-              <h4 class="indent-title">Заголовок</h4>
-              <p class="description">
-                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
-                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
-                Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor 
-              </p>
-            </div>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>

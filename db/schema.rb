@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20171019232650) do
   end
 
   create_table "cases", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "project_name"
+    t.string   "title"
     t.string   "task"
     t.integer  "industry_id"
     t.integer  "work_type_id"

@@ -1,0 +1,28 @@
+<svg width="48" height="28" viewBox="0 0 48 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Vector</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-19968 -14433)">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(19968 14433)" fill="#2D9CDB"/>
+<use xlink:href="#path0_fill" transform="translate(19968 14433)" fill="#E11B7E"/>
+<use xlink:href="#path0_fill" transform="translate(19968 14433)" fill="url(#paint2_linear)"/>
+<use xlink:href="#path0_fill" transform="translate(19968 14433)" fill="url(#paint3_radial)"/>
+<use xlink:href="#path0_fill" transform="translate(19968 14433)" fill="url(#paint4_radial)"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint2_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(15.7689 24.4912 -42.9956 8.98232 26.7697 -4.49116)">
+<stop offset="0.04" stop-color="#00A3FF"/>
+<stop offset="1" stop-color="#35ABD5" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="paint3_radial" cx="0.5" cy="0.5" r="0.5" gradientUnits="userSpaceOnUse" gradientTransform="matrix(71.6046 -29.7631 52.2508 40.7875 -51.3604 21.8218)">
+<stop offset="0.13" stop-color="#F2C94C"/>
+<stop offset="1" stop-color="#FF0000" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint4_radial" cx="0.5" cy="0.5" r="0.5" gradientUnits="userSpaceOnUse" gradientTransform="matrix(45.5964 -22.2623 39.0826 25.9727 -28.6325 25.4788)">
+<stop offset="0.01" stop-color="#FDDB86"/>
+<stop offset="1" stop-color="#F06942" stop-opacity="0"/>
+</radialGradient>
+<path id="path0_fill" fill-rule="evenodd" d="M 23.3959 27.2047L 26.2669 27.2047C 26.2669 27.2047 27.1309 27.1087 27.5749 26.6347C 27.9949 26.1937 27.9949 25.3747 27.9949 25.3747C 27.9949 25.3747 27.9349 21.5227 29.7349 20.9557C 31.5049 20.3947 33.7549 24.6757 36.1549 26.3197C 37.9849 27.5797 39.3649 27.3097 39.3649 27.3097L 45.7849 27.2197C 45.7849 27.2197 49.1449 27.0097 47.5549 24.3697C 47.4349 24.1597 46.6549 22.4197 42.8149 18.8497C 38.7949 15.1297 39.3349 15.7297 44.1649 9.27971C 47.1049 5.34971 48.3049 2.94971 47.9149 1.92971C 47.5849 0.969712 45.3949 1.20971 45.3949 1.20971L 38.1949 1.26971C 38.1949 1.26971 37.6549 1.20971 37.2649 1.44971C 36.8749 1.68971 36.6349 2.22971 36.6349 2.22971C 36.6349 2.22971 35.4949 5.28971 33.9649 7.86971C 30.7219 13.3267 29.4319 13.6267 28.9219 13.2667C 27.7129 12.4867 28.0219 10.1077 28.0219 8.40671C 28.0219 3.12671 28.8319 0.906712 26.4619 0.336712C 25.6819 0.156712 25.0999 0.0367122 23.0929 0.00671219C 20.5129 -0.0232878 18.3379 0.0247122 17.1049 0.627712C 16.2949 1.03271 15.6649 1.92971 16.0249 1.97771C 16.5049 2.03771 17.5849 2.27171 18.1549 3.05171C 18.9049 4.06271 18.8749 6.32171 18.8749 6.32171C 18.8749 6.32171 19.2949 12.5527 17.8849 13.3267C 16.8949 13.8487 15.5749 12.7657 12.6949 7.81571C 11.2249 5.29571 10.1149 2.47571 10.1149 2.47571C 10.1149 2.47571 9.90487 1.96571 9.51487 1.66571C 9.06487 1.33571 8.40487 1.21571 8.40487 1.21571L 1.53487 1.27571C 1.53487 1.27571 0.51487 1.30571 0.15487 1.75571C -0.17513 2.14571 0.12487 2.98571 0.12487 2.98571C 0.12487 2.98571 5.49487 15.5557 11.5849 21.8857C 17.1649 27.6907 23.4949 27.3157 23.4949 27.3157L 23.3959 27.2047Z"/>
+</defs>
+</svg>
