@@ -19,6 +19,7 @@ ActiveAdmin.register Category do
         link_to page.name, biglionsadmin13_page_path(page)
       end
       column :nav_name
+      column :priority
       column :actions do |page|
         span link_to "Edit", edit_biglionsadmin13_page_path(page)
         span link_to "Delete", biglionsadmin13_page_path(page),method: :delete
