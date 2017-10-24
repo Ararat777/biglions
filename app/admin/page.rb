@@ -10,6 +10,7 @@ ActiveAdmin.register Page do
     column 'Название',:name
     column 'Навигационное название',:nav_name
     column 'Категория',:category
+    column 'Приоритет', :priority
     actions
   end
   
