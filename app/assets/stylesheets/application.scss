@@ -4046,6 +4046,38 @@ a,a:focus,a:visited{
     }
   }
 }
+@media (max-height: 700px){
+  .button{
+    font-size: 16px;
+  }
+  #content .slider .viewport .slidewrapper .slide-item .slide-content{
+    .title{
+      font-size: 32px;
+      line-height: 33px;
+      margin-top: 10px !important;
+    }
+    .indent-title{
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .description{
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  #content .slider .viewport .slidewrapper .slide-item .slide-content .sub-categories a{
+    font-size: 14px;
+    line-height: 26px;
+  }
+  #content .sales{
+    margin-top: 10px !important;
+    span{
+    font-size: 34px;
+    line-height: 46px;
+    
+    }
+  }
+}
 
 
 
