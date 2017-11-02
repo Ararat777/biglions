@@ -4,6 +4,7 @@ class CreateReviews < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :site
       t.string :body
+      t.string :email
       t.belongs_to :work_type
       t.belongs_to :industry
       t.belongs_to :category

@@ -225,11 +225,13 @@ $(window).on('load',function(){
     $('.modal_box').fadeIn();
   })
  $('.close-modal-form').on("click",function(){
-    $('.modal_box').fadeOut();
+    $('.modal_box,.review_modal_box').fadeOut();
   })
   $(window).on("click",function(event){
     if(event.target.className == 'modal_box' || event.target.className == 'bg'){
       $('.modal_box').fadeOut();
+    }else if(event.target.className == 'review_modal_box'){
+      $('.review_modal_box').fadeOut();
     }
   })
   $('.agreement span').on("click",function(){

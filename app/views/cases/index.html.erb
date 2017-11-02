@@ -49,7 +49,7 @@
                      <div class="col-md-12">
                        <div class="project-box">
                           <h4 class="project-title">
-                            <%= item.title %>
+                            <%= link_to item.title, case_path(item.id) %>
                           </h4>
                           <span class="project-category">
                             <%= item.work_type.title %> | <%= item.industry.title %>
@@ -76,7 +76,7 @@
                  <div class="col-md-6">
                     <div class="project-box">
                       <h4 class="project-title">
-                        <%= item.title %>
+                        <%= link_to item.title, case_path(item.id) %>
                       </h4>
                       <span class="project-category">
                         <%= item.work_type.title %> | <%= item.industry.title %>

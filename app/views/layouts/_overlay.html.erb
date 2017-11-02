@@ -148,7 +148,7 @@
             <h4><%= link_to 'Компания',about_path %></h4>
             <div class="top-menu-item-hovered">
               <div class="top-battlements"></div>
-              <div class="menu-item">
+              <div class="menu-item company-links">
                 <% Category.find_by(:title => 'about').pages.each do |item| %>
                 <%= link_to item.name,about_path(anchor: item.title) %>
                 <% end %>

@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="col-md-2">
-        <div class="button">
+        <div class="button review-modal-btn">
           Оставить отзыв
         </div>
       </div>
@@ -67,6 +67,7 @@
     <%= image_tag '/assets/to-right.svg', class: 'img-fluid' %>
   </div>
 </div>
+<%= render 'review_modal_window',review: @review %>
 <script>
   $(window).on("load",function(){
     $('select').each(function () {
@@ -134,5 +135,9 @@
     });
 
 });
-  })
+  });
+  $('.review-modal-btn').on("click",function(){
+    $('.review_modal_box').fadeIn();
+  });
+  
 </script>

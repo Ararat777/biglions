@@ -1,0 +1,52 @@
+<div class="review_modal_box">
+  <div class="modal_content">
+    <div class="modal-form-box">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 offset-md-1 form-place">
+            <h2>Обсудить проект</h2>
+          <%= form_for review,url: reviews_path do |f| %>
+          <div class="row">
+             
+            <div class="col-md-6">
+                <div class="input-group">
+                  <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?' %>
+                </div>
+                
+                <div class="input-group">
+                  <%= f.text_field :site, class: 'form-control',placeholder: 'Ссылка на ваш сайт' %>
+                </div>
+                <div class="input-group">
+                  <%= f.text_field :email, class: 'form-control',placeholder: 'Ваша почта' %>
+              </div>
+            </div>
+            <div class="col-md-6 inputs-mobile">
+              <div class="input-group">
+               <%= f.text_area :body, class: 'form-control',placeholder: 'Оставьте свой отзыв' %>
+              </div>
+            </div>
+            <div class="actions">
+             <div class="container">
+               <div class="row">
+            <div class="col-md-12 action-mobile">
+              <div class="input-group">
+                <%= f.button 'Оставить отзыв', class: 'button', :onclick => "ga('send', 'event', 'discuss_project_page_1', 'send_discuss_project')" %>
+              </div>
+            </div>
+              </div>
+             </div>
+            </div>
+          </div>
+          <% end %>
+          <h4>BigLions © 2015-2017</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="close-modal-form">
+    <%= image_tag '/assets/close.svg',class: 'img-fluid' %>
+  </div>
+  
+</div>

@@ -134,6 +134,7 @@ ActiveRecord::Schema.define(version: 20171019232650) do
     t.string   "name"
     t.string   "site"
     t.string   "body"
+    t.string   "email"
     t.integer  "work_type_id"
     t.integer  "industry_id"
     t.integer  "category_id"

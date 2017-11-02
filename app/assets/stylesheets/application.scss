@@ -270,8 +270,16 @@ a,a:focus,a:visited{
     }
   }
   .contacts{
+    .tariff{
+      display: block;
+      color: white;
+      font-size: 10px;
+    }
     .phone{
       transition: color 0.5s;
+      &:first-child{
+        margin-right: 10px;
+      }
     }
     .phone .bolder{
       font-weight: 700;
@@ -500,9 +508,14 @@ a,a:focus,a:visited{
             color: #fff;
             opacity: 0;
             
+              
+          }
+          &.company-links{
+            a,p{
               &:hover,&:focus{
                 text-decoration: underline !important;
               }
+            }
           }
           .mobile{
             a{
@@ -577,6 +590,7 @@ a,a:focus,a:visited{
             transition: opacity 1s;
             transition-delay: 0.5s;
             text-decoration: none;
+            
           }
         }
         .bottom-battlements{
@@ -1207,6 +1221,9 @@ a,a:focus,a:visited{
            line-height: 34px;
            font-weight: 900;
            color: #fff;
+           a{
+             color: white;
+           }
          }
          .project-category{
            font-size: 18px;
@@ -2891,10 +2908,10 @@ a,a:focus,a:visited{
     }
   }
 }
-.modal_box{
+.modal_box,.review_modal_box{
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   width: 100%;
   height: 100%;
   

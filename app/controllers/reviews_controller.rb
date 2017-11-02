@@ -6,14 +6,25 @@ class ReviewsController < ApplicationController
     else
     @reviews = Review.all
     end
+    
+    @review = Review.new
   end
   
   def show
     @review = Review.find(params[:id])
   end
+  
+  def create
+    @review = Review.new(review_params)
+    if @review.save
+      redirect_to review_path(@review.id)
+    end
+  end
     
     private
-  
+    def review_params
+      params.require(:review).permit(:name,:email,:site,:body)
+    end
     def filter_reviews_params
     hh = {}
     params[:filter].each do |k,v|
