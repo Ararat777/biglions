@@ -25,3 +25,5 @@
 /.htaccess
 # Ignore db config
 /config/database.yml
+
+public/
