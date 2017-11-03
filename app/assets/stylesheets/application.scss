@@ -3236,6 +3236,12 @@ a,a:focus,a:visited{
     }
   }
   #content{
+    .warning{
+      p{
+        color: white;
+        opacity: 0.5;
+      }
+    }
     .cases-page{
       width: 100%;
       height: 100vh;
