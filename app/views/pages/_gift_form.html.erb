@@ -84,7 +84,7 @@
   </div>
 </div>
 <script>
-  $(document).ready(function(){
+  
       var initialFillValue = 0;
    var config1 = liquidFillGaugeDefaultSettings();
       config1.circleColor = "white";
@@ -107,9 +107,8 @@
       gauge1.update(initialFillValue);
     });
     $('.gform').on("ajax:success",function(){
-      var gauge1 = loadLiquidFillGauge("fillgauge1", initialFillValue,config1);
       gauge1.update(0);
-    })
-  });
+    });
+  
 
 </script>
