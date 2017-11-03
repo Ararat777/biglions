@@ -754,6 +754,7 @@ a,a:focus,a:visited{
   
   position: relative;
   overflow: hidden;
+  
   .review-show-box{
     width: 100%;
     padding-left: 100px;
@@ -1200,30 +1201,7 @@ a,a:focus,a:visited{
               justify-content: space-between;
               align-items: center;
             }
-            .project-box{
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          text-align: left;
-          height: 150px;
-          background: rgba(0,0,0,0.6);
-          margin-bottom: 30px;
-          padding: 10px;
-         .project-title{
-           font-size: 36px;
-           line-height: 34px;
-           font-weight: 900;
-           color: #fff;
-           a{
-             color: white;
-           }
-         }
-         .project-category{
-           font-size: 18px;
-           line-height: 21px;
-           color: #fff;
-         }
-        }
+            
       .project-box.show-all{
         justify-content: center;
         .show-all-projects.button{
@@ -1277,6 +1255,30 @@ a,a:focus,a:visited{
       }
       margin-top: 30px;
     }
+  }
+  .project-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: left;
+    height: 150px;
+    background: rgba(0,0,0,0.6);
+    margin-bottom: 30px;
+    padding: 10px;
+   .project-title{
+     font-size: 36px;
+     line-height: 34px;
+     font-weight: 900;
+     color: #fff;
+     a{
+       color: white;
+     }
+   }
+   .project-category{
+     font-size: 18px;
+     line-height: 21px;
+     color: #fff;
+   }
   }
   .review-box{
     position: relative;
@@ -3083,7 +3085,7 @@ a,a:focus,a:visited{
   }    
 }
 @media (max-width: 767px){
-  .modal_box{
+  .modal_box,.review_modal_box{
     .modal_content{
       width: 100%;
       .action-mobile,.inputs-mobile{
@@ -3170,6 +3172,13 @@ a,a:focus,a:visited{
           justify-content: center;
           align-items: center;
           color: #fff;
+          .cases-link{
+                margin-top: 10px;
+              background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
+              color: transparent;
+              background-clip: text;
+              -webkit-background-clip: text;
+          }
           &.contacts-menu{
             .mobile{
               font-size: 24px;
@@ -3227,6 +3236,53 @@ a,a:focus,a:visited{
     }
   }
   #content{
+    .cases-page{
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/services.jpg') no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      .title{
+        font-size: 44px;
+        line-height: 46px;
+        font-weight: 700;
+        color: white;
+      }
+      .description{
+        font-size: 16px;
+        color: white;
+      }
+      .green{
+        background-color: #27AE60;
+        padding: 8px 0;
+        text-align: center;
+        font-size: 18px;
+        line-height: 21px;
+        color: white;
+        margin-bottom: 20px;
+      }
+      padding-top: 150px;
+    }
+    .reviews-page{
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/reviews-bg-blured.png') center no-repeat;
+      background-size: 110% 110%;
+      background-attachment: fixed;
+      padding-top: 230px;
+      
+    }
+    .filter-form-box{
+        padding-left: 0;
+        top: 20px;
+        .title{
+          text-align: center;
+        }
+        .filter-form{
+          margin-bottom: 10px;
+        }
+      }
+    
     .contacts{
       height: auto;
     }

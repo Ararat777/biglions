@@ -43,9 +43,46 @@
     <div class="col-sm-12 col-xs-12 top-menu-opened-item flex-column">
           <div class="top-menu-item-mobile portfolio">
             <h4>Портфолио <i class="fa fa-caret-down caret-btn" aria-hidden="true"></i></h4>
-            <div class="top-menu-item-hovered">
-              <div class="top-battlements"></div>
-              <div class="bottom-battlements"></div>
+            <div class="menu-item-box">
+              <div class="menu-item mobile">
+                <div class="category-link">
+                  <span>По типу работ</span>
+                  <div class="sub-categories-links-box">
+                    <div class="sub-categories-links">
+                      
+                        <% WorkType.all.in_groups_of(2,false).each do |group| %>
+                        <div class="row">
+                          <% group.each do |item| %>
+                          <div class="col-md-6">
+                          <%= link_to item.title,cases_path(filter: {:work_type => item.id}) %>
+                          </div>
+                          <% end %>
+                        </div>
+                      <% end %>
+                     </div>
+                  </div>
+                </div>
+                
+                
+                <div class="category-link">
+                  <span>По отрасли</span>
+                  <div class="sub-categories-links-box">
+                    <div class="sub-categories-links">
+                      <% Industry.all.in_groups_of(2,false).each do |group| %>
+                        <div class="row">
+                          <% group.each do |item| %>
+                          <div class="col-md-6">
+                          <%= link_to item.title,cases_path(filter: {:work_type => item.id}) %>
+                          </div>
+                          <% end %>
+                        </div>
+                      <% end %>
+
+                     </div>
+                  </div>
+                </div>
+                <%= link_to "Посмотреть все работы",cases_path, class: 'cases-link' %>
+              </div>
             </div>
           </div>
           <div class="top-menu-item-mobile contacts">

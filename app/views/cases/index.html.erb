@@ -2,12 +2,12 @@
   <div class="container">
     <div class="row">
       
-      <div class="col-md-2 offset-md-5">
+      <div class="col-md-2 offset-md-5 col-5">
         <div class="filter">
           Сортировать:
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-12">
         <div class="filter-form">
           <%= form_for :filter,url: cases_path,html: {class: 'form-inline'},enforce_utf8: false,method: :get do |f| %>
           <%= f.select(:work_type_id,options_for_select(WorkType.all.collect{|c| [c.title, c.id]}),{include_blank: "По типу работ"},{class: 'form-control'}) %>
@@ -18,6 +18,39 @@
     </div>
   </div>
 </div>
+<% if mobile_device? %>
+<div class="cases-page">
+  <div class="cases-list">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="title">
+          Наши кейсы
+        </h2>
+         <p class="description">
+           Каждый проект схватка креативного мышления,технологичности и практичности
+         </p>
+         <div class="green">
+           Нами было выиграно более 250 схваток
+         </div>
+      </div>
+      <% @cases.each do |item| %>
+        <div class="col-12">
+          <div class="project-box">
+              <h4 class="project-title">
+                <%= link_to item.title, case_path(item.id) %>
+              </h4>
+              <span class="project-category">
+                <%= item.work_type.title %> | <%= item.industry.title %>
+              </span>
+            </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
+<% else %>
 <div class="cases slider">
  <div class="viewport">
    <div class="slidewrapper">
@@ -103,6 +136,7 @@
     <%= image_tag '/assets/to-right.svg', class: 'img-fluid' %>
   </div>
 </div>
+<% end %>
 <script>
   $(window).on("load",function(){
     $('select').each(function () {

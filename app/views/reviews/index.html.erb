@@ -1,17 +1,17 @@
 <div class="filter-form-box">
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 col-12">
       <h2 class="title">
         Отзывы
       </h2>
      </div>
-      <div class="col-md-2">
+      <div class="col-md-2 col-4">
         <div class="filter">
           Сортировать:
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-12">
         <div class="filter-form">
           <%= form_for :filter,url: reviews_path,html: {class: 'form-inline'},enforce_utf8: false,method: :get do |f| %>
           <%= f.select(:work_type_id,options_for_select(WorkType.all.collect{|c| [c.title, c.id]}),{include_blank: "По типу работ"},{class: 'form-control'}) %>
@@ -27,6 +27,28 @@
     </div>
   </div>
 </div>
+<% if mobile_device? %>
+<div class="reviews-page">
+  <div class="reviews-list">
+  <div class="container">
+    <div class="row">
+      <% @reviews.each do |item| %>
+        <div class="col-12">
+          <%= link_to review_path(item.id),class: 'show-review' do %>
+            <div class="review-box">
+              <h4><%= item.name %></h4>
+              <span><%= item.site %></span>
+              <p><%= truncate(item.body,length: 60,separator: ' ') %></p>
+            </div>
+           <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>
+
+<% else %>
 <div class="reviews slider">
  <div class="viewport">
    <div class="slidewrapper">
@@ -67,6 +89,8 @@
     <%= image_tag '/assets/to-right.svg', class: 'img-fluid' %>
   </div>
 </div>
+
+<% end %>
 <%= render 'review_modal_window',review: @review %>
 <script>
   $(window).on("load",function(){

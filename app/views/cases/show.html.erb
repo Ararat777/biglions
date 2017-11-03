@@ -72,10 +72,10 @@
       <div class="col-md-10 offset-md-1">
         <div class="review">
           <div class="row">
-            <div class="col-md-4 review-image text-center">
+            <div class="col-md-4 col-12 review-image text-center">
               <%= image_tag "/assets/review.png", class: "img-fluid" %>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-12 review-text">
               <h4 class="title"><%= Review.all.first.name %></h4>
               <span class="site"><%= Review.all.first.site %></span>
               <p class="body"><%= Review.all.first.body %></p>

@@ -284,3 +284,62 @@
  }
   
 }
+@media(max-width: 768px){
+  #portfolio{
+    .about-project-box{
+      margin-top: 100px;
+      .about-project{
+        .title{
+          font-size: 46px;
+        }
+      }
+    }
+    .images-box{
+      .mobile-version{
+        padding-top: 40px;
+        padding-bottom: 60px;
+        img{
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .indents-box{
+      margin-top: 0;
+      .indent-left,.indent-right{
+        border: none;
+      }
+      .indent.left{
+        padding-right: 0;
+        text-align: left;
+      }
+      .indent.right{
+        padding-left: 0;
+        text-align: right;
+        .indent-title{
+          text-align: right;
+        }
+        .description{
+          text-align: right;
+        }
+      }
+      .indent{
+        padding-bottom: 0;
+      }
+      margin-bottom: 50px;
+    }
+    .review-box{
+      .review-image{
+        margin-bottom: 30px;
+      }
+      .review-text{
+        padding: 0 30px;
+      }
+    }
+    .form-title{
+      font-size: 42px;
+    }
+    .form-box .social-links{
+      margin-bottom: 150px;
+    }
+  } 
+}
