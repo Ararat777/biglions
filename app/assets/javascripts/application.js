@@ -45,8 +45,8 @@ $(window).on('load',function(){
     var close = "<img src='/assets/close-form.svg' class='img-fluid'>";
     $(".uploaded-file").html("Файл: " + arr[arr.length - 1] + close);
     $('.uploaded-file img').on("click",function(){
-      $("#projects_document").val();
-      $(".uploaded-file").text('');
+      $("#projects_document").val('');
+      $(".uploaded-file").html('');
     });
   })
   var slideNow = 1;

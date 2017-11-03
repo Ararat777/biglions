@@ -11,7 +11,7 @@
       </div>
       <div class="col-md-7 col-sm-7">
         <div class="gift form-box">
-          <%= form_for :projects,url: projects_path,remote: true do |f| %>
+          <%= form_for :projects,url: projects_path,html: {class: 'gform'},remote: true do |f| %>
           <%= f.hidden_field :form_path, :value => "#{page.category.name}/#{page.name}" %>
           <div class="row">
             <div class="col-md-6 inputs-mobile col-sm-6">
@@ -84,25 +84,32 @@
   </div>
 </div>
 <script>
-var initialFillValue = 0;
- var config1 = liquidFillGaugeDefaultSettings();
-    config1.circleColor = "white";
-    config1.textColor = "white";
-    config1.waveTextColor = "#white";
-    config1.waveColor = "#fff892";
-    config1.circleFillGap = 0;
-    config1.circleThickness = 0.05;
-    config1.textVertPosition = 0.5;
-    config1.waveAnimateTime = 1000;
-    config1.displayPercent = false;
-    config1.minValue = 0;
-    config1.maxValue = 400;
- 
- var gauge1 = loadLiquidFillGauge("fillgauge1", initialFillValue,config1);
-  $(".gift.form-box input[type=text],.gift.form-box textarea").each(function(){
-   if($(this).val()){
-     initialFillValue += 100;
-   }
-    gauge1.update(initialFillValue);
+  $(document).ready(function(){
+      var initialFillValue = 0;
+   var config1 = liquidFillGaugeDefaultSettings();
+      config1.circleColor = "white";
+      config1.textColor = "white";
+      config1.waveTextColor = "#white";
+      config1.waveColor = "#fff892";
+      config1.circleFillGap = 0;
+      config1.circleThickness = 0.05;
+      config1.textVertPosition = 0.5;
+      config1.waveAnimateTime = 1000;
+      config1.displayPercent = false;
+      config1.minValue = 0;
+      config1.maxValue = 400;
+
+   var gauge1 = loadLiquidFillGauge("fillgauge1", initialFillValue,config1);
+    $(".gift.form-box input[type=text],.gift.form-box textarea").each(function(){
+     if($(this).val()){
+       initialFillValue += 100;
+     }
+      gauge1.update(initialFillValue);
+    });
+    $('.gform').on("ajax:success",function(){
+      var gauge1 = loadLiquidFillGauge("fillgauge1", initialFillValue,config1);
+      gauge1.update(0);
+    })
   });
+
 </script>

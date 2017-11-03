@@ -2,7 +2,11 @@ $('.modal_box').fadeOut();
 $('.discuss-project-response-box .response-message').html("<%= j render('succes') %>");
 $(".discuss-project-response-box").fadeIn();
 $("input#projects_form_path[value='<%= @form_path %>']").parent().each(function(){
-  $(this).find('input,textarea').each(function(){
+  $(this).find("input[type='text'],textarea").each(function(){
     $(this).val('');
   });
+  if($(this).find("input[type='file']")){
+    $(this).find("input[type='file']").val('');
+    $(".uploaded-file").html('');
+  }
 });

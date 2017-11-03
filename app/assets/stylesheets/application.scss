@@ -895,7 +895,7 @@ a,a:focus,a:visited{
       width: 100%;
       height: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       
       flex-direction: column;
       &.horizontal{
@@ -3456,7 +3456,7 @@ a,a:focus,a:visited{
           width: 100%;
           height: 100%;
           display: flex;
-          justify-content: center;
+          justify-content: flex-start;
 
           flex-direction: column;
           &.horizontal{
@@ -3652,6 +3652,7 @@ a,a:focus,a:visited{
           padding: 0 5px;
           display: inline-block;
           width: 40%;
+          font-size: 30px;
         }
       }
     }
@@ -3710,6 +3711,7 @@ a,a:focus,a:visited{
           background-color: #EB5757;
           padding: 0 5px;
           width: 45%;
+          font-size: 30px;
         }
         .form-box{
           padding: 5px;
@@ -3864,6 +3866,7 @@ a,a:focus,a:visited{
       .page-content.services{
         .circle-inner{
           overflow: hidden;
+          height: 350px;
           .circle-box{
             width: 200%;
             left: -50%;
@@ -3950,6 +3953,7 @@ a,a:focus,a:visited{
       .page-content.work{
         .circle-inner{
           overflow: hidden;
+          height: 350px;
           .circle-box{
             width: 200%;
             left: -50%;

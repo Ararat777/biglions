@@ -14,6 +14,8 @@ ActiveAdmin.register Project do
      end
    end
    column :form_path
+   column :comment
+   column :created_at
  end
   
   controller do
