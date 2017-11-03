@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
       end
     else
       respond_to do |format|
-        format.js{render :template => 'projects/error.js.erb', :layout => false}
+        format.js{render :template => 'projects/error.js.erb', :layout => false,:status => 422}
       end
     end
   end

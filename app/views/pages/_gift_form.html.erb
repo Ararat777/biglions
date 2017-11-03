@@ -107,7 +107,8 @@
       gauge1.update(initialFillValue);
     });
     $('.gform').on("ajax:success",function(){
-      gauge1.update(0);
+      initialFillValue = 0;
+      gauge1.update(initialFillValue);
     });
   
 

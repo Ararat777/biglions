@@ -1,1 +1,3 @@
-<p class='text-danger'><%= @project.errors.full_messages %></p>
+<% @project.errors.each do |k,v| %>
+<p class='text-danger'><%= v %></p>
+<% end %>

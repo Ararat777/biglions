@@ -1,5 +1,4 @@
 class Project < ApplicationRecord
   mount_uploader :document, DocumentUploader
-  validates :name,presence: true,format: {:with => /[А-Яа-яA-Za-z]/,message: 'В имени должны быть только буквы' }
-  validates :phone,presence: true,numericality: true,length: {:is => 10}
+  validates :phone,presence: {message: "Поле «Номер телефона» не заполнено"},numericality: {:message => "Введите актуальный номер телефона(минимальная длинна номера - 7 цифр)",length: {:is => 7}}
 end
