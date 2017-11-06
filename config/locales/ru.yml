@@ -1,0 +1,4 @@
+ru:
+  errors:
+    messages:
+      extension_whitelist_error: "Невозможно прикрепить данный тип документа"

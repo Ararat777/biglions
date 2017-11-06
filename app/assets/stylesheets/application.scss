@@ -373,7 +373,8 @@ a,a:focus,a:visited{
       &.portfolio{
         .menu-item{
           .cases-link{
-            margin-top: 10px;
+            position: absolute;
+            bottom: 30px;
             background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
             color: transparent;
             background-clip: text;
@@ -895,11 +896,12 @@ a,a:focus,a:visited{
       width: 100%;
       height: 100%;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       
       flex-direction: column;
       &.horizontal{
         flex-direction: row;
+        justify-content: flex-start;
       }
     }
     .viewport{
@@ -2835,7 +2837,7 @@ a,a:focus,a:visited{
       }
     }
     .response-message{
-      padding: 10px;
+      padding: 20px;
       position: relative;
       width: 100%;
       min-height: 200px;
@@ -2843,7 +2845,7 @@ a,a:focus,a:visited{
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       border: 3px solid;
       border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
       border-image-slice: 1;
