@@ -110,13 +110,13 @@
           <h2>Обсудить<br>проект</h2>
           <%= form_for :projects,url: projects_path,remote: true do |f| %>
           <div class="input-group">
-            <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?' %>
+            <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?',autocomplete: "off" %>
           </div>
           <div class="input-group">
-            <%= f.text_field :phone, class: 'form-control',placeholder: 'Ваш номер телефона' %>
+            <%= f.text_field :phone, class: 'form-control',placeholder: 'Ваш номер телефона',autocomplete: "off" %>
           </div>
           <div class="input-group">
-            <%= f.text_field :email, class: 'form-control',placeholder: 'Электронная почта' %>
+            <%= f.text_field :email, class: 'form-control',placeholder: 'Электронная почта',autocomplete: "off" %>
           </div>
           <div class="input-group">
             <%= f.text_area :comment, class: 'form-control',placeholder: 'Опишите кратко свой проект' %>
@@ -259,13 +259,13 @@
           <%= form_for :projects,url: projects_path,html:{multipart: true},authenticity_token: true,remote: true do |f| %>
           <%= f.hidden_field :form_path, class: 'form-path' %>
           <div class="input-group">
-            <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?' %>
+            <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?',autocomplete: "off" %>
           </div>
           <div class="input-group">
-            <%= f.text_field :phone, class: 'form-control',placeholder: 'Ваш номер телефона' %>
+            <%= f.text_field :phone, class: 'form-control',placeholder: 'Ваш номер телефона',autocomplete: "off" %>
           </div>
           <div class="input-group">
-            <%= f.text_field :email, class: 'form-control',placeholder: 'Электронная почта' %>
+            <%= f.text_field :email, class: 'form-control',placeholder: 'Электронная почта',autocomplete: "off" %>
           </div>
           <div class="input-group">
             <%= f.text_area :comment, class: 'form-control',placeholder: 'Опишите кратко свой проект' %>

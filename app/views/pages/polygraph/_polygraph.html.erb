@@ -16,13 +16,13 @@
      <%= form_for :projects,url: projects_path,remote: true do |f| %>
        <%= f.hidden_field :form_path, :value => "#{page.category.name}/#{page.name}" %>
           <div class="input-group">
-            <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?' %>
+            <%= f.text_field :name, class: 'form-control',placeholder: 'Как Вас зовут?',autocomplete: "off" %>
           </div>
           <div class="input-group">
-            <%= f.text_field :phone, class: 'form-control',placeholder: 'Ваш номер телефона' %>
+            <%= f.text_field :phone, class: 'form-control',placeholder: 'Ваш номер телефона',autocomplete: "off" %>
           </div>
           <div class="input-group">
-            <%= f.text_field :email, class: 'form-control',placeholder: 'Электронная почта' %>
+            <%= f.text_field :email, class: 'form-control',placeholder: 'Электронная почта',autocomplete: "off" %>
           </div>
           <div class="input-group">
             <%= f.button 'Обсудить проект', class: 'button', :onclick => "ga('send', 'event', '#{page.category.title}_#{page.title}_page', 'send_discuss_project_17')" %>
