@@ -1206,6 +1206,9 @@ a,a:focus,a:visited{
             
       .project-box.show-all{
         justify-content: center;
+        a{
+          text-decoration: none;
+        }
         .show-all-projects.button{
           
           width: 50%;

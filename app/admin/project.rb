@@ -16,6 +16,9 @@ ActiveAdmin.register Project do
    column :form_path
    column :comment
    column :created_at
+   column :about_project
+   column :site_link
+   column :about_work
  end
   
   controller do

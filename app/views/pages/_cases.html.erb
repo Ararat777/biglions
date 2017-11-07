@@ -16,9 +16,11 @@
   <% end %>
   <div class="col-md-6 hidden-sm-down">
     <div class="project-box show-all">
+      <%= link_to cases_path do %>
       <div class="show-all-projects button" onclick="ga('send', 'event', '<%= page.category.title %>_<%= page.title %>_page', 'show_all_works')">
         Показать все работы
       </div>
+      <%end %>
     </div>
   </div>
 </div>
