@@ -23,7 +23,8 @@
   </head>
   <body>
     <header class="portfolio-header">
-      <div class="row">
+      <div class="container-fluid">
+        <div class="row">
         <div class="col-md-1 col-1">
           <div class="back">
             <%= link_to request.referer do %><%= image_tag "/assets/to-left.svg" %><% end %>
@@ -40,6 +41,8 @@
           </div>
         </div>
       </div>
+      </div>
+      
     </header>
     <div id="portfolio">
       <%= yield %>
