@@ -133,14 +133,14 @@ ActiveRecord::Schema.define(version: 20171019232650) do
   create_table "reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "site"
-    t.string   "body"
+    t.text     "body",         limit: 65535
     t.string   "email"
     t.integer  "work_type_id"
     t.integer  "industry_id"
     t.integer  "category_id"
     t.integer  "case_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.index ["case_id"], name: "index_reviews_on_case_id", using: :btree
     t.index ["category_id"], name: "index_reviews_on_category_id", using: :btree
     t.index ["industry_id"], name: "index_reviews_on_industry_id", using: :btree

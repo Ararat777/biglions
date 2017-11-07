@@ -3,7 +3,7 @@ class CreateReviews < ActiveRecord::Migration[5.0]
     create_table :reviews do |t|
       t.string :name
       t.string :site
-      t.string :body
+      t.text :body
       t.string :email
       t.belongs_to :work_type
       t.belongs_to :industry
