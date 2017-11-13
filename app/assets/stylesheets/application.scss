@@ -1355,6 +1355,16 @@ a,a:focus,a:visited{
       background: url('/assets/crew-about.png') no-repeat;
       background-size: cover;
     }
+    .slide-content.ourteam{
+      .owl-carousel{
+        .owl-item{
+          padding: 20px;
+          &.center{
+            padding: 5px;
+          }
+        }
+      }
+    }
     .mfp-no-margins img.mfp-img {
 	padding: 0;
     }
@@ -3106,6 +3116,13 @@ a,a:focus,a:visited{
       right: 5%;
     }
   }
+  .discuss-project-response-box .discuss-project-response-content{
+    width: 95%;
+  }
+  .agreement-modal .agreement-content{
+    width: 90%;
+    margin-top: 100px;
+  }
 #top-menu{
     height: 70px;
     background: #000;
@@ -4117,7 +4134,7 @@ a,a:focus,a:visited{
 }
 @media (max-height: 700px){
   .button{
-    font-size: 14px;
+    font-size: 16px;
   }
   #content .slider .viewport .slidewrapper .slide-item .slide-content{
     .title{

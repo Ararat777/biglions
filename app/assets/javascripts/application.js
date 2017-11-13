@@ -357,6 +357,13 @@ $(window).on('load',function(){
     })
     $('.caret-btn').on("click",function(){
       $(this).parent().siblings(".menu-item-box").slideToggle();
+      if($(this).hasClass("fa-caret-down")){
+        $(this).removeClass("fa-caret-down");
+        $(this).addClass("fa-caret-up");
+      }else{
+        $(this).removeClass("fa-caret-up");
+        $(this).addClass("fa-caret-down");
+      }
     })
     
     $(window).on("scroll",function(){
