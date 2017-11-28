@@ -40,12 +40,5 @@ class PagesController < ApplicationController
     end
   end
   
-  def get_category
-    @category = Category.find_by(:title => params[:action]) or not_found
-    if params[:sub_category]
-      @category = @category.categories.find_by(:title => params[:category]).categories.find_by(:title => params[:sub_category]) or not_found
-    elsif params[:category]
-      @category = @category.categories.find_by(:title => params[:category]) or not_found  
-    end
-  end
+  
 end
