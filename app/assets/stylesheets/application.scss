@@ -1021,9 +1021,10 @@ a,a:focus,a:visited{
 
 
                 .question-row{
-                  height: 62px;
+                  padding: 10px 0 10px 10px;
                   display: flex;
-                  flex-direction: row;
+                  justify-content: flex-start;
+                  align-items: center;
                 }
                 .answer{
                   display: none;
@@ -3420,9 +3421,11 @@ a,a:focus,a:visited{
 
 
                 .question-row{
-                  height: 62px;
-                  display: flex;
-                  flex-direction: row;
+                  padding-top: 10px;
+                  padding-bottom: 10px;
+                  padding-left: 10px;
+                 
+                  min-height: 42px;
                 }
                 .answer{
                   display: none;
@@ -3435,16 +3438,15 @@ a,a:focus,a:visited{
                 }
 
                 .switch{
-                  width: 10%;
+                  min-width: 5% !important;
+                  position: relative;
                   height: 100%;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  cursor: pointer;
+                  display: inline-block;
+                  
                 }
                 .question{
-                  display: flex;
-                  align-items: center;
+                  display: inline;
+                  
                   text-align: left;
                   color: #fff;
                   font-weight: 700;
@@ -3484,8 +3486,11 @@ a,a:focus,a:visited{
           height: 100%;
           display: flex;
           justify-content: flex-start;
-
+          
           flex-direction: column;
+          &.social-links{
+            margin-bottom: 15px;
+          }
           &.horizontal{
             flex-direction: row;
           }
@@ -3525,7 +3530,9 @@ a,a:focus,a:visited{
               flex-direction: column;
           .button{
             margin-bottom: 10px;
+            width: 100%;
           }
+          
             }
             .sub-categories{
               margin-top: 20px;
@@ -3552,6 +3559,7 @@ a,a:focus,a:visited{
         .title{
           margin-top: 30px;
           font-weight: 900;
+          font-size: 26px;
           text-transform: uppercase;
           color: #fff;
           text-align: center;
@@ -3678,7 +3686,7 @@ a,a:focus,a:visited{
           margin-bottom: 10px;
           padding: 0 5px;
           display: inline-block;
-          width: 40%;
+          width: 45%;
           font-size: 30px;
         }
       }
@@ -3946,7 +3954,7 @@ a,a:focus,a:visited{
             }
             .title{
               font-size: 44px;
-              font-weight: 45px;
+              
               text-align: center;
             }
             .description{
@@ -4130,6 +4138,25 @@ a,a:focus,a:visited{
     .description{
       margin-bottom: 5px;
     }
+  }
+  .modal-form-box form .input-group textarea, .form-box form .input-group textarea{
+    min-height: 115px;
+  }
+  .modal_box .modal_content .modal-form-box h2, .review_modal_box .modal_content .modal-form-box h2{
+    font-size: 26px;
+  }
+  #content .landing_page.page .page-content.order_landing #timer-box .digit{
+    font-size: 90px;
+  }
+  #content .internet_shop.page .page-content.price .title.price,#content .marketing.page .page-content.price .title.price{
+    font-size: 26px;
+    
+  }
+  #content .ppc.page .page-content.ppc .shadow-cloud .cloud-text .title{
+    font-size: 34px;
+  }
+  #content .auditing.page .page-content.price .auditing-tariff-box span{
+    font-size: 28px;
   }
 }
 @media (max-height: 700px){

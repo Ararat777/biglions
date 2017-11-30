@@ -12,7 +12,9 @@ class ApplicationController < ActionController::Base
       @category = @category.categories.find_by(:title => params[:category]) or not_found  
     end
     set_meta_tags title: @category.meta_title,
-              description: @category.meta_description
+              description: @category.meta_description,
+              keywords: @category.meta_keywords
+              
   end
   helper_method :mobile_device?
   helper_method :get_category

@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10 offset-md-1 form-place">
-            <h2>Обсудить проект</h2>
+            <h2>Обсудить<br> проект</h2>
           <%= form_for :projects,url: projects_path,html: {multipart: true},remote: true,authenticity_token: true do |f| %>
           <div class="row">
             <%= f.hidden_field :form_path, class: 'form-path' %>

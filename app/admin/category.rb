@@ -2,7 +2,7 @@ ActiveAdmin.register Category do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-  permit_params :title, :name, :meta_title, :meta_description, :parent_id 
+  permit_params :title, :name, :meta_title, :meta_description, :parent_id, :meta_keywords
   menu label: 'Категории',priority: 1
   
   show do
@@ -11,6 +11,7 @@ ActiveAdmin.register Category do
       row :name
       row :meta_title
       row :meta_description
+      row :meta_keywords
       row :parent
     end
     table_for category.pages do

@@ -28,9 +28,7 @@
       <% end %>
     </div>
      <% if mobile_device? %>
-     <div class="button">
-       Оставить заявку на продвижение
-     </div>
+     <%= link_to 'Показать больше',services_category_path(page.title), class: 'show-more button' %>
      <% end %>
    </div>
   </div>

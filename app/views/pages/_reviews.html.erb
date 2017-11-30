@@ -2,6 +2,7 @@
   <%= page.name %>
 </h2>
   <div class="row">
+    <% if category.reviews.size > 0 %>
     <% category.reviews.last(4).each do |item| %>
     <div class="col-md-6">
       <div class="review-box">
@@ -11,4 +12,11 @@
       </div>
     </div>
     <%end %>
+    <% else %>
+    <div class="col-md-8 offset-md-2">
+      <h2 class="indent-title">
+        Извините, в данный момент мы занимаемся наполнением сайта!
+      </h2>
+    </div>
+    <% end %>
   </div>
