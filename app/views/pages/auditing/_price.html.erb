@@ -15,7 +15,7 @@
     <% category.tariffs.each_with_index do |item,number| %>
     <div class="col-md-<%= column_width + number %> col-<%= column_width + number %> col-sm-<%= column_width + number %> tariff-column">
       <div class="auditing-tariff-box">
-        <span><%= item.title %> - $<%=item.price%> </span>
+        <span><%= item.title %> - <%=item.price%> грн </span>
         <%= link_to "Подробно", tariff_path(item),remote: true,class: 'button', :onclick => "ga('send', 'event', '#{page.category.title}_#{page.title}_page_#{number + 1}', 'detail_#{number + 1}')" %>
       </div>
     </div>

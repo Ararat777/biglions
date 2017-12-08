@@ -434,6 +434,14 @@ a,a:focus,a:visited{
           align-items: center;
           color: #fff;
           width: 100%;
+          text-align: center;
+          .temporary{
+            font-weight: 700;
+            font-size: 20px;
+            color: white;
+            margin-left: 10px;
+            margin-right: 10px;
+          }
           span{
             font-size: 18px;
             line-height: 17px;
@@ -761,7 +769,7 @@ a,a:focus,a:visited{
   .review-show-box{
     width: 100%;
     padding-left: 100px;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/reviews-bg-blured.png') center no-repeat;
     background-size: 110% 110%;
     display: flex;
@@ -3200,6 +3208,13 @@ a,a:focus,a:visited{
           justify-content: center;
           align-items: center;
           color: #fff;
+          text-align: center;
+          .temporary{
+            font-weight: 700;
+            font-size: 16px;
+            margin-left: 5px;
+            margin-right: 5px;
+          }
           .cases-link{
                 margin-top: 10px;
               background-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
@@ -3269,6 +3284,11 @@ a,a:focus,a:visited{
         color: white;
         opacity: 0.5;
       }
+    }
+    .review-show-box{
+      padding-left: 0;
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
     .cases-page{
       width: 100%;
