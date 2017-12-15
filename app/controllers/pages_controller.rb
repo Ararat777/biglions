@@ -4,13 +4,13 @@ class PagesController < ApplicationController
   
   def main
     
-    @pages = @category.pages
+    @pages = @category.pages.where(:active => true)
     
     render_page
   end
   
   def about
-    @pages = @category.pages
+    @pages = @category.pages.where(:active => true)
     
     render_page
   end
@@ -19,7 +19,7 @@ class PagesController < ApplicationController
   end
   
   def services
-    @pages = @category.pages
+    @pages = @category.pages.where(:active => true)
     render_page
   end
   private
