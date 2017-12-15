@@ -1525,6 +1525,7 @@ a,a:focus,a:visited{
           float: left;
           padding: 0 5px;
           position: relative;
+          font-size: 28px;
           &:after{
             content: '';
             background: url("/assets/price-arrow.png") no-repeat center;
@@ -1533,6 +1534,7 @@ a,a:focus,a:visited{
             width: 550px;
             height: 45px;
             top: 0;
+            left: 100%;
           }
         }
         
