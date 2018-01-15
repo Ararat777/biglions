@@ -1698,13 +1698,6 @@ a,a:focus,a:visited{
     .how_work-button{
       width: 80%;
     }
-    .slide-content.price{
-      .tariff-box{
-        h4{
-          min-height: 68px;
-        }
-      }
-    }
     .slide-content.methods{
       .description{
         margin-bottom: 0;
@@ -1886,7 +1879,11 @@ a,a:focus,a:visited{
         
       }
     }
-    
+      .slide-content.price{
+          .tariff-box p{
+            text-align: left;
+          }
+      }
   }
   .smm.slider{
     background: linear-gradient(180deg, rgba(17,17,17,0.83) 0%, rgba(17,17,17,0.27) 38.67%, rgba(17,17,17,0.335047) 56.35%, rgba(17,17,17,0.56) 99.45%),url('/assets/smm-blured.png') no-repeat;
@@ -2578,7 +2575,7 @@ a,a:focus,a:visited{
       color: #fff;
     }
     h4{
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
     p{
       padding-right: 5px;
