@@ -2917,7 +2917,7 @@ a,a:focus,a:visited{
         flex-direction: column;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       border: 3px solid;
       border-image: linear-gradient(135.48deg, #e9b760 11.09%, #fff892 24.1%, #fddc7e 41.31%, #e4b25b 71.12%, #f6ca6b 86.23%);
       border-image-slice: 1;
@@ -2929,6 +2929,7 @@ a,a:focus,a:visited{
       }
         .rules-text{
             color: white;
+            margin: 0;
         }
     }
   }
