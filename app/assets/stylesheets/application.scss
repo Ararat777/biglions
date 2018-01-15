@@ -2902,18 +2902,19 @@ a,a:focus,a:visited{
       height: 100%;
     }
   }
-    width: 45%;
-    height: 400px;
+    width: 70%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     margin-top: 200px;
     z-index: 102;
     .rules-box{
+      padding: 20px;
       position: relative;
       width: 100%;
       height: 100%;
       background: black;
+        flex-direction: column;
       display: flex;
       justify-content: center;
       align-items: center;
