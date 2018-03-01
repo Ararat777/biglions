@@ -1,6 +1,6 @@
 <div class="<%= @category.title %> slider">
  <div class="viewport">
-   <div class="slidewrapper">
+   <div class="slidewrapper" style="display: none;">
      <% @pages.order(:priority).each_with_index do |page,number| %>
      <div class="slide-item">
        <div class="slide-content <%= page.title %>">

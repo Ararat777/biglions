@@ -21,6 +21,7 @@
 //= require owl.carousel.min
 
 $(window).on('load',function(){
+  
   var screenWidth = $(window).width();
   function getDecimal(number){
     return number - parseInt(number);
@@ -379,12 +380,13 @@ $(window).on('load',function(){
       }, 700);
     })
   }
+  $('.slidewrapper').css("display","block");
   /*Fix justify-box height for Safari Mac */
   $('.justify-box, .button-box').each(function(){
     var parentBlockHeight = $(this).parent().css("height");
     $(this).css("height",parentBlockHeight);
   });
-  
+  $("#preload").fadeOut(2000);
 });
 
 

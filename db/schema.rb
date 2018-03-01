@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171215175008) do
+ActiveRecord::Schema.define(version: 20180116112953) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "namespace"
@@ -45,12 +45,12 @@ ActiveRecord::Schema.define(version: 20171215175008) do
 
   create_table "cases", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
-    t.string   "task"
+    t.text     "task",         limit: 65535
     t.integer  "industry_id"
     t.integer  "work_type_id"
     t.integer  "category_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.index ["category_id"], name: "index_cases_on_category_id", using: :btree
     t.index ["industry_id"], name: "index_cases_on_industry_id", using: :btree
     t.index ["work_type_id"], name: "index_cases_on_work_type_id", using: :btree
@@ -152,7 +152,7 @@ ActiveRecord::Schema.define(version: 20171215175008) do
   create_table "tariffs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.text     "body",        limit: 65535
-    t.integer  "price"
+    t.string   "price"
     t.integer  "category_id"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
