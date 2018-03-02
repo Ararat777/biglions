@@ -1,22 +1,31 @@
-<h2 class="title">
-  <%= page.name %>
-</h2>
-  <div class="row">
-    <% if category.reviews.size > 0 %>
-    <% category.reviews.last(4).each do |item| %>
-    <div class="col-md-6">
-      <div class="review-box">
-        <h4><%= item.name %></h4>
-        <span><%= item.site %></span>
-        <p><%= truncate(item.body,length: 60,separator: ' ') %></p>
-      </div>
-    </div>
-    <%end %>
-    <% else %>
-    <div class="col-md-8 offset-md-2">
-      <h2 class="indent-title">
-        Извините, в данный момент мы занимаемся наполнением сайта!
-      </h2>
+<div class="row" style="margin-top: 0;">
+  <div class="col-md-3">
+    <h2 class="title">
+      <%= page.name %>
+    </h2>
+  </div>
+  <div class="col-md-2 offset-md-7">
+    <%= link_to "Все отзывы", reviews_path,class: 'show-more button reviews' %>
+  </div>
+</div>
+<div class="row">
+  <% if category.reviews.size > 0 %>
+  <% category.reviews.last(2).each do |item| %>
+  <div class="col-md-6">
+    <%= link_to review_path(item.id),class: 'show-review' do %>
+    <div class="review-box">
+      <h4><%= item.name %></h4>
+      <span><%= item.site %></span>
+      <p><%= truncate(item.body,length: 400,separator: ' ') %></p>
     </div>
     <% end %>
   </div>
+  <%end %>
+  <% else %>
+  <div class="col-md-8 offset-md-2">
+    <h2 class="indent-title">
+      Извините, в данный момент мы занимаемся наполнением сайта!
+    </h2>
+  </div>
+  <% end %>
+</div>

@@ -38,7 +38,7 @@
             <div class="review-box">
               <h4><%= item.name %></h4>
               <span><%= item.site %></span>
-              <p><%= truncate(item.body,length: 60,separator: ' ') %></p>
+              <p><%= truncate(item.body,length: 250,separator: ' ') %></p>
             </div>
            <% end %>
         </div>
@@ -52,7 +52,7 @@
 <div class="reviews slider">
  <div class="viewport">
    <div class="slidewrapper">
-     <%@reviews.in_groups_of(4,false).each do |group|%>
+     <%@reviews.in_groups_of(2,false).each do |group|%>
      <div class="slide-item">
        <div class="slide-content">
          <div class="container">
@@ -65,7 +65,7 @@
                   <div class="review-box">
                     <h4><%= item.name %></h4>
                     <span><%= item.site %></span>
-                    <p><%= truncate(item.body,length: 60,separator: ' ') %></p>
+                    <p><%= truncate(item.body,length: 400,separator: ' ') %></p>
                   </div>
                    <% end %>
                  </div>

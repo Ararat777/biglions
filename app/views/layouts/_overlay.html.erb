@@ -28,16 +28,14 @@
             </div>
           </div>
           <div class="top-menu-item-mobile company">
-            <h4><%= link_to 'Компания',"#" %> <i class="fa fa-caret-down caret-btn" aria-hidden="true"></i></h4>
+            <h4><%= link_to 'Компания',about_path %> <i class="fa fa-caret-down caret-btn" aria-hidden="true"></i></h4>
             
               <div class="menu-item-box">
                 <div class="menu-item mobile">
-                <!--
                 <% Category.find_by(:title => 'about').pages.each do |item| %>
                 <%= link_to item.name,about_path(anchor: item.title) %>
                 <% end %>
-                -->
-                  <h3 class="temporary">Извините,на данный момент мы занимаемся наполнением сайта</h3>
+                
                 </div>
               </div>
             
@@ -48,7 +46,6 @@
             <h4>Портфолио <i class="fa fa-caret-down caret-btn" aria-hidden="true"></i></h4>
             <div class="menu-item-box">
               <div class="menu-item mobile">
-                <!--
                 <div class="category-link">
                   <span>По типу работ</span>
                   <div class="sub-categories-links-box">
@@ -86,8 +83,6 @@
                   </div>
                 </div>
                 <%= link_to "Посмотреть все работы",cases_path, class: 'cases-link' %>
-                 -->
-                <h3 class="temporary">Извините,на данный момент мы занимаемся наполнением сайта</h3>
               </div>
             </div>
           </div>
@@ -185,16 +180,13 @@
             </div>
           </div>
           <div class="top-menu-item company">
-            <h4><%= link_to 'Компания',"#" %></h4>
+            <h4><%= link_to 'Компания',about_path %></h4>
             <div class="top-menu-item-hovered">
               <div class="top-battlements"></div>
               <div class="menu-item company-links">
-                <!--
-                <% Category.find_by(:title => 'about').pages.each do |item| %>
-                <%= link_to item.name,about_path(anchor: item.title) %>
+                <% Category.find_by(:title => 'about').pages.each_with_index do |item,n| %>
+                <%= link_to item.name,about_path(anchor: item.title) if n != Category.find_by(:title => 'about').pages.length - 1  %>
                 <% end %>
-                -->
-                <h3 class="temporary">Извините,на данный момент мы занимаемся наполнением сайта</h3>
               </div>
               <div class="bottom-battlements"></div>
             </div>
@@ -202,11 +194,11 @@
         </div>
         <div class="col-md-4 top-menu-opened-item flex-column">
           <div class="top-menu-item portfolio">
-            <h4><%= link_to 'Портфолио', "#" %></h4>
+            <h4><%= link_to 'Портфолио', cases_path %></h4>
             <div class="top-menu-item-hovered">
               <div class="top-battlements"></div>
               <div class="menu-item">
-                <!--
+                
                 <div class="category-link">
                   <span>По типу работ</span>
                   <div class="sub-categories-links-box">
@@ -244,8 +236,6 @@
                   </div>
                 </div>
                 <%= link_to "Посмотреть все работы",cases_path, class: 'cases-link' %>
-                 -->
-                <h3 class="temporary">Извините,на данный момент мы занимаемся наполнением сайта</h3>
               </div>
               
                 
