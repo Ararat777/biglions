@@ -32,10 +32,12 @@
             
               <div class="menu-item-box">
                 <div class="menu-item mobile">
-                <% Category.find_by(:title => 'about').pages.each do |item| %>
-                <%= link_to item.name,about_path(anchor: item.title) %>
-                <% end %>
-                
+                <h3 class="temporary">Извините,на данный момент мы занимаемся наполнением сайта</h3>
+                  <!--
+                <#% Category.find_by(:title => 'about').pages.each do |item| %>
+                <#%= link_to item.name,about_path(anchor: item.title) %>
+                <#% end %>
+                //-->
                 </div>
               </div>
             
@@ -183,10 +185,14 @@
             <h4><%= link_to 'Компания',about_path %></h4>
             <div class="top-menu-item-hovered">
               <div class="top-battlements"></div>
+              
               <div class="menu-item company-links">
-                <% Category.find_by(:title => 'about').pages.each_with_index do |item,n| %>
-                <%= link_to item.name,about_path(anchor: item.title) if n != Category.find_by(:title => 'about').pages.length - 1  %>
-                <% end %>
+                <h3 class="temporary">Извините,на данный момент мы занимаемся наполнением сайта</h3>
+                <!--
+                <#% Category.find_by(:title => 'about').pages.each_with_index do |item,n| %>
+                <#%= link_to item.name,about_path(anchor: item.title) if n != Category.find_by(:title => 'about').pages.length - 1  %>
+                <#% end %>
+                //-->
               </div>
               <div class="bottom-battlements"></div>
             </div>
